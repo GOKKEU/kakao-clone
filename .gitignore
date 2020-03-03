@@ -1,0 +1,37 @@
+.DS_Store
+
+
+.status-bar
+.status-bar*2
+span.staus-bar__colock
+nav.nav
+ul.nav_list
+li.nav__list-item*4>a.nav__list-link
+g-avatar ( 글로벌 스타일 / 전역 클레스)
+
+header과 div--ul과 li
+li.more__btn>span.more_btn-icon+span.more__btn-title
+li.settings_setting>span.settings__icon+span.settings__title
+
+차이가..뭘까??
+
+<div class="header__header-column">
+    <span class="header_icon">
+        <i class="fas fa-search"></i>
+    </span>
+    <span class="header_icon">
+        <i class="fas fa-bars"></i>
+    </span>
+</div>
+
+ <div class="header__header-column">
+        <span class="header_icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <!--bars가 아래에 위치-->
+        <div class="header__icon"><i class="fas fa-bars"></i></div>
+      </div>
+
+input에 글 보이는거     
+
+placeholder="Sned message"

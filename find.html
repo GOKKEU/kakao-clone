@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--emmet사용 ,사용언어-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find | Kakao Clone</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--무료폰트를 사용하기 위한 코드-->
+  </head>
+  <body>
+    <!--status-bar start-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:54</span>
+      </div>
+      <div class="status-bar__column">
+        <!--item 무료사용 Font Awesome 사용-->
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+        <span class="status-bar__battery-level">100%</span>
+      </div>
+    </div>
+    <!--status-bar end-->
+    <!--header start-->
+    <header class="header">
+      <div class="header__column">
+        <h1 class="header__title">Find</h1>
+      </div>
+      <div class="header__column">
+        <span class="header_icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span class="header_icon">
+          <i class="fas fa-cog"></i>
+        </span>
+      </div>
+    </header>
+    <!--header end-->
+    <!--main start -->
+    <!--header start-->
+    <header class="find__header">
+      <ul class="find__header-btn header-btn">
+        <li class="find__header-btn header-btn">
+          <span class="header-btn__icon">
+            <i class="fas fa-qrcode fa-3x"></i>
+          </span>
+          <span class="header-btn__title">
+            QR Code
+          </span>
+        </li>
+        <li class="find__header-btn header-btn">
+          <span class="header-btn__icon">
+            <i class="fas fa-user-plus fa-3x"></i>
+          </span>
+          <span class="header-btn__title">
+            Add by Contacts
+          </span>
+        </li>
+        <li class="find__header-btn header-btn">
+          <span class="header-btn__icon">
+            <i class="far fa-envelope fa-3x"></i>
+          </span>
+          <span class="header-btn__title">
+            Invite
+          </span>
+        </li>
+        <li class="find__header-btn header-btn">
+          <span class="header-btn__icon">
+            <i class="fas fa-qrcode fa-3x"></i>
+          </span>
+          <span class="header-btn__title">
+            QR Code
+          </span>
+        </li>
+      </ul>
+    </header>
+    <!--header end -->
+    <!--중간 find__recommended-->
+    <ul class="find__recommended">
+      <h5 class="find__title">Recommendede Friends</h5>
+      <!--친구 프로필 start-->
+      <li class="find__friend frind friend--lg">
+        <div class="friend__column">
+          <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+          <div class="find__content">
+            <span class="friend__name">
+              Nicolas Serrano
+            </span>
+          </div>
+        </div>
+        <div class="friend__column">
+          <div class="friend__add-btn">
+            <i class="fas fa-user-plus"></i>
+          </div>
+        </div>
+      </li>
+      <!--친구 프로필 end-->
+    </ul>
+    <!--main end -->
+    <!--Navigator start-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="friends.html" class="nav__list-link">
+            <i class="far fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="nav__list-link">
+            <i class="far fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="nav__list-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="nav__list-link">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--Navigator end-->
+  </body>
+</html>

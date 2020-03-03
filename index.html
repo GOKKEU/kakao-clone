@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--emmet사용 ,사용언어-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats | Kakao Clone</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--무료폰트를 사용하기 위한 코드-->
+  </head>
+  <body>
+    <!--status-bar start-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:54</span>
+      </div>
+      <div class="status-bar__column">
+        <!--item 무료사용 Font Awesome 사용-->
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+        <span class="status-bar__battery-level">100%</span>
+      </div>
+    </div>
+    <!--status-bar end-->
+    <!--header start-->
+    <header class="header">
+      <div class="header__column">
+        <h1 class="header__title">Chart</h1>
+      </div>
+      <div class="header__column">
+        <span class="header_icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span class="header_icon">
+          <i class="far fa-comment"></i>
+        </span>
+        <span class="header_icon">
+          <i class="fas fa-cog"></i>
+        </span>
+      </div>
+    </header>
+    <!--header end-->
+    <!--main chats box start-->
+    <main class="chats">
+      <ul class="chats__list">
+        <li class="chats__chat chat">
+          <!--chart페이지로 링크화-->
+          <a href="chart.html">
+            <div class="chat__column">
+              <img
+                src="images/avatar.jpg"
+                class="chat_avatar g-avatar"
+              /><!--전역 클레스 g-avatar 선언-->
+              <div class="chat__content">
+                <span class="chat__username">
+                  Lynn
+                </span>
+                <span class="chat__preview">Going home</span>
+              </div>
+            </div>
+            <div class="chat__column">
+              <span class="chat__timestamp">Yesterday</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <!--main chats box end-->
+    <!--Navigator start-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="friends.html" class="nav__list-link">
+            <i class="far fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="nav__list-link">
+            <i class="fas fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="nav__list-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="nav__list-link">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--Navigator end-->
+  </body>
+</html>

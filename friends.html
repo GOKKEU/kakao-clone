@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--emmet사용 ,사용언어-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends | Kakao Clone</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--무료폰트를 사용하기 위한 코드-->
+  </head>
+  <body>
+    <!--status-bar start-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:54</span>
+      </div>
+      <div class="status-bar__column">
+        <!--item 무료사용 Font Awesome 사용-->
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+        <span class="status-bar__battery-level">100%</span>
+      </div>
+    </div>
+    <!--status-bar end-->
+    <!--header start-->
+    <header class="header">
+      <div class="header__column">
+        <h1 class="header__title">Friends</h1>
+      </div>
+      <div class="header__column">
+        <span class="header_icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span class="header_icon">
+          <i class="fas fa-cog"></i>
+        </span>
+      </div>
+    </header>
+    <!--header end-->
+    <!--main-->
+    <main class="friends">
+      <header class="friends__list">
+        <!--개인 프로필 start-->
+        <div class="friends__friend frind friend--lg">
+          <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+          <div class="friend__content">
+            <span class="friend__name">
+              Nicolas Serrano
+            </span>
+            <span class="friend__status">
+              nomadcoders.co
+            </span>
+          </div>
+        </div>
+        <!--개인 프로필 end-->
+      </header>
+      <!--중간 Plus title start-->
+      <div class="friends__plus">
+        <h5 class="friends__plus-title">
+          Plus friend
+        </h5>
+      </div>
+      <!--중간 Plus title end-->
+      <div class="friends__friend frind ">
+        <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+        <div class="friend__content">
+          <span class="friend__name">
+            Plus Freind
+          </span>
+        </div>
+      </div>
+      <!--중간 Friends list start-->
+      <ul class="friends__list">
+        <h5 class="friends_title">Friends 14</h5>
+        <!--친구 프로필 start-->
+        <li class="friends__friend frind friend--lg">
+          <div class="friend__column">
+            <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Nicolas Serrano
+              </span>
+              <span class="friend__status">
+                nomadcoders.co
+              </span>
+            </div>
+          </div>
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span>
+                FTISLAND (FT ComadCoders)
+              </span>
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+        </li>
+        <!--친구 프로필 end-->
+      </ul>
+      <!--중간 Friends list end-->
+    </main>
+    <!--main end-->
+    <!--Navigator start-->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="friends.html" class="nav__list-link">
+            <i class="fas fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="nav__list-link">
+            <i class="far fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="nav__list-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="nav__list-link">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--Navigator end-->
+  </body>
+</html>
