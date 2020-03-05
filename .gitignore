@@ -13,25 +13,29 @@ header과 div--ul과 li
 li.more__btn>span.more_btn-icon+span.more__btn-title
 li.settings_setting>span.settings__icon+span.settings__title
 
-차이가..뭘까??
-
-<div class="header__header-column">
-    <span class="header_icon">
-        <i class="fas fa-search"></i>
-    </span>
-    <span class="header_icon">
-        <i class="fas fa-bars"></i>
-    </span>
-</div>
-
- <div class="header__header-column">
-        <span class="header_icon">
-          <i class="fas fa-search"></i>
-        </span>
-        <!--bars가 아래에 위치-->
-        <div class="header__icon"><i class="fas fa-bars"></i></div>
-      </div>
 
 input에 글 보이는거     
-
 placeholder="Sned message"
+
+
+.nav .nav__list-link {​
+  position: relative;​
+}​
+.nav .nav__badge {​
+  position: absolute;​
+ /*.nav__list-link is the father of .nav__badge​
+ .nav__badge is the one that we are goin to make absolute so that means the father has to be relative.*/ absolure랑 relative 정리 하기...잘 모겠음
+
+
+
+ .chats-body .header,
+.chats-body .status-bar {
+  padding: 0px 20px;
+}
+/*chts-body의 heaer 와 chats-body의 status-bar에 적용*/
+
+
+.chats-body .header,
+.status-bar {
+  padding: 0px 20px;
+}

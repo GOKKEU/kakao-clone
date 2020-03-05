@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chats | Kakao Clone</title>
+    <!--무료아이콘를 사용하기 위한 코드-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--무료폰트를 사용하기 위한 코드-->
+    <!--CSS 사용하기 위한 코드-->
+    <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
     <!--status-bar start-->
@@ -19,8 +21,8 @@
         <i class="fas fa-clock"></i>
         <i class="fas fa-volume-mute"></i>
         <i class="fas fa-wifi"></i>
-        <i class="fas fa-battery-full"></i>
         <span class="status-bar__battery-level">100%</span>
+        <i class="fas fa-battery-full"></i>
       </div>
     </div>
     <!--status-bar end-->
@@ -48,21 +50,26 @@
         <li class="chats__chat chat">
           <!--chart페이지로 링크화-->
           <a href="chart.html">
-            <div class="chat__column">
-              <img
-                src="images/avatar.jpg"
-                class="chat_avatar g-avatar"
-              /><!--전역 클레스 g-avatar 선언-->
-              <div class="chat__content">
-                <span class="chat__username">
-                  Lynn
+            <!--친구 프로필 start-->
+            <div class="chats__chat friend friend--lg">
+              <div class="friend__column">
+                <img src="images/avatar.jpg" class="m-avatar friend__avatar" />
+                <div class="friend__content">
+                  <span class="friend__name">
+                    Lynn
+                  </span>
+                  <span class="friend__bottom-text">
+                    Going home
+                  </span>
+                </div>
+              </div>
+              <div class="friend__column">
+                <span class="chat__timestamp">
+                  March 8
                 </span>
-                <span class="chat__preview">Going home</span>
               </div>
             </div>
-            <div class="chat__column">
-              <span class="chat__timestamp">Yesterday</span>
-            </div>
+            <!--친구 프로필 end-->
           </a>
         </li>
       </ul>
@@ -78,6 +85,8 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <!--badge만들기-->
+            <div class="nav__badge">8</div>
             <i class="fas fa-comment"></i>
           </a>
         </li>

@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friends | Kakao Clone</title>
+    <!--무료아이콘를 사용하기 위한 코드-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--무료폰트를 사용하기 위한 코드-->
+    <!--CSS 사용하기 위한 코드-->
+    <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
     <!--status-bar start-->
@@ -41,43 +43,47 @@
     <!--header end-->
     <!--main-->
     <main class="friends">
-      <header class="friends__list">
+      <header class="friends__header">
         <!--개인 프로필 start-->
-        <div class="friends__friend frind friend--lg">
-          <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
-          <div class="friend__content">
-            <span class="friend__name">
-              Nicolas Serrano
-            </span>
-            <span class="friend__status">
-              nomadcoders.co
-            </span>
+        <div class="friends__friend friend">
+          <div class="friend__column">
+            <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Nicolas Serrano
+              </span>
+              <span class="friend__status">
+                nomadcoders.co
+              </span>
+            </div>
           </div>
         </div>
         <!--개인 프로필 end-->
       </header>
       <!--중간 Plus title start-->
       <div class="friends__plus">
-        <h5 class="friends__plus-title">
+        <h5 class="friends__title">
           Plus friend
         </h5>
-      </div>
-      <!--중간 Plus title end-->
-      <div class="friends__friend frind ">
-        <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
-        <div class="friend__content">
-          <span class="friend__name">
-            Plus Freind
-          </span>
-        </div>
-      </div>
-      <!--중간 Friends list start-->
-      <ul class="friends__list">
-        <h5 class="friends_title">Friends 14</h5>
-        <!--친구 프로필 start-->
-        <li class="friends__friend frind friend--lg">
+        <!--중간 Plus title end-->
+        <div class="friends__friend friend ">
           <div class="friend__column">
-            <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+            <img src="images/avatar.jpg" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Plus Freind
+              </span>
+            </div>
+          </div>
+        </div>
+        <!--중간 Friends list start-->
+      </div>
+      <ul class="friends__list">
+        <h5 class="friends__title">Friends 14</h5>
+        <!--친구 프로필 start-->
+        <li class="friends__friend friend friend--lg">
+          <div class="friend__column">
+            <img src="images/avatar.jpg" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
                 Nicolas Serrano
