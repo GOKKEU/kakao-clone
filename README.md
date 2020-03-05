@@ -4,7 +4,7 @@
 
 ### 베이스 코드
 
-> https://github.com/nomadcoders/kakao-clone-v2
+- https://github.com/nomadcoders/kakao-clone-v2
 
 ---
 
@@ -28,8 +28,8 @@
 
 ### 개발 내용
 
-> 예상 기간:3/6 -3/8
-> 실제 개발 기간:
+- 예상 기간:3/6 -3/8
+  - 실제 개발 기간:
 
 1. 노마드코딩의 클론코딩수업으로 기본 틀 만들기
 
