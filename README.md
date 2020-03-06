@@ -55,6 +55,9 @@
 
 #### animation 참고
 
-- animation-timing-function
-  https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2
+animation-timing-function
+
+- https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2
 - https://www.codingfactory.net/10942
+
+#### display flex

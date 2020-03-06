@@ -1,0 +1,26 @@
+.bigScreen {
+  background-color: #fce006;
+  /*해당 div를 화면전체를 채우도록 한다*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /*text를 가운데로 이동*/
+  display: none;
+  align-items: center;
+  justify-content: center;
+  /*text 스타일*/
+  font-weight: 600;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.5; /*란인 간격*/
+  z-index: 4; /*사용자랑 가깝*/
+}
+/*최소550px이거나 그 이상이면 되면 div가 flex되서 노란 화면이 나타난다 */
+@media screen and (min-width: 550px) {
+  .bigScreen {
+    display: flex;
+  }
+}
