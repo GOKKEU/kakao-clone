@@ -33,17 +33,3 @@ a {
   /*밑줄 없애준다*/
   text-decoration: none;
 }
-/*아래->위로 올라가는 애니메이션*/
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    transform: none;
-  }
-}
-
-main {
-  animation: fadeIn 0.5s ease-in;
-}

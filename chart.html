@@ -11,43 +11,40 @@
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body class="chats-body">
-    <!--상단을 고정시키기 위한 코드-->
-    <div class="header-wrapper">
-      <!--status-bar start-->
-      <div class="status-bar">
-        <div class="status-bar__column">
-          <span class="status-bar__clock">13:54</span>
-        </div>
-        <div class="status-bar__column">
-          <!--item 무료사용 Font Awesome 사용-->
-          <i class="fas fa-clock"></i>
-          <i class="fas fa-volume-mute"></i>
-          <i class="fas fa-wifi"></i>
-          <i class="fas fa-battery-full"></i>
-          <span class="status-bar__battery-level">100%</span>
-        </div>
+    <!--status-bar start-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:54</span>
       </div>
-      <!--status-bar end-->
-      <!--header start-->
-      <header class="header">
-        <div class="header__header-column">
-          <a href="index.html" class="header__back-btn">
-            <i class="fas fa-arrow-left"></i>
-          </a>
-          <h1 class="header__title">Best Friend</h1>
-        </div>
-        <div class="header__header-column">
-          <!--bars가 옆 위치-->
-          <span class="header_icon">
-            <i class="fas fa-search"></i>
-          </span>
-          <span class="header_icon">
-            <i class="fas fa-bars"></i>
-          </span>
-        </div>
-      </header>
-      <!--header end-->
+      <div class="status-bar__column">
+        <!--item 무료사용 Font Awesome 사용-->
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <i class="fas fa-battery-full"></i>
+        <span class="status-bar__battery-level">100%</span>
+      </div>
     </div>
+    <!--status-bar end-->
+    <!--header start-->
+    <header class="header">
+      <div class="header__header-column">
+        <a href="index.html" class="header__back-btn">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1 class="header__title">Best Friend</h1>
+      </div>
+      <div class="header__header-column">
+        <!--bars가 옆 위치-->
+        <span class="header_icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span class="header_icon">
+          <i class="fas fa-bars"></i>
+        </span>
+      </div>
+    </header>
+    <!--header end-->
 
     <!--main start-->
     <main class="chat-screen">
@@ -63,7 +60,7 @@
             </span>
             <span class="message__author">Best Friend</span>
           </div>
-          <spna class="message__timestamp"></spna>
+          <spna class="message__timestamp">7:00</spna>
         </li>
         <!--message row end-->
         <!--my message row start-->
@@ -85,7 +82,7 @@
             </span>
             <span class="message__author">Best Friend</span>
           </div>
-          <spna class="message__timestamp"></spna>
+          <spna class="message__timestamp">7:00</spna>
         </li>
         <!--message row end-->
         <!--my message row start-->
@@ -102,12 +99,18 @@
     </main>
     <!--main end-->
     <!--chart write input-->
-    <div class="chat__write-container">
-      <input type="text" placeholder="Sned message" class="chat__write" />
-      <div class="chat__icon-left chat__icon">
+    <div class="chat__write">
+      <div class="chat__write-column">
         <i class="far fa-plus-square"></i>
       </div>
-      <div class="chat__icon-right chat__icon">
+      <div class="chat__write-column">
+        <input
+          type="text"
+          placeholder="Sned message"
+          class="chat__write-input"
+        />
+      </div>
+      <div class="chat__write-column">
         <span class="chat__write-icon">
           <i class="far fa-smile-wink"></i>
         </span>

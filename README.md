@@ -12,8 +12,6 @@
 
 | 이름           | 설명(URL)                                                                                         |
 | -------------- | ------------------------------------------------------------------------------------------------- |
-| W3schools      | https://www.w3schools.com/css/css3_transitions.asp                                                |
-| MDN            | https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY                    |
 | ColorZilla     | https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en       |
 | PageRulerRedux | https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en |
 | Prettier       | https://prettier.io/                                                                              |
@@ -34,7 +32,6 @@
 
 - 예상 기간:3/6 -3/8
 - 실제 개발 기간:
-- 개발 도구: visualCode
 
 1. 노마드코딩의 클론코딩수업으로 기본 틀 만들기
 
@@ -52,9 +49,3 @@
 - 캘린더: 피벗슬라이드 [ ] , 캘린더 일정 추가 기능 [ ] , 왼쪽에서 나타나는 메뉴바 [ ] , 일정별 색상 변경 [ ]
 
 ---
-
-#### animation 참고
-
-- animation-timing-function
-  https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2
-- https://www.codingfactory.net/10942
