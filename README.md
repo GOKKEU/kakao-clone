@@ -45,10 +45,10 @@
 
 2. 카카오톡 v8.7.8 기능 추가하기
 
-- 친구 페이지: 한글로 변경 [ ]
+- 친구 페이지: 한글로 변경 [O]
 - 채팅 페이지: 채팅 입력 시 입력된 글box 생성 기능 [ ]
 - 검색 페이지: 디자인 [ ] , 날짜 크로스브라우징 [ ] ,검색창 애니메이션 [ ]
-- more페이지 : 디자인 변경(한글/버튼/캘린더 일정버튼) [ ]
+- more페이지 : 디자인 변경(한글/버튼/캘린더 일정버튼) [O]
 - 캘린더: 피벗슬라이드 [ ] , 캘린더 일정 추가 기능 [ ] , 왼쪽에서 나타나는 메뉴바 [ ] , 일정별 색상 변경 [ ]
 
 ---
@@ -59,5 +59,3 @@ animation-timing-function
 
 - https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2
 - https://www.codingfactory.net/10942
-
-#### display flex

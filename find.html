@@ -11,25 +11,27 @@
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
-    <!--status-bar start-->
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span class="status-bar__clock">13:54</span>
+    <div class="header-wrapper">
+       <!--status-bar start-->
+       <div class="status-bar">
+        <div class="status-bar__column">
+          <span class="status-bar__kt">KT</span>
+        </div>
+        <div class="status-bar__column">
+          <!--item 무료사용 Font Awesome 사용-->
+          <i class="fas fa-clock"></i>
+          <i class="fas fa-volume-mute"></i>
+          <i class="fas fa-wifi"></i>
+          <span class="status-bar__battery-level">100%</span>
+          <i class="fas fa-battery-full"></i>
+          <span class="status-bar__clock">오전 6:31</span>
+        </div>
       </div>
-      <div class="status-bar__column">
-        <!--item 무료사용 Font Awesome 사용-->
-        <i class="fas fa-clock"></i>
-        <i class="fas fa-volume-mute"></i>
-        <i class="fas fa-wifi"></i>
-        <i class="fas fa-battery-full"></i>
-        <span class="status-bar__battery-level">100%</span>
-      </div>
-    </div>
-    <!--status-bar end-->
+      <!--status-bar end-->
     <!--header start-->
     <header class="header">
       <div class="header__column">
-        <h1 class="header__title">Find</h1>
+        <h1 class="header__title">#날씨</h1>
       </div>
       <div class="header__column">
         <span class="header_icon">
@@ -41,63 +43,19 @@
       </div>
     </header>
     <!--header end-->
+    </div>
     <!--main start -->
     <main class="find">
-      <!--header start-->
-      <header class="find__header">
-        <ul class="find__header-list ">
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="fas fa-qrcode fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              QR Code
-            </span>
-          </li>
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="fas fa-user-plus fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              Add by Contacts
-            </span>
-          </li>
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="far fa-envelope fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              Invite
-            </span>
-          </li>
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="fas fa-qrcode fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              QR Code
-            </span>
-          </li>
-        </ul>
-      </header>
-      <!--header end -->
-      <!--중간 find__recommended-->
+      
       <ul class="find__recommended">
-        <h5 class="find__title">Recommendede Friends</h5>
+        <h5 class="find__title">1.디자인2.날씨받아오기3.입력창</h5>
         <!--친구 프로필 start-->
         <li class="find__friend friend friend--lg">
           <div class="friend__column">
-            <img src="images/avatar.jpg" class="friend__avatar" />
-            <div class="find__content">
-              <span class="friend__name">
-                Nicolas Serrano
-              </span>
-            </div>
+
           </div>
           <div class="friend__column">
-            <div class="friend__add-btn">
-              <i class="fas fa-user-plus"></i>
-            </div>
+
           </div>
         </li>
         <!--친구 프로필 end-->
@@ -113,12 +71,14 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <!--badge만들기-->
+            <div class="nav__badge">8</div>
             <i class="far fa-comment"></i>
           </a>
         </li>
         <li class="nav__list-item">
           <a href="find.html" class="nav__list-link">
-            <i class="fas fa-search"></i>
+            #
           </a>
         </li>
         <li class="nav__list-item">

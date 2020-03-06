@@ -1,14 +1,15 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   /*header안의 text라인을 맞추기 위해*/
   align-items: center;
+  padding: 0px 20px;
 }
 
 .header .header__title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer; /*마우스를 가져갔을때 손가락 모양으로 변경*/
 }
 .header .header_icon {

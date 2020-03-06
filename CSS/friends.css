@@ -7,7 +7,14 @@
 
 .friends__plus .friends__title,
 .friends__list .friends__title {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.6;
   margin-bottom: 10px;
+  font-weight: 600;
+}
+.friends {
+  padding: 0px 20px;
+}
+.friends__friend {
+  margin-top: 10px;
 }

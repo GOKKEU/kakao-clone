@@ -1,34 +1,24 @@
 .header-wrapper {
   background-color: white;
-  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5),
-    inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.08),
+    inset 0 -3px 0px 1px rgba(0, 0, 0, 0.04);
   /*상단 고정 코드*/
   position: fixed;
   width: 100%;
   top: 0px;
+  padding-bottom: 25px;
   /*아래 레이어와 겹치는 문제
   레이어의 순서를 z-index로 해결
   Layer 0 기본 렌더링 레이어--> 2 (숫자커지면 사용자로 가깝)
   */
   z-index: 2;
+  /*스클롤 내려갈때 애니메이션 추가*/
 }
 
 /*배경 부분*/
 .chat-screen {
   background-image: url("../images/pattern.png");
   min-height: 100vh;
-}
-.chats-body {
-  padding: 0;
-  padding-top: 100px;
-}
-/*chts-body의 heaer 와 chats-body의 status-bar에 적용*/
-.chats-body .status-bar {
-  padding: 10px 20px 0px;
-}
-/*즉 .status-bar{} 만 쓰이면 모든 화명의 해당 클래스에 적용*/
-.chats-body .header {
-  padding: 0px 20px;
 }
 
 .chat-screen .chat__messages {

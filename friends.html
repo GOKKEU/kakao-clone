@@ -11,35 +11,38 @@
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
-    <!--status-bar start-->
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span class="status-bar__clock">13:54</span>
-      </div>
-      <div class="status-bar__column">
-        <!--item 무료사용 Font Awesome 사용-->
-        <i class="fas fa-clock"></i>
-        <i class="fas fa-volume-mute"></i>
-        <i class="fas fa-wifi"></i>
-        <i class="fas fa-battery-full"></i>
-        <span class="status-bar__battery-level">100%</span>
-      </div>
+    <div class="header-wrapper">
+          <!--status-bar start-->
+          <div class="status-bar">
+            <div class="status-bar__column">
+              <span class="status-bar__kt">KT</span>
+            </div>
+            <div class="status-bar__column">
+              <!--item 무료사용 Font Awesome 사용-->
+              <i class="fas fa-clock"></i>
+              <i class="fas fa-volume-mute"></i>
+              <i class="fas fa-wifi"></i>
+              <span class="status-bar__battery-level">100%</span>
+              <i class="fas fa-battery-full"></i>
+              <span class="status-bar__clock">오전 6:31</span>
+            </div>
+          </div>
+          <!--status-bar end-->
+      <!--header start-->
+      <header class="header">
+        <div class="header__column">
+          <h1 class="header__title">친구</h1>
+        </div>
+        <div class="header__column">
+          <span class="header_icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="header_icon">
+            <i class="fas fa-cog"></i>
+          </span>
+        </div>
+      </header>
     </div>
-    <!--status-bar end-->
-    <!--header start-->
-    <header class="header">
-      <div class="header__column">
-        <h1 class="header__title">Friends</h1>
-      </div>
-      <div class="header__column">
-        <span class="header_icon">
-          <i class="fas fa-search"></i>
-        </span>
-        <span class="header_icon">
-          <i class="fas fa-cog"></i>
-        </span>
-      </div>
-    </header>
     <!--header end-->
     <!--main-->
     <main class="friends">
@@ -50,10 +53,10 @@
             <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
-                Nicolas Serrano
+                GOKKEU
               </span>
               <span class="friend__status">
-                nomadcoders.co
+                gokkeu.github.io/kakao-clone
               </span>
             </div>
           </div>
@@ -63,39 +66,90 @@
       <!--중간 Plus title start-->
       <div class="friends__plus">
         <h5 class="friends__title">
-          Plus friend
+          생일인 친구
         </h5>
         <!--중간 Plus title end-->
         <div class="friends__friend friend ">
           <div class="friend__column">
-            <img src="images/avatar.jpg" class="friend__avatar" />
+            <img src="images/cake.jpg" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
-                Plus Freind
+                친구의 생일을 확인해 보세요!
               </span>
             </div>
+          </div>
+          <div class="friend__column">
+              <span class="chat__side">
+                1 >
+              </span>         
           </div>
         </div>
         <!--중간 Friends list start-->
       </div>
       <ul class="friends__list">
-        <h5 class="friends__title">Friends 14</h5>
+        <h5 class="friends__title">친구 1</h5>
         <!--친구 프로필 start-->
         <li class="friends__friend friend friend--lg">
           <div class="friend__column">
             <img src="images/avatar.jpg" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
-                Nicolas Serrano
+                민주
               </span>
               <span class="friend__status">
-                nomadcoders.co
+                *^^*
               </span>
             </div>
           </div>
           <div class="friend__column">
             <div class="friend__now-listening">
-              <span>
+              <span class>
+                FTISLAND (FT ComadCoders)
+              </span>
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+        </li>
+        <!--친구 프로필 end-->
+        <!--친구 프로필 start-->
+        <li class="friends__friend friend friend--lg">
+          <div class="friend__column">
+            <img src="images/avatar.jpg" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                민주
+              </span>
+              <span class="friend__status">
+                *^^*
+              </span>
+            </div>
+          </div>
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span class>
+                FTISLAND (FT ComadCoders)
+              </span>
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+        </li>
+        <!--친구 프로필 end-->
+        <!--친구 프로필 start-->
+        <li class="friends__friend friend friend--lg">
+          <div class="friend__column">
+            <img src="images/avatar.jpg" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                민주
+              </span>
+              <span class="friend__status">
+                *^^*
+              </span>
+            </div>
+          </div>
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span class>
                 FTISLAND (FT ComadCoders)
               </span>
               <i class="fas fa-play"></i>
@@ -104,6 +158,7 @@
         </li>
         <!--친구 프로필 end-->
       </ul>
+      
       <!--중간 Friends list end-->
     </main>
     <!--main end-->
@@ -117,12 +172,14 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <!--badge만들기-->
+            <div class="nav__badge">8</div>
             <i class="far fa-comment"></i>
           </a>
         </li>
         <li class="nav__list-item">
           <a href="find.html" class="nav__list-link">
-            <i class="fas fa-search"></i>
+            #
           </a>
         </li>
         <li class="nav__list-item">
