@@ -1,3 +1,57 @@
-.find {
-  padding: 0px 20px;
+.find__write-lineBox {
+  /*바닥 고정 */
+  position: fixed;
+  width: 100%;
+  bottom: 70px;
+}
+
+.find__write {
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  margin: auto 0;
+  padding: 20px 60px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.find__write:focus {
+  /*input을 클릭했을때 파란 테두리를 지우기위해 사용 코드  */
+  outline: none;
+  /*줄어들때 상하(수직 방향)의 이동 거리 값을 지정*/
+  transform: translateY(-800px);
+  /*사용자랑 가깝게*/
+  z-index: 3;
+}
+.find__write:focus ~ .find__icon {
+  transform: translateY(-800px);
+}
+.find__icon-right {
+  position: absolute;
+  right: 35px;
+  opacity: 0.7;
+  cursor: pointer;
+  bottom: 20px;
+}
+
+.find__icon-left {
+  position: absolute;
+  left: 35px;
+  bottom: 20px;
+  font-weight: 600;
+  color: #fce006;
+  cursor: pointer;
+}
+.find__line {
+  position: absolute;
+  bottom: 8px;
+  border-radius: 10px;
+  border: 3px solid #fce006;
+  height: 45px;
+  width: 90%;
+  left: 25px;
+
+  /*클릭 이벤트 허용 여부 :none을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 한다*/
+  pointer-events: none;
 }

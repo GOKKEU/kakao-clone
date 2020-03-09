@@ -12,8 +12,8 @@
   </head>
   <body>
     <div class="header-wrapper">
-       <!--status-bar start-->
-       <div class="status-bar">
+      <!--status-bar start-->
+      <div class="status-bar">
         <div class="status-bar__column">
           <span class="status-bar__kt">KT</span>
         </div>
@@ -28,38 +28,53 @@
         </div>
       </div>
       <!--status-bar end-->
-    <!--header start-->
-    <header class="header">
-      <div class="header__column">
-        <h1 class="header__title">#날씨</h1>
-      </div>
-      <div class="header__column">
-        <span class="header_icon">
+      <!--search btn start-->
+      <div class="find__write-lineBox">
+        <input
+          type="text"
+          placeholder="검색어를 입력해주세요"
+          class="find__write"
+        />
+        <div class="find__icon-left find__icon">
+          <a class="">
+            #
+          </a>
+        </div>
+        <div class="find__icon-right find__icon">
           <i class="fas fa-search"></i>
-        </span>
-        <span class="header_icon">
-          <i class="fas fa-cog"></i>
-        </span>
+        </div>
+        <div class="find__line find__icon"></div>
       </div>
-    </header>
-    <!--header end-->
+      <div class="find__write-container"></div>
+      <!--search btn end-->
+      <!--header start-->
+      <header class="header">
+        <div class="header__column">
+          <h1 class="header__title">#날씨</h1>
+        </div>
+        <div class="header__column">
+          <span class="header_icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="header_icon">
+            <i class="fas fa-cog"></i>
+          </span>
+        </div>
+      </header>
+      <!--header end-->
     </div>
     <!--main start -->
     <main class="find">
-      
       <ul class="find__recommended">
         <h5 class="find__title">1.디자인2.날씨받아오기3.입력창</h5>
         <!--친구 프로필 start-->
         <li class="find__friend friend friend--lg">
-          <div class="friend__column">
-
-          </div>
-          <div class="friend__column">
-
-          </div>
+          <div class="friend__column"></div>
+          <div class="friend__column"></div>
         </li>
         <!--친구 프로필 end-->
       </ul>
+    </main>
     <!--main end -->
     <!--Navigator start-->
     <nav class="nav">
