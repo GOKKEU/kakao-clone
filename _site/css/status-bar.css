@@ -1,0 +1,16 @@
+.status-bar {
+  display: flex; /*가로 ---> 세로*/
+  justify-content: space-between; /*두 div사이에 공간을 만듬*/
+  margin-bottom: 25px;
+  opacity: 0.6; /*투명도 조정*/
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px 0px;
+}
+
+.status-bar i {
+  font-size: 14px;
+}
+.status-bar__clock {
+  margin-left: 10px;
+}

@@ -1,0 +1,25 @@
+.settings {
+  border-top: 1px solid #f7f7f7;
+}
+.settings .settings__sections {
+  padding: 30px 0px;
+}
+
+.settings__setting .settings__icon {
+  margin-right: 20px;
+}
+.settings__setting .settings__title {
+  font-size: 22px;
+  font-weight: 300;
+}
+.settings__icon i {
+  font-size: 20px;
+}
+.settings .settings__setting {
+  margin-bottom: 30px;
+}
+/*또 다른 섹션을 밑에 추가할때
+ 마지막 li는 아래 코드 값을 갖음*/
+.settings .settings__setting:last-child {
+  margin-bottom: 0;
+}

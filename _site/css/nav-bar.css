@@ -1,0 +1,57 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  /*고정 position:fixed는 width나 height이 필요하다*/
+  padding: 20px 50px; /*아이콘  가운데 시키기 위한 코드*/
+  bottom: 0px; /*하단에 위치시키기 위한 코드*/
+  left: 0px;
+  border-top: 1px solid #f7f7f7;
+  background-color: #fcfcfc;
+}
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav i {
+  font-size: 20px;
+}
+
+.nav .nav__list-link {
+  position: relative;
+  font-weight: 600;
+  font-size: 25px;
+}
+.nav .nav__badge {
+  position: absolute;
+  /*.nav__list-link is the father of .nav__badge
+ .nav__badge is the one that we are goin to make absolute so that means the father has to be relative.*/
+  top: -7px;
+  right: -7px;
+  color: white;
+  background-color: #dc5d46;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  /*수자를 수짓,수평 가운데 정렬을 하기위한 코드*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*모서리 둥글게*/
+  border-radius: 50%;
+}
+/*navbar 애니메이션*/
+@keyframes showNavBar {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: none;
+  }
+}
+.nav {
+  /*1초늦게시작*/
+  animation-delay: 1s;
+  animation: showNavBar 0.5s ease-out forwards;
+  transform: translateY(50px);
+}

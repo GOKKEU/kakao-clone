@@ -1,0 +1,87 @@
+.more {
+  padding: 0px 20px;
+}
+
+.more .more__header-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.more .header-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more .header-btn__title {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.more .header-btn__icon {
+  font-size: 16px;
+}
+/*pay 부분*/
+.more .more__pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ededeb;
+  margin: 20px 0px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.more__pay-cash {
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: 800;
+}
+.more__pay-cash span:last-child {
+  font-weight: 400;
+  font-size: 16px;
+}
+.more__send-btn {
+  font-size: 15px;
+  padding: 0px 10px;
+  font-weight: 600;
+}
+.more__pay-btn {
+  border-left: 1px solid lightgray;
+  font-size: 15px;
+  padding: 0px 10px;
+  font-weight: 600;
+}
+/*section 부분*/
+.more__section {
+  display: flex;
+  border-top: 1px solid #f7f7f7;
+  border-bottom: 1px solid #f7f7f7;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.more__section a {
+  opacity: 0.5;
+}
+.more__section i {
+  padding-right: 5px;
+}
+.more__section_envelope,
+.more__section_calendar {
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+.more__section_envelope:hover,
+.more__section_calendar:hover {
+  background-color: lightslategrey;
+}
+.more__section_calendar:link {
+  background-color: lightslategrey;
+}
