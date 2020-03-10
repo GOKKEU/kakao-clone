@@ -10,23 +10,25 @@
 
 ### 사용 사이트
 
-| 이름           | 설명(URL)                                                                                         |
-| -------------- | ------------------------------------------------------------------------------------------------- |
-| W3schools      | https://www.w3schools.com/css/css3_transitions.asp                                                |
-| MDN            | https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY                    |
-| ColorZilla     | https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en       |
-| PageRulerRedux | https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en |
-| Prettier       | https://prettier.io/                                                                              |
-| ESLint         | 코드에서 발견 된 문제 패턴을 식별하기위한 정적 코드 분석 도구                                     |
-| Emmet          | 에밋은 HTML, XML, XSL 문서 등을 편집할 때 빠른 코딩을 위해 사용하는 플러그인이다.                 |
-| Font Awesome   | 무료 아이콘 사이트 (적용예시 https://www.w3schools.com/icons/fontawesome5_intro.asp )             |
-| Gogle font     | https://fonts.google.com/                                                                         |
-| Reset.css      | https://meyerweb.com/eric/tools/css/reset/​                                                       |
-| Uigradients    | https://uigradients.com/#Memariani                                                                |
-| Pinterest      | https://www.pinterest.co.kr/                                                                      |
-| Dribbble       | https://dribbble.com/                                                                             |
-| Flaticon       | https://www.flaticon.com/free-icon/girl_163847?term=profile&page=1&position=57                    |
-| PNG->JPG       | https://png2jpg.com/ko/                                                                           |
+| 이름            | 설명(URL)                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------- |
+| W3schools       | https://www.w3schools.com/css/css3_transitions.asp                                                |
+| MDN             | https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY                    |
+| ColorZilla      | https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en       |
+| PageRulerRedux  | https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en |
+| Prettier        | https://prettier.io/                                                                              |
+| ESLint          | 코드에서 발견 된 문제 패턴을 식별하기위한 정적 코드 분석 도구                                     |
+| Emmet           | 에밋은 HTML, XML, XSL 문서 등을 편집할 때 빠른 코딩을 위해 사용하는 플러그인이다.                 |
+| Font Awesome    | 무료 아이콘 사이트 (적용예시 https://www.w3schools.com/icons/fontawesome5_intro.asp )             |
+| Gogle font      | https://fonts.google.com/                                                                         |
+| Reset.css       | https://meyerweb.com/eric/tools/css/reset/​                                                       |
+| Uigradients     | https://uigradients.com/#Memariani                                                                |
+| Pinterest       | https://www.pinterest.co.kr/                                                                      |
+| Dribbble        | https://dribbble.com/                                                                             |
+| Flaticon        | https://www.flaticon.com/free-icon/girl_163847?term=profile&page=1&position=57                    |
+| PNG->JPG        | https://png2jpg.com ko/                                                                           |
+| box-shadow 참고 | https://www.tabmode.com/homepage/box-shadow.html                                                  |
+| 개발환경 참고   | https://poiemaweb.com/js-hello-world                                                              |
 
 ---
 
@@ -59,3 +61,23 @@ animation-timing-function
 
 - https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2
 - https://www.codingfactory.net/10942
+
+#### 로컬스토리지
+
+작은 자바스크립트 정보를 보관
+키,값으로 저장
+키 중보되면 나중것으로
+
+사용자를 기억하는 방법
+로컬르토리지는 string만
+obj -> string 변환
+JSON.stringify(toDos)
+
+console.dir(event.target); /_event.tartget의 상세 내용 알수 있다_/
+console.log()
+
+#### MDN 검색 자료
+
+| 코드                              | 링크                                                           |
+| --------------------------------- | -------------------------------------------------------------- |
+| | https://developer.mozilla.org/ko/docs/Web/API/ChildNode/remove |

@@ -1,8 +1,9 @@
+
 .find__write-lineBox {
   /*바닥 고정 */
   position: fixed;
   width: 100%;
-  bottom: 70px;
+  bottom: 66px;
 }
 
 .find__write {
@@ -32,6 +33,16 @@
 .find__write:focus ~ .find__line {
   position: fixed;
   top: 75px;
+}
+.find__write-container ul {
+  position: fixed;
+  top: 180px;
+  background-color: bisque;
+}
+.find__write-container ul :focus ~ .find__write-container {
+  position: fixed;
+  background-color: ;
+  
 }
 .find__write:focus ~ .find__write-container {
   position: fixed;

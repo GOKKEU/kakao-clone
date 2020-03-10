@@ -10,7 +10,7 @@
     <!--CSS 사용하기 위한 코드-->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body class="find-body">
     <div class="header-wrapper">
       <!--status-bar start-->
       <div class="status-bar">
@@ -31,9 +31,9 @@
       <!--search btn start-->
       <div class="find__write-lineBox">
         <input
-          type="text"
+          type="search"
           placeholder="검색어를 입력해주세요"
-          class="find__write"
+          class="find__write js-toDoForm"
         />
         <div class="find__icon-left find__icon">
           <a class="">
@@ -44,7 +44,9 @@
           <i class="fas fa-search"></i>
         </div>
         <div class="find__line"></div>
-        <div class="find__write-container"></div>
+        <div class="find__write-container">
+          <ul class="js-toDoList"></ul>
+        </div>
       </div>
       <!--search btn end-->
       <!--header start-->
@@ -94,7 +96,7 @@
     <!--main start -->
     <main class="find">
       <ul class="find__recommended">
-        <h5 class="find__title">1.디자인2.날씨받아오기3.입력창</h5>
+        <h5 class="find__title"></h5>
         <!--친구 프로필 start-->
         <li class="find__friend friend friend--lg">
           <div class="friend__column"></div>
@@ -112,5 +114,6 @@
       </span>
     </div>
     <script src="js/clock.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
