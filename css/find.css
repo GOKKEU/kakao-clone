@@ -15,6 +15,7 @@
   padding: 20px 60px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  box-shadow: 2px 7px 10px 3px #999;
 }
 .find__write:focus {
   /*input을 클릭했을때 파란 테두리를 지우기위해 사용 코드  */
@@ -23,7 +24,6 @@
   position: fixed;
   top: 65px;
   background-color: white;
-  box-shadow: 3px 3px 3px 3px #999;
 }
 .find__write:focus ~ .find__icon {
   position: fixed;
@@ -33,21 +33,41 @@
   position: fixed;
   top: 75px;
 }
-.find__write-container ul {
-  position: fixed;
-  top: 180px;
-  background-color: bisque;
-}
-.find__write-container ul :focus ~ .find__write-container {
-  position: fixed;
-  background-color: ;
-}
+
 .find__write:focus ~ .find__write-container {
+  display: block;
   position: fixed;
   width: 100%;
   height: 100%;
   top: 120px;
   background-color: white;
+}
+
+.find__write-container {
+  display: none;
+  padding: 15px;
+  background-color: white;
+}
+
+.find__write-container button {
+  position: fixed;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0px 0px 2px 2px lightgrey;
+  color: lightgrey;
+}
+
+.find__write-container li {
+  margin: 15px;
+  font-size: 17px;
+  font-weight: 600;
 }
 .find__icon-right {
   position: absolute;
@@ -80,18 +100,58 @@
 /*날씨 부분*/
 .find__imformation {
   display: flex;
+  font-size: 16px;
+  font-weight: 600;
+}
+.find_weather_title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 20px;
 }
 .find__toDayWeather {
+  margin-top: 20px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  box-shadow: 1px 1px 4px 0px #999;
+  flex-direction: row;
 }
 .find__column {
+  width: 100%;
+  margin: auto 0;
   display: flex;
+  flex-direction: column;
   padding: 15px;
-  border: 1px solid;
   justify-content: center;
+  align-items: center;
 }
 .find__column span {
-  margin: auto;
+  width: 100%;
+  margin: 10px;
+}
+
+.addingcss {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 120px;
+}
+.iconaddingcss {
+  position: fixed;
+  top: 85px;
+}
+.lineaddingcss {
+  position: fixed;
+  top: 75px;
+}
+.lnputaddingcss {
+  outline: none;
+  position: fixed;
+  top: 65px;
+  background-color: red;
+}
+
+.settings__setting {
+  padding: 15px 20px;
+  border-top: 1px solid lightgrey;
 }

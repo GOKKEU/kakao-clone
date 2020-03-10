@@ -17,6 +17,7 @@
 }
 .settings .settings__setting {
   margin-bottom: 30px;
+  padding-left: 20px;
 }
 /*또 다른 섹션을 밑에 추가할때
  마지막 li는 아래 코드 값을 갖음*/
