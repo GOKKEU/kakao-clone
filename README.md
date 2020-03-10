@@ -10,25 +10,26 @@
 
 ### 사용 사이트
 
-| 이름            | 설명(URL)                                                                                         |
-| --------------- | ------------------------------------------------------------------------------------------------- |
-| W3schools       | https://www.w3schools.com/css/css3_transitions.asp                                                |
-| MDN             | https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY                    |
-| ColorZilla      | https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en       |
-| PageRulerRedux  | https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en |
-| Prettier        | https://prettier.io/                                                                              |
-| ESLint          | 코드에서 발견 된 문제 패턴을 식별하기위한 정적 코드 분석 도구                                     |
-| Emmet           | 에밋은 HTML, XML, XSL 문서 등을 편집할 때 빠른 코딩을 위해 사용하는 플러그인이다.                 |
-| Font Awesome    | 무료 아이콘 사이트 (적용예시 https://www.w3schools.com/icons/fontawesome5_intro.asp )             |
-| Gogle font      | https://fonts.google.com/                                                                         |
-| Reset.css       | https://meyerweb.com/eric/tools/css/reset/​                                                       |
-| Uigradients     | https://uigradients.com/#Memariani                                                                |
-| Pinterest       | https://www.pinterest.co.kr/                                                                      |
-| Dribbble        | https://dribbble.com/                                                                             |
-| Flaticon        | https://www.flaticon.com/free-icon/girl_163847?term=profile&page=1&position=57                    |
-| PNG->JPG        | https://png2jpg.com ko/                                                                           |
-| box-shadow 참고 | https://www.tabmode.com/homepage/box-shadow.html                                                  |
-| 개발환경 참고   | https://poiemaweb.com/js-hello-world                                                              |
+| 이름             | 설명(URL)                                                                                         |
+| ---------------- | ------------------------------------------------------------------------------------------------- |
+| W3schools        | https://www.w3schools.com/css/css3_transitions.asp                                                |
+| MDN              | https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY                    |
+| ColorZilla       | https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en       |
+| PageRulerRedux   | https://chrome.google.com/webstore/detail/page-ruler-redux/giejhjebcalaheckengmchjekofhhmal?hl=en |
+| Prettier         | https://prettier.io/                                                                              |
+| ESLint           | 코드에서 발견 된 문제 패턴을 식별하기위한 정적 코드 분석 도구                                     |
+| Emmet            | 에밋은 HTML, XML, XSL 문서 등을 편집할 때 빠른 코딩을 위해 사용하는 플러그인이다.                 |
+| Font Awesome     | 무료 아이콘 사이트 (적용예시 https://www.w3schools.com/icons/fontawesome5_intro.asp )             |
+| Gogle font       | https://fonts.google.com/                                                                         |
+| Reset.css        | https://meyerweb.com/eric/tools/css/reset/​                                                       |
+| Uigradients      | https://uigradients.com/#Memariani                                                                |
+| Pinterest        | https://www.pinterest.co.kr/                                                                      |
+| Dribbble         | https://dribbble.com/                                                                             |
+| Flaticon         | https://www.flaticon.com/free-icon/girl_163847?term=profile&page=1&position=57                    |
+| PNG->JPG         | https://png2jpg.com ko/                                                                           |
+| box-shadow 참고  | https://www.tabmode.com/homepage/box-shadow.html                                                  |
+| 개발환경 참고    | https://poiemaweb.com/js-hello-world                                                              |
+| open weather api | https://openweathermap.org/api                                                                    |
 
 ---
 
@@ -48,8 +49,8 @@
 2. 카카오톡 v8.7.8 기능 추가하기
 
 - 친구 페이지: 한글로 변경 [O],실기간 시간[O]
-- 채팅 페이지: 채팅 입력 시 입력된 글box 생성 기능 [ ]
-- 검색 페이지: 디자인 [O] , 날씨 크로스브라우징 [ ] ,검색창 애니메이션 [O]
+- 채팅 페이지: 로컬스토리지 이용-->응용해서 채팅 페이지도 적용[]
+- 검색 페이지: 디자인 [O] , 날씨 API [O] ,검색창 애니메이션 [O],채팅 입력 시 입력된 글 box 생성 기능[O],날씨 디자인 변경[]
 - more페이지 : 디자인 변경(한글/버튼/캘린더 일정버튼) [O]
 - 캘린더: 피벗슬라이드 [ ] , 캘린더 일정 추가 기능 [ ] , 왼쪽에서 나타나는 메뉴바 [ ] , 일정별 색상 변경 [ ]
 
@@ -76,8 +77,12 @@ JSON.stringify(toDos)
 console.dir(event.target); /_event.tartget의 상세 내용 알수 있다_/
 console.log()
 
+#### API
+
+다른 서버로 부터 손쉽게 데이터를 가져올 수 있는 수단
+
 #### MDN 검색 자료
 
-| 코드                              | 링크                                                           |
-| --------------------------------- | -------------------------------------------------------------- |
-| | https://developer.mozilla.org/ko/docs/Web/API/ChildNode/remove |
+| 코드 | 링크                                                           |
+| ---- | -------------------------------------------------------------- |
+|      | https://developer.mozilla.org/ko/docs/Web/API/ChildNode/remove |

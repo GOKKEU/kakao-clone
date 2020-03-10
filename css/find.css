@@ -1,4 +1,3 @@
-
 .find__write-lineBox {
   /*바닥 고정 */
   position: fixed;
@@ -42,7 +41,6 @@
 .find__write-container ul :focus ~ .find__write-container {
   position: fixed;
   background-color: ;
-  
 }
 .find__write:focus ~ .find__write-container {
   position: fixed;
@@ -78,4 +76,22 @@
 
   /*클릭 이벤트 허용 여부 :none을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 한다*/
   pointer-events: none;
+}
+/*날씨 부분*/
+.find__imformation {
+  display: flex;
+}
+.find__toDayWeather {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.find__column {
+  display: flex;
+  padding: 15px;
+  border: 1px solid;
+  justify-content: center;
+}
+.find__column span {
+  margin: auto;
 }

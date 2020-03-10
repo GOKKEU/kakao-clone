@@ -95,15 +95,35 @@
     </div>
     <!--main start -->
     <main class="find">
-      <ul class="find__recommended">
-        <h5 class="find__title"></h5>
-        <!--친구 프로필 start-->
-        <li class="find__friend friend friend--lg">
-          <div class="friend__column"></div>
-          <div class="friend__column"></div>
-        </li>
-        <!--친구 프로필 end-->
-      </ul>
+      <div class="find__imformation">
+        <!--날씨 start-->
+        <div class="find__toDayWeather ">
+          <div class="find__column js-place"></div>
+          <div class="find__column">
+            <span class="js-weather"></span>
+            <span class="js-temp"></span>
+          </div>
+        </div>
+        <!--다음날 날씨-->
+        <div class="find__toDayWeather ">
+        </div>
+      </div>
+      <section class="settings__sections">
+        <ul class="settings_list">
+          <li class="settings__setting">
+            <span class="settings__icon"><i class="fas fa-lock"></i></span>
+            <span class="settings__title">Privacy</span>
+          </li>
+          <li class="settings__setting">
+            <span class="settings__icon"><i class="far fa-bell"></i></span>
+            <span class="settings__title">Notification</span>
+          </li>
+          <li class="settings__setting">
+            <span class="settings__icon"><i class="far fa-user"></i></span>
+            <span class="settings__title">Friends</span>
+          </li>
+        </ul>
+      </section>
     </main>
     <!--main end -->
 
@@ -115,5 +135,6 @@
     </div>
     <script src="js/clock.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
