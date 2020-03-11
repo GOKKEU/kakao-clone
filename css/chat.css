@@ -1,7 +1,6 @@
 .header-wrapper {
   background-color: white;
-  box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.08),
-    inset 0 -3px 0px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.08);
   /*상단 고정 코드*/
   position: fixed;
   width: 100%;
@@ -98,7 +97,7 @@
   border: none;
   width: 100%;
   /*입력창을 가운데 위치하게 하는 코드*/
- 
+
   margin: 0 auto;
   /*크기 줄어들때 부드럽게 보이는 효과*/
   /*transition: all 0.4s ease-in;대신 세부 요소 변경하기 위해 코드 변경*/
