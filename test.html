@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--emmet사용 ,사용언어-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chart | Kakao Clone</title>
+    <!--무료폰트를 사용하기 위한 코드-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--CSS 사용하기 위한 코드-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  </head>
+  <body class="calendar">
+    <!--상단을 고정시키기 위한 코드-->
+    <div class="  header-wrapper">
+      <!--status-bar start-->
+      <div class="status-bar">
+       <div class="status-bar__column">
+         <span class="status-bar__kt">KT</span>
+       </div>
+       <div class="status-bar__column">
+         <!--item 무료사용 Font Awesome 사용-->
+         <i class="fas fa-clock"></i>
+         <i class="fas fa-volume-mute"></i>
+         <i class="fas fa-wifi"></i>
+         <span class="status-bar__battery-level">100%</span>
+         <i class="fas fa-battery-full"></i>
+         <span class="status-bar__clock js-clock"><p>00:00</p></span>
+       </div>
+     </div>
+     <!--status-bar end-->
+      <!--header start-->
+  <header class=" header">
+    <div class="header__header-column">
+      <a href="index.html" class="header__back-btn">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <h1 class="header__title js-month">3월</h1>
+      <select><option>test</option></select>
+    </div>
+    <div class="header__header-column">
+      <!--bars가 옆 위치-->
+      <span class="header_icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    </div>
+  </header>
+  <!--header end-->
+   </div>
+ 
+     <div class="slide">
+  <ul class="clearfix">
+    <li class=" box1 box">
+      <div>
+      <ul class="weekdays">
+        <li>일</li>
+        <li>월</li>
+        <li>화</li>
+        <li>수</li>
+        <li>목</li>
+        <li>금</li>
+        <li>토</li>
+      </ul>
+      <div class="days"></div>
+    </li>
+    <li class=" box2 box"></li>
+    <li class=" box3 box"></li>
+  </ul>
+</div>
+    
+   
+    
+    <!--MediaQuery
+    <div class="bigScreen">
+      <span class="bigScreen__text">
+        Please make your screen small
+      </span>
+    </div>-->
+  </body>
+  <script src="js/clock.js"></script>
+  <script src="js/calendar.js"></script>
+  <!--<script src="js/jqMouseWheelSlide.js"></script>-->
+  
+  </body>
+  
+</html>
