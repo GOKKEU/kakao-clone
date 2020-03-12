@@ -17,7 +17,7 @@ const arrayli = [];
 function addLi(length) {
   for (let i = 0; i < length; i++) {
     const span = document.createElement("span");
-    span.innerHTML = i + 1;
+    span.innerHTML = i + 2;
     arrayli.push(span);
   }
 }
@@ -49,6 +49,7 @@ function paintDays() {
 
   addLi(firstDay); //앞에 li추가
   addLi(lastDate); //// 마지막 날짜 숫자까지 li추가
+  console.log(lastDate);
   addLi(42 - lastDate); //뒤에 li추가
 
   const newArr = chunk(arrayli, 7);

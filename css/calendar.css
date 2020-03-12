@@ -19,7 +19,7 @@
 .calendar__header {
   display: flex;
   justify-content: space-between;
-  margin:20px 10px ;
+  margin:20px 1px ;
 }
 
 .calendar__header i,
