@@ -6,11 +6,13 @@ const currentDays = date.getDate();
 //1월 : 0 부터시작! 3월은 2 따라서 1을 더해준다.
 const currentMonth = date.getMonth() + 1;
 const currentYear = date.getFullYear();
+
 const weekdays = date.getDay(); //일:0 1:월 2:화 수:3 목:4 금:5 토:6
-function getDateObj(month) {
+
+function getDateObj(month,year) {
   const date = {
-    firstDay: new Date(currentYear, month - 1, 1).getDay(), // 현재 달의 1일 요일
-    lastDate: new Date(currentYear, month, 0).getDate() // setting day parameter to 0 means one day less than firs day of the month which is last day of the previous moth.
+    firstDay: new Date(year, month - 1, 1).getDay(), // 현재 달의 1일 요일
+    lastDate: new Date(year, month, 0).getDate() // setting day parameter to 0 means one day less than firs day of the month which is last day of the previous moth.
   };
   return date;
 }
@@ -67,8 +69,8 @@ function printArr(arr, currentM) {
   }
 }
 
-function paintDays(currentM, arr) {
-  const dateObj = getDateObj(currentM);
+function paintDays(currentM, arr,obj) {
+  const dateObj = obj;
   const firstDay = dateObj["firstDay"];
   const lastDate = dateObj["lastDate"];
 
@@ -85,16 +87,16 @@ function paintDays(currentM, arr) {
   printArr(newArr, currentM);
 }
 
-function printContainer(currentM) {
-  console.log("page생성:" + currentM);
+function printContainer(month,year) {
+
   const div = document.createElement("div");
-  div.id = currentM;
+  div.id = month;
   div.classList.add("box");
   monthContainer.appendChild(div);
   //div를 id값 순서로 정렬
   const arr = [];
 
-  paintDays(currentM, arr);
+  paintDays(month, arr,getDateObj(month,year));
 }
 
 function init() {
