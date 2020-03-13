@@ -1,30 +1,24 @@
-.calendar-body {
-  margin: 80px 0px 0px;
-  padding: 0px;
-}
-
 .calendar-body .header-wrapper {
-  padding-bottom: 0px;
+  padding-bottom: 20px;
 }
 .calendar-body .status-bar {
   padding: 0px 10px;
   margin: 10px;
 }
-
-.calendar__header-left {
+.weekdays {
   display: flex;
-  margin: 20px 0px 0px;
+  margin-top: 10px;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 1px;
   position: fixed;
   top: 35px;
   left: 30px;
 }
-.calendar__header-right {
-  display: flex;
-  margin: 20px 0px 0px;
-  position: fixed;
-  top: 35px;
-  right: 30px;
-}
+
 .calendar__header i,
 .calendar__header select,
 .calendar__header h1 {
@@ -33,20 +27,18 @@
 .calendar__header-col {
   display: flex;
 }
-
+.calendar-body .weekdays li {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  width: 200%;
+}
 .boxwrap div ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.boxwrap div li {
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  width: 100%;
-  padding-bottom: 90px;
-}
-/*좌-우로 위치하도록 하는 코드*/
+
 .boxwrap {
   white-space: nowrap;
 }
@@ -54,6 +46,7 @@
   display: inline-block;
   width: 120%;
 }
+<<<<<<< HEAD
 /*스크롤 안보이게 하기
 /* IE and Edge */
 /* Firefox */
@@ -67,3 +60,5 @@ body::-webkit-scrollbar {
   display: none;
 }
 */
+=======
+>>>>>>> parent of 1fbc005... scroll기능 1차

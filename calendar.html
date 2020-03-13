@@ -22,6 +22,7 @@
 
       $(function() {
         $("html, body").on("mousewheel DOMMouseScroll", function(e) {
+<<<<<<< HEAD
           const boxContainer = document.querySelector(".boxwrap");
 
           //스크롤이 화면 끝에 위치했을때
@@ -36,6 +37,43 @@
               console.log("노드X 이전해로 리로드 ");
             }
             /*조건문 END*/
+=======
+          var wheelDelta = e.originalEvent.wheelDelta;
+
+          if (wheelDelta > 0) {
+            console.log("up");
+            $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+
+            /*애니메이션*/
+            $(this)
+              .stop()
+              .animate(
+                {
+                  scrollLeft: -20 + "px" //스크롤시 왼쪽에서 부터 0px 위치로 스크롤이 돌아온다!
+                },
+                {
+                  duration: 1000,
+                  complete: function() {
+                    const boxContainer = document.querySelector(".boxwrap");
+
+                    const firstId = boxContainer.firstElementChild.id;
+
+                    /* id값을 int로 변경*/
+                    let firstNumber = parseInt(firstId);
+
+                    if (firstNumber > 0) {
+                      /*타이틀 수정*/
+                      document.querySelector(
+                        ".js-month"
+                      ).innerHTML = firstNumber;
+
+                      //boxContainer.firstElementChild.remove();
+                      //printContainer(lastNumber - 1);
+                    }
+                  }
+                }
+              );
+>>>>>>> parent of 1fbc005... scroll기능 1차
           } else {
             console.log("down:");
           }
@@ -63,8 +101,13 @@
       <!--status-bar end-->
     </div>
     <div class="calendar__header">
+<<<<<<< HEAD
       <div class="calendar__header-left">
         <a href="more.html" class="header__back-btn">
+=======
+      <div class="calendar__header-col">
+        <a href="index.html" class="header__back-btn">
+>>>>>>> parent of 1fbc005... scroll기능 1차
           <i class="fas fa-arrow-left"></i>
         </a>
         <h1 class="header__title js-month"></h1>
@@ -72,7 +115,7 @@
           ><option>test</option></select
         >
       </div>
-      <div class="calendar__header-right">
+      <div class="calendar__header-col">
         <span class="">
           <i class="fas fa-bars"></i>
         </span>
