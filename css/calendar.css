@@ -1,25 +1,22 @@
 .calendar-body .header-wrapper {
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
-
 .calendar-body .status-bar {
   padding: 0px 10px;
   margin: 10px;
 }
 .weekdays {
   display: flex;
-
   margin-top: 10px;
 }
-.calendar {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
+
 .calendar__header {
   display: flex;
   justify-content: space-between;
-  margin:20px 1px ;
+  margin: 20px 1px;
+  position: fixed;
+  top: 35px;
+  left: 30px;
 }
 
 .calendar__header i,
@@ -34,37 +31,18 @@
   text-align: center;
   font-size: 15px;
   font-weight: 500;
-  width: 100%;
+  width: 200%;
 }
-
-.days ul {
+.boxwrap div ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.calendar .days li {
-  text-align: center;
-  width: 100%;
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 20px;
-  margin-bottom: 60px;
-}
-
-.calendar .days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important;
-}
 
 .boxwrap {
-  display: table;
-  table-layout: fixed;
-  width: 400%;
-  height: 100%;
-  table-layout: fixed;
+  white-space: nowrap;
 }
 .box {
-  display: table-cell;
-  position: relative;
+  display: inline-block;
+  width: 100%;
 }

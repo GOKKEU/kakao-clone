@@ -83,9 +83,14 @@ console.log()
 
 #### 검색 자료
 
-| 코드            | 링크                                                                                                                                                                                     |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                 | https://developer.mozilla.org/ko/docs/Web/API/ChildNode/remove                                                                                                                           |
-| querySelector   | https://javacpro.tistory.com/36                                                                                                                                                          |
-| addEventListent | HTML이 모두 로드 되기 전에 자바스크립트 영역에서 HTML을 참조하기 때문입니다.즉, addEventListenr에서 HTML 태그를 참조할 수가 없었기 때문에 null을 참조하게 됐고 에러가 발생하는 것입니다. |
-
+| 메서드 or 기능                      | 설명(URL)                                                                                                                                                                                               |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ChildNode.remove()                  | https://developer.mozilla.org/ko/docs/Web/API/ChildNode/remove                                                                                                                                          |
+| querySelector                       | https://javacpro.tistory.com/36                                                                                                                                                                         |
+| addEventListent                     | addEventListenr에서 HTML 태그를 참조할 수가 없었기 때문에 null을 참조하게 됐고 에러가 발생 할 수 있음                                                                                                   |
+| window.onload vs \$(document).ready | https://blog.naver.com/PostView.nhn?blogId=u3478&logNo=60134222468                                                                                                                                      |
+| overflow                            | http://webberstudy.com/html-css/css-2/overflow-float-clear/                                                                                                                                             |
+| 화면 전체 만들기                    | https://codingbroker.tistory.com/56                                                                                                                                                                     |
+| 스크롤-애니메이션(완전좋음)                   | https://superkts.com/jquery/@scroll                                                                                                                                                                     |
+| 스크롤 예제                         | https://recoveryman.tistory.com/121?category=597401,http://2nusa.blogspot.com/2016/10/jquery-mouse-wheel.html,https://ys87.tistory.com/entry/JQuery-마우스휠을-이용하여-좌우-스크롤하기?category=526517 |
+| 스크롤 -css                         | https://www.w3schools.com/cssref/tryit.asp?filename=trycss_text_white-space,https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll                                               |
