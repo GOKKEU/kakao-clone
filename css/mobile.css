@@ -20,7 +20,7 @@
 }
 /*최소550px이거나 그 이상이면 되면 div가 flex되서 노란 화면이 나타난다 */
 /*새로운버전은 크기를 더 줄임*/
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 363px) {
   .bigScreen {
     display: flex;
   }

@@ -20,7 +20,7 @@
       $(function() {
         var d = false;
 
-        $("html, body").on("mousewheel DOMMouseScroll", function(e) {
+        $("html, body").on("touchmove ", function(e) {
           var wheelDelta = e.originalEvent.wheelDelta;
 
           if (wheelDelta > 0) {
