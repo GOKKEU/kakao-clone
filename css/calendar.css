@@ -1,9 +1,6 @@
 .calendar-body {
   margin: 80px 0px 0px;
   padding: 0px;
-  /*height: 100vmax;
-  width: 100vmax;*/
-  position: fixed;
 }
 
 .calendar-body .header-wrapper {
@@ -60,11 +57,10 @@
 .box {
   display: inline-block;
   align-items: center;
-  width: 180%; /*모바일 크기는 130%.....*/
-  /*모바일 세로 맞축기*/
+  width: 100%; 
   height: 100%;
-  justify-content: center;
-  padding: 0px 12px;
+  padding: 0px 5%;
+  border: solid 1px mediumvioletred;
 }
 /*스크롤 안보이게 하기*/
 /* IE and Edge */
@@ -78,3 +74,4 @@ body::-webkit-scrollbar {
   display: none;
 }
 */
+
