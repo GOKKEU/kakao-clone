@@ -3,7 +3,7 @@ const focusInput = document.querySelector(".js-toDoForm"),
   focusIine = document.querySelector(".find__line"),
   focusContainer = document.querySelector(".find__write-container"),
   focusToDo = document.querySelector(".js-toDoList"),
-  focusBtn = focusToDo.querySelectorAll("button");
+  focusChild = focusToDo.childNodes;
 
 const focused = null;
 
@@ -34,9 +34,19 @@ function mouseLeave() {
 }
 
 function init() {
-  for (var i = 0; i < focusBtn.length; i++) {
-    focusBtn.item(i).addEventListener("mouseenter", mouseEnter);
-    focusBtn.item(i).addEventListener("mouseleave", mouseLeave);
+  const TODOS_LS = "toDos";
+  const localStorageItem = localStorage.getItem(TODOS_LS);
+
+  if (localStorageItem !== null) {
+    const parseItem = JSON.parse(localStorageItem);
+    /*input이 포커스 될때*/
+    focusInput.addEventListener("focus", e => {
+      for (var i = 0; i < parseItem.length; i++) {
+        //만약에 container가 block 상태이면! 실행
+        focusChild.item(i).addEventListener("mouseenter", mouseEnter);
+        focusChild.item(i).addEventListener("mouseleave", mouseLeave);
+      }
+    });
   }
 }
 init();
