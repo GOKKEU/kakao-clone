@@ -33,19 +33,16 @@
 .calendar__header h1 {
   margin-right: 10px;
 }
-.calendar__header-col {
-  display: flex;
-}
 
 .boxwrap div ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 13%;
+  height: 13.5%;
 }
 
 .boxwrap div ul:first-child {
-  height: 9%;
+  height: 4%;
 }
 .boxwrap div li {
   text-align: center;
@@ -59,17 +56,15 @@
   height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
-  
-  
 }
 .box {
   display: inline-block;
   align-items: center;
-  width: 120%;
+  width: 130%;
   /*모바일 세로 맞축기*/
   height: 100%;
   justify-content: center;
-  padding: 0px 15px;
+  padding: 0px 12px;
 }
 /*스크롤 안보이게 하기*/
 /* IE and Edge */
