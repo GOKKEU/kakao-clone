@@ -9,10 +9,12 @@ $(function() {
   var d = false;
 
   $("html, body").on("mousewheel DOMMouseScroll", function(e) {
+    var wheelDelta = e.originalEvent.wheelDelta;
+
     if (wheelDelta > 0) {
       console.log("up");
       /*스클롤의 시작위치*/
-      var wheelDelta = e.originalEvent.wheelDelta;
+
       console.log(wheelDelta);
 
       $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
