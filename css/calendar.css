@@ -60,7 +60,7 @@
 .box {
   display: inline-block;
   align-items: center;
-  width: 130%;
+  width: 180%; /*모바일 크기는 130%.....*/
   /*모바일 세로 맞축기*/
   height: 100%;
   justify-content: center;

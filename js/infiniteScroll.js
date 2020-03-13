@@ -1,22 +1,22 @@
+function myFunction() {
+  document.querySelector(".boxwrap").style.background = "pink";
+}
+
 $(document).ready(function() {
-  console.log("first Page Load");
   printContainer(currentMonth);
   printContainer(currentMonth + 1);
-  //  window.scrollTo(300, 0);
+  document.querySelector(".boxwrap").addEventListener("touchmove", myFunction);
+
+  console.log("fist");
 });
 
+//마우스 휠 이벤시 시!
 $(function() {
-  var d = false;
-
   $("html, body").on("mousewheel DOMMouseScroll", function(e) {
     var wheelDelta = e.originalEvent.wheelDelta;
 
     if (wheelDelta > 0) {
       console.log("up");
-      /*스클롤의 시작위치*/
-
-      console.log(wheelDelta);
-
       $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
 
       /*애니메이션*/
@@ -30,7 +30,7 @@ $(function() {
             duration: 1000,
             complete: function() {
               const boxContainer = document.querySelector(".boxwrap");
-              console.dir(boxContainer);
+
               const firstId = boxContainer.firstElementChild.id;
 
               /* id값을 int로 변경*/
@@ -67,6 +67,7 @@ $(function() {
             duration: 1000,
             complete: function() {
               const boxContainer = document.querySelector(".boxwrap");
+
               const lastId = boxContainer.lastElementChild.id;
 
               /* id값을 int로 변경*/
@@ -74,7 +75,6 @@ $(function() {
 
               /*해당 lastId가 12면 END*/
               if (lastNumber < 12) {
-                console.log("타이틀 수정");
                 /*타이틀 수정*/
                 document.querySelector(".js-month").innerHTML = lastId;
 
