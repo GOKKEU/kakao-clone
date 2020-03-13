@@ -1,6 +1,9 @@
 .calendar-body {
   margin: 80px 0px 0px;
   padding: 0px;
+  /*height: 100vmax;
+  width: 100vmax;*/
+  position: fixed;
 }
 
 .calendar-body .header-wrapper {
@@ -13,14 +16,14 @@
 
 .calendar__header-left {
   display: flex;
-  margin: 20px 0px 0px;
+
   position: fixed;
   top: 35px;
   left: 30px;
 }
 .calendar__header-right {
   display: flex;
-  margin: 20px 0px 0px;
+
   position: fixed;
   top: 35px;
   right: 30px;
@@ -38,27 +41,45 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 13%;
+}
+
+.boxwrap div ul:first-child {
+  height: 9%;
 }
 .boxwrap div li {
   text-align: center;
   font-size: 15px;
   font-weight: 500;
-  width: 100%;
-  padding-bottom: 90px;
 }
 /*좌-우로 위치하도록 하는 코드*/
 .boxwrap {
   white-space: nowrap;
+  /*모바일 세로 맞추기*/
+  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  margin: 0 auto;
+  
+  
 }
 .box {
   display: inline-block;
-  width: 100%;
+  align-items: center;
+  width: 120%;
+  /*모바일 세로 맞축기*/
+  height: 100%;
+  justify-content: center;
+  padding: 0px 15px;
 }
 /*스크롤 안보이게 하기*/
+/* IE and Edge */
+/* Firefox */
+/* Chrome, Safari, Opera
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none;
 }
+*/
