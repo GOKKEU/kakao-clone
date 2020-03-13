@@ -46,14 +46,12 @@ function chunk(arr, size) {
 
 //array안에 묶어진 요소를 출력한다
 function printArrWeeks(arr, currentM) {
-  console.log(currentM);
   const ul = document.createElement("ul");
   for (var i in arr) {
     const li = document.createElement("li");
     li.innerHTML = arr[i];
     ul.appendChild(li);
   }
-  console.log(ul);
   document.getElementById(currentM).appendChild(ul);
 }
 function printArr(arr, currentM) {
@@ -81,7 +79,6 @@ function paintDays(currentM, arr) {
   addLi(42 - arrayLength, arr, 0); //뒤에 li추가
 
   const weeks = ["일", "월", "화", "수", "목", "금", "토"];
-  console.log(weeks);
   printArrWeeks(weeks, currentM);
 
   const newArr = chunk(arr, 7);
@@ -89,7 +86,7 @@ function paintDays(currentM, arr) {
 }
 
 function printContainer(currentM) {
-  console.log("lastID:" + currentM);
+  console.log("page생성:" + currentM);
   const div = document.createElement("div");
   div.id = currentM;
   div.classList.add("box");

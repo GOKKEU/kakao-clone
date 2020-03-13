@@ -52,13 +52,18 @@
 }
 .box {
   display: inline-block;
-  width: 100%;
+  width: 120%;
 }
-/*스크롤 안보이게 하기*/
+/*스크롤 안보이게 하기
+/* IE and Edge */
+/* Firefox */
+/*Chrome, Safari, Opera*/
+/*
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+  display: none;
 }
+*/
