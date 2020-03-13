@@ -43,15 +43,21 @@
 
                     /* id값을 int로 변경*/
                     let firstNumber = parseInt(firstId);
+                    console.log(firstNumber + "firstID");
 
-                    if (firstNumber > 0) {
+                    if (firstNumber > 1) {
                       /*타이틀 수정*/
-                      document.querySelector(
-                        ".js-month"
-                      ).innerHTML = firstNumber;
-
-                      //boxContainer.firstElementChild.remove();
-                      //printContainer(lastNumber - 1);
+                      document.querySelector(".js-month").innerHTML =
+                        firstNumber - 1;
+                      /*모든 자시 노드를 삭제*/
+                      while (boxContainer.hasChildNodes()) {
+                        boxContainer.removeChild(
+                          boxContainer.firstElementChild
+                        );
+                      }
+                      /* 자시 노드를 추가*/
+                      printContainer(firstNumber - 1);
+                      printContainer(firstNumber);
                     }
                   }
                 }
@@ -114,7 +120,7 @@
       <!--status-bar end-->
     </div>
     <div class="calendar__header">
-      <div class="calendar__header-col">
+      <div class="calendar__header-left">
         <a href="index.html" class="header__back-btn">
           <i class="fas fa-arrow-left"></i>
         </a>
@@ -123,7 +129,7 @@
           ><option>test</option></select
         >
       </div>
-      <div class="calendar__header-col">
+      <div class="calendar__header-right">
         <span class="">
           <i class="fas fa-bars"></i>
         </span>
