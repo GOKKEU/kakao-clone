@@ -1,42 +1,18 @@
 const month = document.querySelector(".js-month"),
   monthContainer = document.querySelector(".boxwrap");
 
-const date = new Date();
-const currentDays = date.getDate();
-//1월 : 0 부터시작! 3월은 2 따라서 1을 더해준다.
-const currentMonth = date.getMonth() + 1;
-const currentYear = date.getFullYear();
-
-const weekdays = date.getDay(); //일:0 1:월 2:화 수:3 목:4 금:5 토:6
-
-function getDateObj(month,year) {
-  const date = {
-    firstDay: new Date(year, month - 1, 1).getDay(), // 현재 달의 1일 요일
-    lastDate: new Date(year, month, 0).getDate() // setting day parameter to 0 means one day less than firs day of the month which is last day of the previous moth.
+/*Date객체 obj을 만드는 함수*/
+function getDateObj(setmonth, setyear) {
+  const dateObj = {
+    //getDay() 함수 출력값 : 일:0  1:월  2:화  수:3  목:4  금:5  토:6
+    currMonth: setmonth,
+    currFirstDay: new Date(setyear, setmonth - 1).getDay(), //현재년,월의 요일
+    curLastDate: new Date(setyear, setmonth, 0).getDate(),
+    preLastDate: new Date(setyear, setmonth - 1, 0).getDate() //이전달에 마지막 날짜
   };
-  return date;
-}
+  console.log(new Date(setyear, setmonth, 0).getDate());
 
-// li를 추가하는 메서드
-function addLi(length, arr, firstBox) {
-  if (firstBox) {
-    priviousMonth = currentMonth - 1;
-    const lastMonth = new Date(currentYear, priviousMonth, 0);
-    const preLastDay = lastMonth.getDate();
-    for (let i = preLastDay - length; i < preLastDay; i++) {
-      const span = document.createElement("span");
-      span.innerHTML = i;
-      arr.push(span);
-    }
-  } else {
-    for (let i = 0; i < length; i++) {
-      const span = document.createElement("span");
-      if (!firstBox) {
-        span.innerHTML = i + 1;
-      }
-      arr.push(span);
-    }
-  }
+  return dateObj;
 }
 //array의 요소를 7개씩 묶어주는 메서드
 function chunk(arr, size) {
@@ -45,62 +21,75 @@ function chunk(arr, size) {
     arryLi.push(arr.slice(i, i + size));
   return arryLi;
 }
-
-//array안에 묶어진 요소를 출력한다
-function printArrWeeks(arr, currentM) {
-  const ul = document.createElement("ul");
-  for (var i in arr) {
-    const li = document.createElement("li");
-    li.innerHTML = arr[i];
-    ul.appendChild(li);
-  }
-  document.getElementById(currentM).appendChild(ul);
-}
+/*화면에 날짜배열을 출력하는 함수*/
 function printArr(arr, currentM) {
+  const WEEKS = "weeks";
+  const DATE ="date";
+  console.log(arr);
   for (const i in arr) {
     const ul = document.createElement("ul");
+  
+    if (i === "0") {
+
+      ul.classList.add(WEEKS);
+    }else{
+      ul.classList.add(DATE);
+    }
     for (var j in arr[i]) {
       const li = document.createElement("li");
-      li.innerHTML = arr[i][j].innerHTML;
+      li.innerHTML = arr[i][j];
       ul.appendChild(li);
     }
-
     document.getElementById(currentM).appendChild(ul);
   }
 }
 
-function paintDays(currentM, arr,obj) {
+function arrAddDate(obj) {
+  const arr = ["일", "월", "화", "수", "목", "금", "토"];
   const dateObj = obj;
-  const firstDay = dateObj["firstDay"];
-  const lastDate = dateObj["lastDate"];
+  const currM = dateObj["currMonth"];
+  const firstDay = dateObj["currFirstDay"];
+  let prelastDate = dateObj["preLastDate"];
+  let crrlastDate = dateObj["curLastDate"];
 
-  addLi(firstDay, arr, 1); //앞에 li추가
-  addLi(lastDate, arr, 0); //// 마지막 날짜 숫자까지 li추가
-  const arrayLength = arr.length;
+  /*이전달 내용*/
 
-  addLi(42 - arrayLength, arr, 0); //뒤에 li추가
-
-  const weeks = ["일", "월", "화", "수", "목", "금", "토"];
-  printArrWeeks(weeks, currentM);
-
+  for (let i = 0; i < firstDay; i++) {
+    arr[i + 7] = prelastDate - firstDay + 1;
+    prelastDate = prelastDate + 1;
+  }
+  /*현재달 내용*/
+  for (let i = 1; i <= crrlastDate; i++) {
+    // 1~마지막날
+    arr.push(i);
+  }
+  /*다음달 내용*/
+  let emptylen = 49 - arr.length;
+  for (let i = 1; i <= emptylen; i++) {
+    //1~ (남은갯수)
+    arr.push(i);
+  }
+  /*길이가 7인 배열 만들기-각각 7개의 요소를 갖음*/
   const newArr = chunk(arr, 7);
-  printArr(newArr, currentM);
+
+  printArr(newArr, currM);
 }
 
-function printContainer(month,year) {
+function printContainer(printmonth, printyear) {
+  //(1)년도와 월을 받아서 Div생성
+  console.log(printmonth, printyear);
 
   const div = document.createElement("div");
-  div.id = month;
+  div.id = printmonth;
   div.classList.add("box");
   monthContainer.appendChild(div);
   //div를 id값 순서로 정렬
-  const arr = [];
 
-  paintDays(month, arr,getDateObj(month,year));
+  //(2)해당 년 월에 일을 배열한다 (달)
+  arrAddDate(getDateObj(printmonth, printyear));
 }
 
 function init() {
-  //monthContainer에 div를 생성
-  month.innerHTML = currentMonth; // 월
+  // month.innerHTML = currentMonth; // 월
 }
 init();
