@@ -38,7 +38,7 @@
         </a>
         <h1 class="month js-month"></h1>
         <select
-          ><option>test</option></select
+          ><option></option></select
         >
         <a id="year"></a>
       </div>
@@ -52,12 +52,43 @@
       <div class="boxwrap"></div>
     </div>
     <button class="addBtn">+</button>
-    <!--MediaQuery
+    <div class="pageChg"></div>
+    <div class="addToDoList">
+      <div class="list_header">
+        <button class="list_left">         
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        </a>
+        <div class="list_right">
+        <h1>저장</h1>
+        </div>
+      </div>
+      <div class="list_section">
+          <ul class="list">
+            <li class="list_title__setting">
+              <input type="text" class="list_title" placeholder="일정제목"/>
+              <div></div>
+            </li>
+          </ul>
+          
+            <ul class="list_time__setting">
+              <li class="startTime">시작 2020</li>
+              <li class="endTime">종료</li>
+            </ul>
+            <ul class="list_text__setting">         
+              <li>
+              <span class="list__text">내용</span>
+            </li>
+            </li>
+          </ul>      
+      </div>
+    </div>
+    <!--MediaQuery-->
     <div class="bigScreen">
       <span class="bigScreen__text">
         Please make your screen small
       </span>
-    </div>-->
+    </div>
     <script src="./js/clock.js"></script>
     <script src="./js/calendar.js"></script>
   </body>

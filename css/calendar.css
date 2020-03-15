@@ -61,7 +61,7 @@
   overflow: auto;
   white-space: nowrap;
 
- height: 850px;
+  height: 850px;
 }
 .box {
   /*화면넓이 3등분 코드
@@ -100,4 +100,45 @@ body::-webkit-scrollbar {
   font-size: 40px;
   box-shadow: 1px 1px 4px 0px #999;
   cursor: pointer;
+}
+.pageChg {
+  background-color: red;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.addToDoList {
+  /*버튼클릭시 display: flex;*/
+
+  /*해당 div를 화면전체를 채우도록 한다*/
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  /*slide*/
+  overflow-x: hidden;
+  transition: 0.2s;
+  background-color: white;
+}
+.list_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  align-items: center;
+}
+.list_left {
+  border: none;
+  background-color: white;
+  font-size: 21px;
+}
+.list_section li {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.list_section input {
+  width: 100%;
+  border: none;
 }

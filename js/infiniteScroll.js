@@ -151,34 +151,25 @@ function touchEvent(e) {
 }
 //마우스 휠 이벤시 시!
 $(function() {
-  $("body").on("mousewheel", function(e) {
+  $(".boxwrap").on("mousewheel", function(e) {
     mouseWheelEvent(e);
   });
-  $("body").on("touchmove", function() {
+  $(".boxwrap").on("touchmove", function() {
     document.body.style.backgroundColor = "red";
-    $(".boxwrap")
-      .stop()
-      .animate(
-        { scrollLeft: 0 },
-        {
-          duration: 1000,
-          complete: function() {
-            let firstNumber = parseInt(boxCon.firstElementChild.id);
-            while (boxCon.hasChildNodes()) {
-              boxCon.removeChild(boxCon.firstElementChild);
-            }
-            leftPrint(firstNumber);
-            scrollPositionChg();
-            document.querySelector(".month").innerHTML = firstNumber;
-          }
-        }
-      );
   });
 });
 $(document).ready(function() {
   document.querySelector(".addBtn").addEventListener("click", function() {
     //버튼 클릭 이벤트 (full 화면)
+    $(".addToDoList").css("position", "fixed");
+    document.querySelector(".addToDoList").style.width = "100%";
   });
+  document.querySelector(".list_left").addEventListener("click", function() {
+    //버튼 클릭 이벤트 css position기본값으로
+    $(".addToDoList").css("position", "static");
+    document.querySelector(".addToDoList").style.width = "0";
+  });
+
   document.getElementById("year").innerHTML = currentYear;
   leftPrint(currentMonth);
   scrollPositionChg();
