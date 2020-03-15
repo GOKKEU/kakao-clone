@@ -1,6 +1,7 @@
 .calendar-body {
   /* position: fixed;*/
   margin-top: 60px;
+  height: 700px;
 }
 /*헤더부분 start*/
 .calendar-body .header-wrapper {
@@ -73,21 +74,9 @@
   align-items: center;
   width: 100%;
   height: calc(100%);
-  border: solid 1px mediumvioletred;
   font-size: 18px;
 }
-/*스크롤 안보이게 하기*/
-/* IE and Edge */
-/* Firefox */
-/* Chrome, Safari, Opera
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-*/
+
 .addBtn {
   position: fixed;
   bottom: 20px;
@@ -141,4 +130,18 @@ body::-webkit-scrollbar {
 .list_section input {
   width: 100%;
   border: none;
+}
+.saveToDoList {
+  cursor: pointer;
+}
+/*스크롤 안보이게 하기*/
+/* IE and Edge */
+/* Firefox */
+/* Chrome, Safari, Opera*/
+.boxwrap {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.boxwrap::-webkit-scrollbar {
+  display: none;
 }

@@ -169,7 +169,13 @@ $(document).ready(function() {
     $(".addToDoList").css("position", "static");
     document.querySelector(".addToDoList").style.width = "0";
   });
-
+  //저장버튼
+  document.querySelector(".saveToDoList").addEventListener("click", function() {
+    //날짜밑에 span추가
+    document.body.style.backgroundColor = "red";
+    $(".addToDoList").css("position", "static");
+    document.querySelector(".addToDoList").style.width = "0";
+  });
   document.getElementById("year").innerHTML = currentYear;
   leftPrint(currentMonth);
   scrollPositionChg();
