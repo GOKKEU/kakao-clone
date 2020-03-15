@@ -154,7 +154,7 @@ $(function() {
   $("body").on("mousewheel", function(e) {
     mouseWheelEvent(e);
   });
-  $("body").on("swipeleft", function() {
+  $("body").on("touchmove", function() {
     document.body.style.backgroundColor = "red";
     $(".boxwrap")
       .stop()
