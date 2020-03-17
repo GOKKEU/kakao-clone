@@ -347,3 +347,17 @@ function chgDayList() {
 }
 //확인버튼 클릭시 해당값을 시작 input박스에 보냄
 //
+document.querySelector(".submitDatebtn").addEventListener("click", function(e) {
+  console.log("버튼클릭");
+  const cheekedYear = document.querySelector(".year-list").children.item(1)
+    .innerText;
+  const month = document.querySelector(".month-list").children.item(1)
+    .innerText; //선택된달의
+  const chekedMonth = month < 10 ? "0" + month : month;
+  const day = document.querySelector(".month-list").children.item(1).innerText;
+  const chekedDay = day < 10 ? "0" + day : day;
+  document.querySelector(".startTime").querySelector("input").value =
+    cheekedYear + "-" + chekedMonth + "-" + chekedDay;
+
+    //버튼 확인버튼시 사라짐 
+});

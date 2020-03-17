@@ -73,7 +73,7 @@
           </ul>
           
             <ul class="list_time__setting">
-              <li class="startTime">시작</li>
+              <li class="startTime">시작<input type="text"/></li>
               <li class="endTime">종료</li>
             </ul>
             <ul class="list_text__setting">         
@@ -84,28 +84,8 @@
           </ul> 
           
           
-          <div class="datepicker"> 
-            <!--
-          <div class="datesetting">
-            <form>
-              <input type="date"  id="preyear"></input>
-            <input type="date" class="setDateinput"  id="setYear" />
-            <input type="date" id="nextyear"></input>
-          </form>
-         
-            
-          </div>   -->
-          <!-- Month -->
+          <div class="datepicker">        
         <div class="boxCalendar">
-          <div class="cal-shell">
-            <div class="select-month">
-              <ul class="month-list">
-               <li>1</li>
-               <li>2</li>
-               <li>3</li>
-              </ul>
-            </div>
-          </div>
           <div class="cal-shell">
             <div class="select-year">
               <ul class="year-list">
@@ -117,6 +97,16 @@
             </div>
           </div>
           <div class="cal-shell">
+            <div class="select-month">
+              <ul class="month-list">
+               <li>1</li>
+               <li>2</li>
+               <li>3</li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="cal-shell">
             <div class="select-day">
               <ul class="day-list">
                 <li>1</li>
@@ -126,7 +116,7 @@
             </div>
           </div>
           </div> 
-          
+          <input type="button" value="확인" class="submitDatebtn"/>
       </div>
   </div>
     <!--MediaQuery-->
