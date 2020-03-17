@@ -1,0 +1,83 @@
+/*드레그시 스타일 변경!!!색상 변경*/
+::-moz-selection {
+  background: #f00;
+  color: #fff;
+}
+::selection {
+  background: #f00;
+  color: #fff;
+}
+
+.datepicker {
+  height: 300px;
+  position: fixed;
+  bottom: 50px;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.setBtninput {
+}
+.setDateinput {
+  color: #95a5a6;
+  font-size: 25px;
+width: 100%;
+  font-weight: 600;
+
+  text-align: center;
+
+
+  /*마우스 클릭 막음
+  pointer-events: none; */
+}
+.setDateinput:focus {
+}
+
+/* input 기본 스타일 초기화 */
+/* (X지움)*/
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+/*up doqn 기능은 꺼지지X 버튼만 지움!*/
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* (달력켜지는부분) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* 날짜사이 - 부분 */
+input[type="date"]::-webkit-datetime-edit-text {
+  
+
+}
+
+input[type="date" i] {
+  align-items: center;
+}
+
+/*
+::-webkit-datetime-edit { padding: 1em; }
+::-webkit-datetime-edit-fields-wrapper { background-color: palevioletred; }  
+::-webkit-datetime-edit-text {-webkit-user-drag: none; -webkit-tap-highlight-color: red; }
+
+::-webkit-datetime-edit-month-field { color: blue; }
+::-webkit-datetime-edit-day-field { color: green; }
+::-webkit-datetime-edit-year-field { color: purple; }
+::-ms-input-placeholder {}
+*/
+.datesetting {
+  display: flex;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+#setYear::-webkit-datetime-edit-month-field,
+#setYear::-webkit-datetime-edit-day-field {
+}

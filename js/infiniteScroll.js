@@ -129,6 +129,7 @@ function touchEvent(e) {
       );
   } else {
     /*이벤트*/
+    console.log("down");
     $(".boxwrap")
       .stop()
       .animate(

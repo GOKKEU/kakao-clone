@@ -11,6 +11,7 @@
     <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
 
     <script src="./js/infiniteScroll.js"></script>
+ 
   </head>
   <body class="calendar-body" style="overflow-y:hidden">
     <div class="header-wrapper">
@@ -72,7 +73,7 @@
           </ul>
           
             <ul class="list_time__setting">
-              <li class="startTime">시작 2020</li>
+              <li class="startTime">시작</li>
               <li class="endTime">종료</li>
             </ul>
             <ul class="list_text__setting">         
@@ -80,16 +81,63 @@
               <span class="list__text">내용</span>
             </li>
             </li>
-          </ul>      
+          </ul> 
+          
+          
+          <div class="datepicker"> 
+            <!--
+          <div class="datesetting">
+            <form>
+              <input type="date"  id="preyear"></input>
+            <input type="date" class="setDateinput"  id="setYear" />
+            <input type="date" id="nextyear"></input>
+          </form>
+         
+            
+          </div>   -->
+          <!-- Month -->
+        <div class="boxCalendar">
+          <div class="cal-shell">
+            <div class="select-month">
+              <ul class="month-list">
+               <li>1</li>
+               <li>2</li>
+               <li>3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cal-shell">
+            <div class="select-year">
+              <ul class="year-list">
+                <li>2019</li>
+               <li>2020</li>
+              <li>2021</li>
+        
+              </ul>
+            </div>
+          </div>
+          <div class="cal-shell">
+            <div class="select-day">
+              <ul class="day-list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+               </ul>
+            </div>
+          </div>
+          </div> 
+          
       </div>
-    </div>
+  </div>
     <!--MediaQuery-->
     <div class="bigScreen">
       <span class="bigScreen__text">
         Please make your screen small
       </span>
     </div>
+
     <script src="./js/clock.js"></script>
     <script src="./js/calendar.js"></script>
+    <script src="./js/chgDate.js"></script>
   </body>
 </html>

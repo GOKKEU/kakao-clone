@@ -12,7 +12,7 @@
 @import "mobile.css";
 @import "chats.css";
 @import "calendar.css";
-
+@import "chgDate.css";
 * {
   /*
   box-sizing은 박스의 크기를 어떤 것을 기준으로 계산할지를 정하는 속성입니다.

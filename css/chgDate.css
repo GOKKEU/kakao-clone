@@ -1,0 +1,91 @@
+.cal-shell {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* THE SELECT ROW */
+
+/* MONTH VIEW */
+
+.month-list {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.month-list li {
+  text-align: center;
+  height: 40px;
+}
+
+.month-list li:hover {
+  background: #00ff00;
+}
+.month-list li:active {
+  background: #0000ff;
+}
+
+/* MONTH VIEW */
+
+.day-list {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.day-list li {
+  text-align: center;
+  height: 40px;
+}
+
+.day-list li:hover {
+  background: #00ff00;
+}
+.day-list li:active {
+  background: #0000ff;
+}
+
+/* MONTH VIEW */
+
+.year-list {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.year-list li {
+  text-align: center;
+  height: 40px;
+}
+
+.year-list li:hover {
+  background: #00ff00;
+}
+.year-list li:active {
+  background: #0000ff;
+}
+.boxCalendar {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  
+  position: fixed;
+  bottom: 50px;
+  background-color: palevioletred;
+}
+.cal-shell li {
+  border-bottom: 2px solid black;
+  margin: 0px 20px;
+}
+/*스크롤바 숨기기*/
+.month-list,
+.year-list,
+.day-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.month-list::-webkit-scrollbar,
+.year-list::-webkit-scrollbar,
+.day-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}

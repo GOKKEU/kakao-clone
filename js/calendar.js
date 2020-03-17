@@ -30,7 +30,6 @@ function printArr(arr, currentM) {
     const ul = document.createElement("ul");
   
     if (i === "0") {
-
       ul.classList.add(WEEKS);
     }else{
       ul.classList.add(DATE);
