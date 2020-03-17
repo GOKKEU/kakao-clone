@@ -356,8 +356,56 @@ document.querySelector(".submitDatebtn").addEventListener("click", function(e) {
   const chekedMonth = month < 10 ? "0" + month : month;
   const day = document.querySelector(".month-list").children.item(1).innerText;
   const chekedDay = day < 10 ? "0" + day : day;
-  document.querySelector(".startTime").querySelector("input").value =
-    cheekedYear + "-" + chekedMonth + "-" + chekedDay;
+  // a의textContent 값을 받아서 시작인지 종료인지 구분 전송
+  const chekTag = document.querySelector(".submitDatebtn").querySelector("a");
 
-    //버튼 확인버튼시 사라짐 
+  console.dir(chekTag);
+  if (chekTag.textContent === "시작") {
+    console.log(chekTag);
+    document.querySelector(".startTime").querySelector("input").value =
+      cheekedYear + "-" + chekedMonth + "-" + chekedDay;
+  } else {
+    document.querySelector(".endTime").querySelector("input").value =
+      cheekedYear + "-" + chekedMonth + "-" + chekedDay;
+  }
+  //버튼 확인버튼시 사라짐
+  document.querySelector(".datepicker").style.display = "none";
+});
+//시작버튼 호버
+//display none->display기본값인 line과 블록중 display:block;
+//애니메이션 추가
+document.querySelector(".startTime").addEventListener("click", function(e) {
+  console.dir(e);
+  /*시작과 종료시간 전송시 구분을 위한 코드*/
+  addTag(".submitDatebtn", e);
+  /*박스 안보이게 하기*/
+  document.querySelector(".datepicker").style.display = "block";
+});
+document.querySelector(".endTime").addEventListener("click", function(e) {
+  /*시작과 종료시간 전송시 구분을 위한 코드*/
+  addTag(".submitDatebtn", e);
+  /*박스 안보이게 하기*/
+  document.querySelector(".datepicker").style.display = "block";
+  //document.querySelector(".list_section").style.cursor = "none";
+});
+
+function addTag(target, e) {
+  const tag = document.querySelector(target).querySelector("a");
+  // e.toElement.innerText;
+  console.dir(e);
+  if (tag == null) {
+    const newTag = document.createElement("a");
+    console.dir(newTag);
+    newTag.textContent = e.toElement.textContent;
+
+    console.dir(newTag.innerText);
+    document.querySelector(target).append(newTag);
+  } else {
+    console.log(tag);
+    tag.textContent = e.toElement.textContent;
+  }
+}
+//확인을 누르지X 나갈때
+document.querySelector(".wrappercontainer").addEventListener("click", function(e) {
+  document.querySelector(".datepicker").style.display = "none";
 });
