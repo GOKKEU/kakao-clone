@@ -249,9 +249,6 @@ document.querySelector(".day-list").addEventListener("mousewheel", function(e) {
 
 //중간의 날짜를 받아서 확인버튼 누르면 input text에 전송
 //month box에 변화 ->
-//L-2 L-1 마지막날
-// L-1 마지막날 L-2
-// 마지막날 1 2
 
 function getLastDay() {
   const chekedM = document.querySelector(".month-list").children.item(1)
@@ -383,7 +380,7 @@ document.querySelector(".startTime").addEventListener("click", function(e) {
 
   /*박스 보이게 하기*/
   document.querySelector(".datepicker").style.display = "block";
-=
+
 });
 document.querySelector(".endTime").addEventListener("click", function(e) {
   /*시작과 종료시간 전송시 구분을 위한 코드*/
@@ -400,3 +397,5 @@ document
   .addEventListener("click", function(e) {
     document.querySelector(".datepicker").style.display = "none";
   });
+
+  
