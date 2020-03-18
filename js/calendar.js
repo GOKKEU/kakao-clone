@@ -24,14 +24,14 @@ function chunk(arr, size) {
 /*화면에 날짜배열을 출력하는 함수*/
 function printArr(arr, currentM) {
   const WEEKS = "weeks";
-  const DATE ="date";
+  const DATE = "date";
   console.log(arr);
   for (const i in arr) {
     const ul = document.createElement("ul");
-  
+
     if (i === "0") {
       ul.classList.add(WEEKS);
-    }else{
+    } else {
       ul.classList.add(DATE);
     }
     for (var j in arr[i]) {
@@ -40,7 +40,9 @@ function printArr(arr, currentM) {
       ul.appendChild(li);
     }
     document.getElementById(currentM).appendChild(ul);
+   
   }
+ 
 }
 
 function arrAddDate(obj) {
@@ -86,9 +88,5 @@ function printContainer(printmonth, printyear) {
 
   //(2)해당 년 월에 일을 배열한다 (달)
   arrAddDate(getDateObj(printmonth, printyear));
-}
 
-function init() {
-  // month.innerHTML = currentMonth; // 월
 }
-init();

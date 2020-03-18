@@ -56,6 +56,8 @@ function scrollPositionChg() {
   let posi = boxCon.offsetWidth;
   console.dir(posi);
   $(".boxwrap").scrollLeft(posi);
+  /*일정 출력 함수*/
+  loadSchedule();
 }
 
 function mouseWheelEvent(e) {
@@ -104,61 +106,13 @@ function mouseWheelEvent(e) {
   }
 }
 
-function touchEvent(e) {
-  const touchDelta = e.originalEvent.touchEvent;
-  const boxCon = document.querySelector(".boxwrap");
-  if (wheelDelta > 0) {
-    console.log("up");
-
-    $(".boxwrap")
-      .stop()
-      .animate(
-        { scrollLeft: 0 },
-        {
-          duration: 1000,
-          complete: function() {
-            let firstNumber = parseInt(boxCon.firstElementChild.id);
-            while (boxCon.hasChildNodes()) {
-              boxCon.removeChild(boxCon.firstElementChild);
-            }
-            leftPrint(firstNumber);
-            scrollPositionChg();
-            document.querySelector(".month").innerHTML = firstNumber;
-          }
-        }
-      );
-  } else {
-    /*이벤트*/
-    console.log("down");
-    $(".boxwrap")
-      .stop()
-      .animate(
-        { scrollLeft: "+=" + boxCon.offsetWidth },
-        {
-          duration: 1000,
-          complete: function() {
-            let lastNumber = parseInt(boxCon.lastElementChild.id);
-
-            while (boxCon.hasChildNodes()) {
-              boxCon.removeChild(boxCon.firstElementChild);
-            }
-            rifhtPrint(lastNumber);
-            scrollPositionChg();
-            document.querySelector(".month").innerHTML = lastNumber;
-          }
-        }
-      );
-  }
-}
 //마우스 휠 이벤시 시!
 $(function() {
   $(".boxwrap").on("mousewheel", function(e) {
     mouseWheelEvent(e);
   });
-  $(".boxwrap").on("touchmove", function() {
-    document.body.style.backgroundColor = "red";
-  });
 });
+
 $(document).ready(function() {
   document.querySelector(".addBtn").addEventListener("click", function() {
     //버튼 클릭 이벤트 (full 화면)
