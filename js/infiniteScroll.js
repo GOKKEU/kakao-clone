@@ -117,17 +117,19 @@ $(function() {
     mouseWheelEvent(e);
   });
 });
-
+//add 버튼 클릭시!
 $(document).ready(function() {
   document.querySelector(".addBtn").addEventListener("click", function() {
     //버튼 클릭 이벤트 (full 화면)
     $(".addToDoList").css("position", "fixed");
     document.querySelector(".addToDoList").style.width = "100%";
   });
+
   document.querySelector(".list_left").addEventListener("click", function() {
     //버튼 클릭 이벤트 css position기본값으로
     $(".addToDoList").css("position", "static");
     document.querySelector(".addToDoList").style.width = "0";
+    document.querySelector(".endTime").querySelector("input").style.color="black";
   });
 
   document.getElementById("year").innerHTML = currentYear;

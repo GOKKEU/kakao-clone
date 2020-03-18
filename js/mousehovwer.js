@@ -11,9 +11,8 @@ const ADD_CSS = "addingcss";
 const ADD_CSS_ICON = "iconaddingcss";
 const ADD_CSS_IINE = "lineaddingcss";
 const ADD_CSS_IIPUT = "lnputaddingcss";
-
+/*마우스 호버 효과 (입력창 안에서)*/
 function mouseEnter() {
-  //focusContainer.style.background = "blue";
   focusContainer.classList.add(ADD_CSS);
   for (var i = 0; i < focusIcon.length; i++) {
     focusIcon.item(i).classList.add(ADD_CSS_ICON);
@@ -23,7 +22,6 @@ function mouseEnter() {
 }
 
 function mouseLeave() {
- // focusContainer.style.background = "pink";
   focusContainer.classList.remove(ADD_CSS);
   for (var i = 0; i < focusIcon.length; i++) {
     focusIcon.item(i).classList.remove(ADD_CSS_ICON);
@@ -43,8 +41,10 @@ function init() {
     focusInput.addEventListener("focus", e => {
       for (var i = 0; i < parseItem.length; i++) {
         //만약에 container가 block 상태이면! 실행
-        focusChild.item(i).addEventListener("mouseenter", mouseEnter);
-        focusChild.item(i).addEventListener("mouseleave", mouseLeave);
+        const todoSavedData = focusChild.item(i);
+
+        todoSavedData.addEventListener("mouseenter", mouseEnter);
+        todoSavedData.addEventListener("mouseleave", mouseLeave);
       }
     });
   }

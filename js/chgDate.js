@@ -1,3 +1,5 @@
+/*룰렛 start*/ 
+
 function chgYearList(e) {
   const wheelyear = e.wheelDelta;
 
@@ -227,6 +229,7 @@ function chgDayListLastDay() {
     }
   }
 }
+/*룰렛 end */ 
 
 /*event 추가 메서드*/
 //0.룰렛의 List에 마우스 휠 효과가 적용됬을때 이벤트
@@ -298,3 +301,5 @@ document
   .addEventListener("click", function(e) {
     document.querySelector(".datepicker").style.display = "none";
   });
+
+

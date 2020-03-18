@@ -28,21 +28,21 @@ function addSchedule(nodes, start, beteeenDay, content) {
   //span 태그의 시작점에 디자인 추가 멧서드
   let count = 0;
   let curCount = 0;
-  let nexCount =0;
+  let nexCount = 0;
   console.dir(nodes); //총 49개
   for (let i = 0; i < nodes.length; i++) {
     const number = parseInt(nodes.item(i).innerHTML);
     if (number === 1) {
       count++;
     }
-    console.log(start);
+
     if (count === 1 && start === number) {
       console.log("몇번째노드" + i); //0~6 까지 빼고 7부터
       console.log(start + "," + number + "," + Number(49 - i));
 
       const span = document.createElement("span");
       span.innerText = content;
-      nodes.item(i).appendChild(span);     
+      nodes.item(i).appendChild(span);
     }
     if (count === 1) {
       curCount++;
@@ -52,8 +52,9 @@ function addSchedule(nodes, start, beteeenDay, content) {
       nexCount++;
     }
   }
-  console.log("첫노드부터 이달 마지막 날까지"+curCount+"표시된 다음달의 갯수"+nexCount);
- 
+  console.log(
+    "첫노드부터 이달 마지막 날까지" + curCount +"표시된 다음달의 갯수" + nexCount
+  );
 }
 
 function printLocalData(startArr, endArr, title) {
@@ -65,8 +66,10 @@ function printLocalData(startArr, endArr, title) {
     (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24;
   console.log(beteeenDay);
   if (beteeenDay < 0) {
-    //
+    document.querySelector(".endTime").querySelector("input").style.color ="red";
+    return false;
   } else {
+    document.querySelector(".endTime").querySelector("input").style.color ="black";
     //현재 생성된달력 날짜 비교
     const boxList = document.querySelector(".boxwrap").childNodes;
     //year값 비교
@@ -83,6 +86,7 @@ function printLocalData(startArr, endArr, title) {
       }
     }
   }
+  return true;
 }
 /*로컬스트로지에 저장된 데이터를 가져와서 화면에 출력하는 메서드*/
 function getLocalData() {
@@ -94,15 +98,12 @@ function getLocalData() {
       const endArr = dateitem.end.split("-");
       const title = dateitem.title;
 
-      console.log("시작" + startArr + "종료" + endArr);
-      console.log("제목" + title);
-
-      printLocalData(startArr, endArr, title);
-
-      /*저장시 이전화면으로 돌아가기 위해 넓이를 0으로*/
-      console.log("화면 줄어들었니?");
-      document.querySelector(".addToDoList").position = "static";
-      document.querySelector(".addToDoList").style.width = "0";
+      const boolcheek = printLocalData(startArr, endArr, title);
+      if (boolcheek) {
+        /*저장시 이전화면으로 돌아가기 위해 넓이를 0으로*/
+        document.querySelector(".addToDoList").position = "static";
+        document.querySelector(".addToDoList").style.width = "0";
+      }
     }
   });
 }
@@ -114,6 +115,12 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
   const startT = document.querySelector(".startTime").querySelector("input");
   const endT = document.querySelector(".endTime").querySelector("input");
   const test = document.querySelector(".text-content");
+
+  if (title.value === "") {
+    alert("제목을 입력해 주세요");
+    return
+  }
+
   const timeObj = {
     start: startT.value,
     end: endT.value,
