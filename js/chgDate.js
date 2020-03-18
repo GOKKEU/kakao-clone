@@ -351,19 +351,20 @@ document.querySelector(".submitDatebtn").addEventListener("click", function(e) {
   const month = document.querySelector(".month-list").children.item(1)
     .innerText; //선택된달의
   const chekedMonth = month < 10 ? "0" + month : month;
-  const day = document.querySelector(".month-list").children.item(1).innerText;
+  const day = document.querySelector(".day-list").children.item(1).innerText;
+  console.log(day+"??");
   const chekedDay = day < 10 ? "0" + day : day;
   // a의textContent 값을 받아서 시작인지 종료인지 구분 전송
   const chekTag = document.querySelector(".chekTag").value;
 
   console.dir(chekTag);
   if (chekTag === "시작") {
-    console.log(chekTag);
+    console.log(chekedDay);
     document.querySelector(".startTime").querySelector("input").value =
       cheekedYear + "-" + chekedMonth + "-" + chekedDay;
   }
   if (chekTag === "종료") {
-    console.log(chekTag);
+    console.log(chekedDay);
     document.querySelector(".endTime").querySelector("input").value =
       cheekedYear + "-" + chekedMonth + "-" + chekedDay;
   }
