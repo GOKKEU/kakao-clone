@@ -56,11 +56,6 @@ document.getElementById("setYear").addEventListener("mousewheel", function(e) {
 
 
 
-
-
-
-
-
   preLabel.defaultValue = filerY + filerM + filerD;
   nextLabel.defaultValue = nfilerY + nfilerM + nfilerD;
 });

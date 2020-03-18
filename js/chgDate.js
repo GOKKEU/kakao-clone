@@ -371,24 +371,25 @@ document.querySelector(".submitDatebtn").addEventListener("click", function(e) {
   document.querySelector(".datepicker").style.display = "none";
 });
 //시작버튼 호버
-//display none->display기본값인 line과 블록중 display:block;
+
 //애니메이션 추가
-document.querySelector(".startTime").addEventListener("click", function(e) {
-  /*시작과 종료시간 전송시 구분을 위한 코드*/
-  const tag = e.toElement.innerText;
-  document.querySelector(".chekTag").value = tag;
+document
+  .querySelector(".startTime input")
+  .addEventListener("click", function(e) {
+    /*시작과 종료시간 전송시 구분을 위한 코드*/
+    const tag = e.toElement.previousElementSibling.innerHTML;
+    document.querySelector(".chekTag").value = tag;
+    console.log(tag);
+    /*박스 보이게 하기*/
+    document.querySelector(".datepicker").style.display = "block";
+  });
 
+document.querySelector(".endTime input").addEventListener("click", function(e) {
+  /*시작과 종료시간 전송시 구분을 위한 코드*/
+  const tag = e.toElement.previousElementSibling.innerHTML;
+  document.querySelector(".chekTag").value = tag;
   /*박스 보이게 하기*/
   document.querySelector(".datepicker").style.display = "block";
-
-});
-document.querySelector(".endTime").addEventListener("click", function(e) {
-  /*시작과 종료시간 전송시 구분을 위한 코드*/
-  const tag = e.toElement.innerText;
-  document.querySelector(".chekTag").value = tag;
-  /*박스 보이게 하기*/
-  document.querySelector(".datepicker").style.display = "block";
-
 });
 
 //확인을 누르지X 나갈때
@@ -397,5 +398,3 @@ document
   .addEventListener("click", function(e) {
     document.querySelector(".datepicker").style.display = "none";
   });
-
-  

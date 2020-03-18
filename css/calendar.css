@@ -123,14 +123,8 @@
   background-color: white;
   font-size: 21px;
 }
-.list_section li {
-  padding: 10px 20px;
-  font-size: 18px;
-}
-.list_section input {
-  width: 100%;
-  border: none;
-}
+
+
 .saveToDoList {
   cursor: pointer;
 }
