@@ -173,6 +173,7 @@
 .list_section input {
   width: 100%;
   border: none;
+  color: black;
 }
 
 .text-title {

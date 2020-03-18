@@ -53,7 +53,10 @@ function addSchedule(nodes, start, beteeenDay, content) {
     }
   }
   console.log(
-    "첫노드부터 이달 마지막 날까지" + curCount +"표시된 다음달의 갯수" + nexCount
+    "첫노드부터 이달 마지막 날까지" +
+      curCount +
+      "표시된 다음달의 갯수" +
+      nexCount
   );
 }
 
@@ -66,10 +69,8 @@ function printLocalData(startArr, endArr, title) {
     (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24;
   console.log(beteeenDay);
   if (beteeenDay < 0) {
-    document.querySelector(".endTime").querySelector("input").style.color ="red";
     return false;
   } else {
-    document.querySelector(".endTime").querySelector("input").style.color ="black";
     //현재 생성된달력 날짜 비교
     const boxList = document.querySelector(".boxwrap").childNodes;
     //year값 비교
@@ -99,10 +100,16 @@ function getLocalData() {
       const title = dateitem.title;
 
       const boolcheek = printLocalData(startArr, endArr, title);
+      console.log(boolcheek);
       if (boolcheek) {
         /*저장시 이전화면으로 돌아가기 위해 넓이를 0으로*/
         document.querySelector(".addToDoList").position = "static";
         document.querySelector(".addToDoList").style.width = "0";
+        document.querySelector(".endTime").querySelector("input").style.color =
+          "black";
+      } else {
+        document.querySelector(".endTime").querySelector("input").style.color =
+          "red";
       }
     }
   });
@@ -118,7 +125,7 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
 
   if (title.value === "") {
     alert("제목을 입력해 주세요");
-    return
+    return;
   }
 
   const timeObj = {

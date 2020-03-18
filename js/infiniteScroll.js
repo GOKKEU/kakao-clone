@@ -129,7 +129,7 @@ $(document).ready(function() {
     //버튼 클릭 이벤트 css position기본값으로
     $(".addToDoList").css("position", "static");
     document.querySelector(".addToDoList").style.width = "0";
-    document.querySelector(".endTime").querySelector("input").style.color="black";
+
   });
 
   document.getElementById("year").innerHTML = currentYear;
