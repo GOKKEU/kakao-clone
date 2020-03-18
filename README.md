@@ -36,7 +36,7 @@
 ### 개발 내용
 
 - 개발 도구: visualCode
-사용언어:javascript,css,html
+  사용언어:javascript,css,html
 
 1. 노마드코딩의 클론코딩수업으로 기본 틀 만들기
 
@@ -82,19 +82,20 @@ console.log()
 
 #### 검색 자료
 
-| 메서드 or 기능                      | 설명(URL)                                                                                                                                                                                               |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ChildNode.remove()                  | https://developer.mozilla.org/ko/docs/Web/API/ChildNode/remove                                                                                                                                          |
-| querySelector                       | https://javacpro.tistory.com/36                                                                                                                                                                         |
-| addEventListent                     | addEventListenr에서 HTML 태그를 참조할 수가 없었기 때문에 null을 참조하게 됐고 에러가 발생 할 수 있음                                                                                                   |
-| window.onload vs \$(document).ready | https://blog.naver.com/PostView.nhn?blogId=u3478&logNo=60134222468                                                                                                                                      |
-| overflow                            | http://webberstudy.com/html-css/css-2/overflow-float-clear/                                                                                                                                             |
-| 화면 전체 만들기                    | https://codingbroker.tistory.com/56                                                                                                                                                                     |
-| 스크롤-애니메이션(완전좋음)         | https://superkts.com/jquery/@scroll                                                                                                                                                                     |
-| 스크롤 예제                         | https://recoveryman.tistory.com/121?category=597401,http://2nusa.blogspot.com/2016/10/jquery-mouse-wheel.html,https://ys87.tistory.com/entry/JQuery-마우스휠을-이용하여-좌우-스크롤하기?category=526517 |
-| 스크롤 -css                         | https://www.w3schools.com/cssref/tryit.asp?filename=trycss_text_white-space,https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll                                               |
-| 모바일 크기조정 예시                | https://codepen.io/team/css-tricks/pen/,https://css-tricks.com/the-trick-to-viewport-units-on-mobile/vapjge                                                                                             |
-| 모바일 화면 크기정리 사이트         | https://material.io/resources/devices/                                                                                                                                                                  |
-| calc                                | https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_calc ,https://codepen.io/chriscoyier/pen/uoxqs                                                                                          |
-| css관해서 잘 정리됨                 | https://css-tricks.com/a-couple-of-use-cases-for-calc/                                                                                                                                                  |  |  | https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ |
-| input 조정 CSS                      | https://stackoverflow.com/questions/14946091/are-there-any-style-options-for-the-html5-date-picker ,http://jsfiddle.net/plan/V2Q58/ ,https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls/                                                                    |
+| 메서드 or 기능                      | 설명(URL)                                                                                                                                                                                                                                       |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ChildNode.remove()                  | https://developer.mozilla.org/ko/docs/Web/API/ChildNode/remove                                                                                                                                                                                  |
+| querySelector                       | https://javacpro.tistory.com/36                                                                                                                                                                                                                 |
+| addEventListent                     | addEventListenr에서 HTML 태그를 참조할 수가 없었기 때문에 null을 참조하게 됐고 에러가 발생 할 수 있음                                                                                                                                           |
+| window.onload vs \$(document).ready | https://blog.naver.com/PostView.nhn?blogId=u3478&logNo=60134222468                                                                                                                                                                              |
+| overflow                            | http://webberstudy.com/html-css/css-2/overflow-float-clear/                                                                                                                                                                                     |
+| 화면 전체 만들기                    | https://codingbroker.tistory.com/56                                                                                                                                                                                                             |
+| 스크롤-애니메이션(완전좋음)         | https://superkts.com/jquery/@scroll                                                                                                                                                                                                             |
+| 스크롤 예제                         | https://recoveryman.tistory.com/121?category=597401,http://2nusa.blogspot.com/2016/10/jquery-mouse-wheel.html,https://ys87.tistory.com/entry/JQuery-마우스휠을-이용하여-좌우-스크롤하기?category=526517                                         |
+| 스크롤 -css                         | https://www.w3schools.com/cssref/tryit.asp?filename=trycss_text_white-space,https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_hor_scroll                                                                                       |
+| 모바일 크기조정 예시                | https://codepen.io/team/css-tricks/pen/,https://css-tricks.com/the-trick-to-viewport-units-on-mobile/vapjge                                                                                                                                     |
+| 모바일 화면 크기정리 사이트         | https://material.io/resources/devices/                                                                                                                                                                                                          |
+| calc                                | https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_calc ,https://codepen.io/chriscoyier/pen/uoxqs                                                                                                                                  |
+| css관해서 잘 정리됨                 | https://css-tricks.com/a-couple-of-use-cases-for-calc/                                                                                                                                                                                          |  |  | https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ |
+| input 조정 CSS                      | https://stackoverflow.com/questions/14946091/are-there-any-style-options-for-the-html5-date-picker ,http://jsfiddle.net/plan/V2Q58/ ,https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls/                       |
+| 선택자                              | https://verdana1012.tistory.com/entry/CSS3-nthchildn-%EC%84%A0%ED%83%9D%EC%9E%90-%EA%B0%99%EC%9D%80%EC%A2%85%EB%A5%98%EC%9D%98-%ED%83%9C%EA%B7%B8%EB%A1%9C-%EA%B5%AC%EC%84%B1%EB%90%98%EC%96%B4-%EC%9E%88%EC%9D%84-%EB%95%8C-%EC%82%AC%EC%9A%A9 |

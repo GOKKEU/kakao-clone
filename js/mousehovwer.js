@@ -13,7 +13,7 @@ const ADD_CSS_IINE = "lineaddingcss";
 const ADD_CSS_IIPUT = "lnputaddingcss";
 
 function mouseEnter() {
-  focusContainer.style.background = "blue";
+  //focusContainer.style.background = "blue";
   focusContainer.classList.add(ADD_CSS);
   for (var i = 0; i < focusIcon.length; i++) {
     focusIcon.item(i).classList.add(ADD_CSS_ICON);
@@ -23,7 +23,7 @@ function mouseEnter() {
 }
 
 function mouseLeave() {
-  focusContainer.style.background = "pink";
+ // focusContainer.style.background = "pink";
   focusContainer.classList.remove(ADD_CSS);
   for (var i = 0; i < focusIcon.length; i++) {
     focusIcon.item(i).classList.remove(ADD_CSS_ICON);

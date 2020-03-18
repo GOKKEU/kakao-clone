@@ -1,255 +1,170 @@
-function boxmouseWheel(e) {
+function chgYearList(e) {
+  const wheelyear = e.wheelDelta;
+
+  const firstLi = document.createElement("li");
+  const centerLi = document.createElement("li");
+  const lastLi = document.createElement("li");
+
+  const node = document.querySelector(".year-list");
+
+  if (wheelyear < 0) {
+    console.log("down");
+
+    if (parseInt(node.children.item(0).innerHTML).toString() === "2050") {
+      return;
+    }
+
+    firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
+    centerLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 2;
+    lastLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 3;
+  } else {
+    if (parseInt(node.children.item(0).innerHTML).toString() === "2000") {
+      return;
+    }
+
+    firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 1;
+    centerLi.innerHTML = parseInt(node.children.item(0).innerHTML);
+    lastLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
+  }
+
+  changeLi(node, firstLi, centerLi, lastLi);
+}
+
+function chgDayList(e, lastNum, target) {
   const wheel = e.wheelDelta;
+  const node = document.querySelector(target);
+  const nodetext = node.children.item(0).innerHTML;
+  const firstLi = document.createElement("li");
+  const centerLi = document.createElement("li");
+  const lastLi = document.createElement("li");
+  if (wheel < 0) {
+    console.log("down");
+
+    if (nodetext === (lastNum - 2).toString()) {
+      firstLi.innerHTML = parseInt(nodetext) + 1;
+      centerLi.innerHTML = parseInt(nodetext) + 2;
+      lastLi.innerHTML = 1;
+    }
+
+    if (nodetext === (lastNum - 1).toString()) {
+      //11 12 1
+      firstLi.innerHTML = parseInt(nodetext) + 1;
+      centerLi.innerHTML = 1;
+      lastLi.innerHTML = 2;
+    }
+    if (nodetext === lastNum.toString()) {
+      //11 12 1
+      firstLi.innerHTML = 1;
+      centerLi.innerHTML = 2;
+      lastLi.innerHTML = 3;
+    }
+    if (firstLi.innerHTML === "") {
+      firstLi.innerHTML = parseInt(nodetext) + 1;
+      centerLi.innerHTML = parseInt(nodetext) + 2;
+      lastLi.innerHTML = parseInt(nodetext) + 3;
+    }
+  } else {
+    // 123 last 12
+    if (node.children.item(0).innerHTML === "1") {
+      firstLi.innerHTML = lastNum;
+      centerLi.innerHTML = 1;
+      lastLi.innerHTML = 2;
+    }
+    //29 1 2 > 28 29 1
+    if (node.children.item(0).innerHTML === lastNum.toString()) {
+      firstLi.innerHTML = lastNum - 1;
+      centerLi.innerHTML = lastNum;
+      lastLi.innerHTML = 1;
+    }
+    //28 29 1  27 28 29
+    if (node.children.item(0).innerHTML === (lastNum - 1).toString()) {
+      firstLi.innerHTML = lastNum - 2;
+      centerLi.innerHTML = lastNum - 1;
+      lastLi.innerHTML = lastNum;
+    }
+    //27 28 29  >26 27 28
+
+    if (firstLi.innerHTML === "") {
+      firstLi.innerHTML = parseInt(nodetext) - 1;
+      centerLi.innerHTML = parseInt(nodetext);
+      lastLi.innerHTML = parseInt(nodetext) + 1;
+    }
+  }
+
+  changeLi(node, firstLi, centerLi, lastLi);
+}
+
+function changeLi(node, firstLi, centerLi, lastLi) {
+  //모두 지우기
+  while (node.hasChildNodes()) {
+    node.removeChild(node.firstChild);
+  }
+
+  node.appendChild(firstLi);
+  node.appendChild(centerLi);
+  node.appendChild(lastLi);
+}
+function chgMonthList(e) {
+  const wheel = e.wheelDelta;
+
+  const firstLi = document.createElement("li");
+  const centerLi = document.createElement("li");
+  const lastLi = document.createElement("li");
+
+  const node = document.querySelector(".month-list");
 
   if (wheel > 0) {
     console.log("up");
-
-    const node = document.querySelector(".month-list");
-
-    const li1 = document.createElement("li");
-    const li2 = document.createElement("li");
-    const li3 = document.createElement("li");
-
-    console.dir(node.children.item(0).innerHTML);
-
     if (node.children.item(0).innerHTML === "1") {
-      li1.innerHTML = 12;
-      li2.innerHTML = parseInt(node.children.item(0).innerHTML);
-      li3.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
+      firstLi.innerHTML = 12;
+      centerLi.innerHTML = parseInt(node.children.item(0).innerHTML);
+      lastLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
     }
 
     if (node.children.item(0).innerHTML === "12") {
       //11 12 1
-      li1.innerHTML = parseInt(node.children.item(0).innerHTML) - 1;
-      li2.innerHTML = parseInt(node.children.item(0).innerHTML);
-      li3.innerHTML = 1;
-    }
-    console.log(li1.innerHTML + "?");
-    if (li1.innerHTML === "") {
-      li1.innerHTML = parseInt(node.children.item(0).innerHTML) - 1;
-      li2.innerHTML = parseInt(node.children.item(0).innerHTML);
-      li3.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
+      firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 1;
+      centerLi.innerHTML = parseInt(node.children.item(0).innerHTML);
+      lastLi.innerHTML = 1;
     }
 
-    //모두 지우기
-    while (node.hasChildNodes()) {
-      node.removeChild(node.firstChild);
+    if (firstLi.innerHTML === "") {
+      firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 1;
+      centerLi.innerHTML = parseInt(node.children.item(0).innerHTML);
+      lastLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
     }
-
-    node.appendChild(li1);
-    node.appendChild(li2);
-    node.appendChild(li3);
   } else {
-    const node = document.querySelector(".month-list");
-
-    const pli1 = document.createElement("li");
-    const pli2 = document.createElement("li");
-    const pli3 = document.createElement("li");
-
-    console.dir(node.children.item(2));
     //  10 11 12 > 11 12 1
     if (node.children.item(0).innerHTML === "10") {
-      pli1.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
-      pli2.innerHTML = parseInt(node.children.item(0).innerHTML) + 2;
-      pli3.innerHTML = 1;
+      firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
+      centerLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 2;
+      lastLi.innerHTML = 1;
     }
     //11 12 1-> 12 1 2
     if (node.children.item(0).innerHTML === "11") {
       //91011
 
-      pli1.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
-      pli2.innerHTML = parseInt(node.children.item(0).innerHTML) - 10;
-      pli3.innerHTML = parseInt(node.children.item(0).innerHTML) - 9;
+      firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
+      centerLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 10;
+      lastLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 9;
     }
 
     //12 1 2 > 123
     if (node.children.item(0).innerHTML === "12") {
-      pli1.innerHTML = parseInt(node.children.item(0).innerHTML) - 11;
-      pli2.innerHTML = parseInt(node.children.item(0).innerHTML) - 10;
-      pli3.innerHTML = parseInt(node.children.item(0).innerHTML) - 9;
+      firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 11;
+      centerLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 10;
+      lastLi.innerHTML = parseInt(node.children.item(0).innerHTML) - 9;
     }
 
-    console.log(pli1.innerHTML + "?");
-    if (pli1.innerHTML === "") {
-      pli1.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
-      pli2.innerHTML = parseInt(node.children.item(0).innerHTML) + 2;
-      pli3.innerHTML = parseInt(node.children.item(0).innerHTML) + 3;
+    if (firstLi.innerHTML === "") {
+      firstLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
+      centerLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 2;
+      lastLi.innerHTML = parseInt(node.children.item(0).innerHTML) + 3;
     }
-
-    //모두 지우기
-    while (node.hasChildNodes()) {
-      node.removeChild(node.firstChild);
-    }
-
-    node.appendChild(pli1);
-    node.appendChild(pli2);
-    node.appendChild(pli3);
   }
+  changeLi(node, firstLi, centerLi, lastLi);
 }
-
-function yearBoxmouseWheel(e) {
-  const wheelyear = e.wheelDelta;
-
-  if (wheelyear < 0) {
-    console.log("down");
-    const node = document.querySelector(".year-list");
-    const li1 = document.createElement("li");
-    const li2 = document.createElement("li");
-    const li3 = document.createElement("li");
-
-    if (parseInt(node.children.item(0).innerHTML).toString() === "2028") {
-      return;
-    }
-
-    li1.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
-    li2.innerHTML = parseInt(node.children.item(0).innerHTML) + 2;
-    li3.innerHTML = parseInt(node.children.item(0).innerHTML) + 3;
-
-    //모두 지우기
-    while (node.hasChildNodes()) {
-      node.removeChild(node.firstChild);
-    }
-
-    node.appendChild(li1);
-    node.appendChild(li2);
-    node.appendChild(li3);
-  } else {
-    const node = document.querySelector(".year-list");
-
-    const pli1 = document.createElement("li");
-    const pli2 = document.createElement("li");
-    const pli3 = document.createElement("li");
-    if (parseInt(node.children.item(0).innerHTML).toString() === "2000") {
-      return;
-    }
-
-    pli1.innerHTML = parseInt(node.children.item(0).innerHTML) - 1;
-    pli2.innerHTML = parseInt(node.children.item(0).innerHTML);
-    pli3.innerHTML = parseInt(node.children.item(0).innerHTML) + 1;
-
-    //모두 지우기
-    while (node.hasChildNodes()) {
-      node.removeChild(node.firstChild);
-    }
-
-    node.appendChild(pli1);
-    node.appendChild(pli2);
-    node.appendChild(pli3);
-  }
-}
-
-function dayBoxmouseWheel(e, lastNum, target) {
-  const wheel = e.wheelDelta;
-  const node = document.querySelector(target);
-  const nodetext = node.children.item(0).innerHTML;
-
-  if (wheel < 0) {
-    console.log("down");
-
-    const li1 = document.createElement("li");
-    const li2 = document.createElement("li");
-    const li3 = document.createElement("li");
-
-    if (nodetext === (lastNum - 2).toString()) {
-      console.log(nodetext + "들어옴");
-
-      li1.innerHTML = parseInt(nodetext) + 1;
-      li2.innerHTML = parseInt(nodetext) + 2;
-      li3.innerHTML = 1;
-    }
-
-    if (nodetext === (lastNum - 1).toString()) {
-      //11 12 1
-      li1.innerHTML = parseInt(nodetext) + 1;
-      li2.innerHTML = 1;
-      li3.innerHTML = 2;
-    }
-    if (nodetext === lastNum.toString()) {
-      //11 12 1
-      li1.innerHTML = 1;
-      li2.innerHTML = 2;
-      li3.innerHTML = 3;
-    }
-    if (li1.innerHTML === "") {
-      li1.innerHTML = parseInt(nodetext) + 1;
-      li2.innerHTML = parseInt(nodetext) + 2;
-      li3.innerHTML = parseInt(nodetext) + 3;
-    }
-
-    //모두 지우기
-    while (node.hasChildNodes()) {
-      node.removeChild(node.firstChild);
-    }
-
-    node.appendChild(li1);
-    node.appendChild(li2);
-    node.appendChild(li3);
-  } else {
-    const pli1 = document.createElement("li");
-    const pli2 = document.createElement("li");
-    const pli3 = document.createElement("li");
-
-    console.dir(node.children.item(2));
-    // 123 last 12
-    if (node.children.item(0).innerHTML === "1") {
-      pli1.innerHTML = lastNum;
-      pli2.innerHTML = 1;
-      pli3.innerHTML = 2;
-    }
-    //29 1 2 > 28 29 1
-    if (node.children.item(0).innerHTML === lastNum.toString()) {
-      pli1.innerHTML = lastNum - 1;
-      pli2.innerHTML = lastNum;
-      pli3.innerHTML = 1;
-    }
-    //28 29 1  27 28 29
-    if (node.children.item(0).innerHTML === (lastNum - 1).toString()) {
-      console.log("들어와?");
-      pli1.innerHTML = lastNum - 2;
-      pli2.innerHTML = lastNum - 1;
-      pli3.innerHTML = lastNum;
-    }
-    //27 28 29  >26 27 28
-
-    console.log(pli1.innerHTML + "?");
-    if (pli1.innerHTML === "") {
-      pli1.innerHTML = parseInt(nodetext) - 1;
-      pli2.innerHTML = parseInt(nodetext);
-      pli3.innerHTML = parseInt(nodetext) + 1;
-    }
-
-    //모두 지우기
-    while (node.hasChildNodes()) {
-      node.removeChild(node.firstChild);
-    }
-
-    node.appendChild(pli1);
-    node.appendChild(pli2);
-    node.appendChild(pli3);
-  }
-}
-
-document
-  .querySelector(".month-list")
-  .addEventListener("mousewheel", function(e) {
-    boxmouseWheel(e);
-    chgDayList();
-  });
-document
-  .querySelector(".year-list")
-  .addEventListener("mousewheel", function(e) {
-    yearBoxmouseWheel(e);
-  });
-document.querySelector(".day-list").addEventListener("mousewheel", function(e) {
-  //마지막해값
-
-  const day = getLastDay();
-  dayBoxmouseWheel(e, day, ".day-list");
-});
-
-//중간의 날짜를 받아서 확인버튼 누르면 input text에 전송
-//month box에 변화 ->
-
+//마지막 달을 구하는 메서드 (DAY 구할때)
 function getLastDay() {
   const chekedM = document.querySelector(".month-list").children.item(1)
     .innerText; //선택된달의
@@ -261,59 +176,38 @@ function getLastDay() {
   const lastDay = new Date(cheekedYear, cheekedMonth, 0).getDate();
   return lastDay;
 }
-
-function chgDayList() {
+/*달의 마지막날이 달라질때 경우마다 dayList에 출력 메서드*/
+function chgDayListLastDay() {
   const day = getLastDay(); //마지막 받아서
   const dayList = document.querySelector(".day-list");
 
+  const firstLi = document.createElement("li");
+  const centerLi = document.createElement("li");
+  const lastLi = document.createElement("li");
   //itme < day && 28<=day<=31 :28<29 28<30 28<31 29<30 29<31 30<31
   //item > day
-  console.dir(dayList);
+
   for (let i = 0; i < dayList.children.length; i++) {
     const item = dayList.children.item(i).innerText;
-    console.dir(day);
-    console.dir(parseInt(item) + "," + i);
 
     if (i === 1) {
       if (parseInt(item) === 1) {
-        //모두 지우기
-        while (dayList.hasChildNodes()) {
-          dayList.removeChild(dayList.firstChild);
-        }
+        firstLi.innerText = day;
+        centerLi.innerText = 1;
+        lastLi.innerText = 2;
 
-        const li1 = document.createElement("li");
-        const li2 = document.createElement("li");
-        const li3 = document.createElement("li");
-        li1.innerText = day;
-        li2.innerText = 1;
-        li3.innerText = 2;
+        changeLi(dayList, firstLi, centerLi, lastLi);
 
-        dayList.appendChild(li1);
-        dayList.appendChild(li2);
-        dayList.appendChild(li3);
-
-        console.log("두번쨍에1" + day);
-        console.dir(dayList.children.item(0));
         break;
       }
     }
     if (i === 2) {
       if (parseInt(item) === 1) {
-        //모두 지우기
-        while (dayList.hasChildNodes()) {
-          dayList.removeChild(dayList.firstChild);
-        }
+        firstLi.innerText = day - 1;
+        centerLi.innerText = day;
+        lastLi.innerText = 1;
 
-        const li1 = document.createElement("li");
-        const li2 = document.createElement("li");
-        const li3 = document.createElement("li");
-        li1.innerText = day - 1;
-        li2.innerText = day;
-        li3.innerText = 1;
-
-        dayList.appendChild(li1);
-        dayList.appendChild(li2);
-        dayList.appendChild(li3);
+        changeLi(dayList, firstLi, centerLi, lastLi);
 
         break;
       }
@@ -323,41 +217,49 @@ function chgDayList() {
       //28<;30  28<31
       console.log(day + "<" + item);
       if (i === 2) {
-        while (dayList.hasChildNodes()) {
-          dayList.removeChild(dayList.firstChild);
-        }
+        firstLi.innerText = day - 2;
+        centerLi.innerText = day - 1;
+        lastLi.innerText = day;
 
-        const li1 = document.createElement("li");
-        const li2 = document.createElement("li");
-        const li3 = document.createElement("li");
-        li1.innerText = day - 2;
-        li2.innerText = day - 1;
-        li3.innerText = day;
-
-        dayList.appendChild(li1);
-        dayList.appendChild(li2);
-        dayList.appendChild(li3);
+        changeLi(dayList, firstLi, centerLi, lastLi);
         break;
       }
     }
   }
 }
-//확인버튼 클릭시 해당값을 시작 input박스에 보냄
-//
+
+/*event 추가 메서드*/
+//0.룰렛의 List에 마우스 휠 효과가 적용됬을때 이벤트
+document
+  .querySelector(".month-list")
+  .addEventListener("mousewheel", function(e) {
+    chgMonthList(e);
+    chgDayListLastDay();
+  });
+document
+  .querySelector(".year-list")
+  .addEventListener("mousewheel", function(e) {
+    chgYearList(e);
+  });
+document.querySelector(".day-list").addEventListener("mousewheel", function(e) {
+  //마지막해값
+
+  const day = getLastDay();
+  chgDayList(e, day, ".day-list");
+});
+
+//1.확인버튼 클릭시 해당값을 선택됬던  input에 값을 전송하는 이벤트
 document.querySelector(".submitDatebtn").addEventListener("click", function(e) {
-  console.log("버튼클릭");
   const cheekedYear = document.querySelector(".year-list").children.item(1)
     .innerText;
   const month = document.querySelector(".month-list").children.item(1)
-    .innerText; //선택된달의
+    .innerText;
   const chekedMonth = month < 10 ? "0" + month : month;
   const day = document.querySelector(".day-list").children.item(1).innerText;
-  console.log(day+"??");
   const chekedDay = day < 10 ? "0" + day : day;
-  // a의textContent 값을 받아서 시작인지 종료인지 구분 전송
-  const chekTag = document.querySelector(".chekTag").value;
 
-  console.dir(chekTag);
+  // 숨겨진 input에서 값을 바다 선택된 input을 구분
+  const chekTag = document.querySelector(".chekTag").value;
   if (chekTag === "시작") {
     console.log(chekedDay);
     document.querySelector(".startTime").querySelector("input").value =
@@ -368,23 +270,20 @@ document.querySelector(".submitDatebtn").addEventListener("click", function(e) {
     document.querySelector(".endTime").querySelector("input").value =
       cheekedYear + "-" + chekedMonth + "-" + chekedDay;
   }
-  //버튼 확인버튼시 사라짐
+  //2.확인 버튼 클릭시 박스 사라지는 이벤트
   document.querySelector(".datepicker").style.display = "none";
 });
-//시작버튼 호버
 
-//애니메이션 추가
+//3.input을 클릭하면 날짜 입력 룰렛 생성 이벤트*/
 document
   .querySelector(".startTime input")
   .addEventListener("click", function(e) {
     /*시작과 종료시간 전송시 구분을 위한 코드*/
     const tag = e.toElement.previousElementSibling.innerHTML;
     document.querySelector(".chekTag").value = tag;
-    console.log(tag);
     /*박스 보이게 하기*/
     document.querySelector(".datepicker").style.display = "block";
   });
-
 document.querySelector(".endTime input").addEventListener("click", function(e) {
   /*시작과 종료시간 전송시 구분을 위한 코드*/
   const tag = e.toElement.previousElementSibling.innerHTML;
@@ -393,7 +292,7 @@ document.querySelector(".endTime input").addEventListener("click", function(e) {
   document.querySelector(".datepicker").style.display = "block";
 });
 
-//확인을 누르지X 나갈때
+//4.확인을 누르지X 나갈때 이벤트 처리
 document
   .querySelector(".wrappercontainer")
   .addEventListener("click", function(e) {

@@ -69,7 +69,7 @@
 }
 .find__icon-right {
   position: absolute;
-  right: 35px;
+  right: 50px;
   opacity: 0.7;
   cursor: pointer;
   bottom: 20px;
@@ -104,29 +104,49 @@
 .find_weather_title {
   font-size: 18px;
   font-weight: 600;
-  padding: 20px 20px;
+  position: fixed;
+  left: 25px;
 }
 .find__toDayWeather {
-  margin-top: 20px;
+  margin-top: 30px;
   width: 100%;
   display: flex;
-  box-shadow: 1px 1px 4px 0px #999;
+  border-top: 5px solid rgb(238, 234, 234);
+  border-bottom: 5px solid rgb(238, 234, 234);
   flex-direction: row;
+  border-right: 5px solid rgb(238, 234, 234);
+}
+.find__toDayWeather:first-child {
+  border-left: 5px solid rgb(238, 234, 234);
 }
 .find__column {
   width: 100%;
   margin: auto 0;
   display: flex;
   flex-direction: column;
-  padding: 15px;
   justify-content: center;
   align-items: center;
-}
-.find__column span {
-  width: 100%;
-  margin: 10px;
+  padding-bottom: 30px;
 }
 
+.find__column span {
+  width: 100%;
+}
+.js-place {
+  margin-top: 30px;
+}
+.js-temp {
+  font-size: 30px;
+  margin-top: 20px;
+}
+.js-weather {
+  font-size: 14px;
+}
+#wicon {
+  width: 85px;
+}
+
+/*이벤트시 추가되는 CSS*/
 .addingcss {
   display: block;
   position: fixed;
@@ -146,10 +166,24 @@
   outline: none;
   position: fixed;
   top: 65px;
-  background-color: red;
 }
 
 .settings__setting {
   padding: 15px 20px;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid rgb(238, 234, 234);
+}
+
+/*아래->위로 올라가는 애니메이션*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.find__write-lineBox {
+  animation: fadeIn 0.5s ease-in;
 }

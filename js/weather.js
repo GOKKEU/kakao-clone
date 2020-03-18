@@ -6,6 +6,9 @@ const toDayTemp = document.querySelector(".js-temp");
 //날씨정보 API
 const API_KEY = "fabdb8edb8c8f543ba4fe4378accc29c";
 //javascript를 이용해서 특정 URL을 호출한는지 확인
+
+//아이콘 적용
+
 function getWeather(lat, lon) {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
@@ -16,7 +19,13 @@ function getWeather(lat, lon) {
     .then(function(json) {
       const temperature = json.main.temp;
       const place = json.name;
-      const weatherArray = json.weather; //how to get array in json
+      const weatherArray = json.weather;
+      console.log(json);
+      const icon = weatherArray[0].icon;
+      const iconurl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+      console.log(iconurl);
+      document.getElementById("wicon").src = iconurl;
+
       const description = weatherArray[0].description;
       console.log(toDayWeather, place, description);
       toDayWeather.innerHTML = `${description}`;
@@ -70,6 +79,5 @@ function loadCoords() {
 }
 function init() {
   loadCoords();
-  
 }
 init();

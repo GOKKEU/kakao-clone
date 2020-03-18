@@ -53,9 +53,14 @@ function rifhtPrint(month) {
 /*스크롤 위치 변경*/
 function scrollPositionChg() {
   const boxCon = document.querySelector(".boxwrap");
-  let posi = boxCon.offsetWidth;
-  console.dir(posi);
-  $(".boxwrap").scrollLeft(posi);
+
+  let boxwidth = boxCon.offsetWidth;
+  /*boxCon의 offsetWidth가 안되는 경우 존재 clientWidth 로 대체 */
+  if (boxwidth === null) {
+    boxwidth = clientWidth;
+  }
+
+  $(".boxwrap").scrollLeft(boxwidth);
   /*일정 출력 함수*/
   loadSchedule();
 }

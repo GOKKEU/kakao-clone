@@ -10,7 +10,7 @@ function getDateObj(setmonth, setyear) {
     curLastDate: new Date(setyear, setmonth, 0).getDate(),
     preLastDate: new Date(setyear, setmonth - 1, 0).getDate() //이전달에 마지막 날짜
   };
-  console.log(new Date(setyear, setmonth, 0).getDate());
+  //console.log(new Date(setyear, setmonth, 0).getDate());
 
   return dateObj;
 }
@@ -25,7 +25,7 @@ function chunk(arr, size) {
 function printArr(arr, currentM) {
   const WEEKS = "weeks";
   const DATE = "date";
-  console.log(arr);
+
   for (const i in arr) {
     const ul = document.createElement("ul");
 

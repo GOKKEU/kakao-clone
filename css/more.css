@@ -78,7 +78,7 @@
   padding: 20px;
   cursor: pointer;
 }
-.more__section_envelope:hover,
+
 .more__section_calendar:hover {
   background-color: lightslategrey;
 }

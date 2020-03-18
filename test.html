@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/test.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+      const request = new XMLHttpRequest();
+      const url = 'https://news.google.com/?hl=ko&gl=KR&ceid=KR:ko'; // 긁어오고 싶은 주소를 넣는다. 예제는 네이버
+
+      request.open('GET', url, true);
+      request.onload = function () {
+        console.log(request.responseText); // 긁어온 내용 뿌리기
+      };
+      request.send();
+
+    </script>
   </head>
   <body class="calendar">
     <!--상단을 고정시키기 위한 코드-->
@@ -79,8 +90,7 @@
       </span>
     </div>-->
   </body>
-  <script src="js/clock.js"></script>
-  <script src="js/calendar.js"></script>
+
   <!--<script src="js/jqMouseWheelSlide.js"></script>-->
   
   </body>
