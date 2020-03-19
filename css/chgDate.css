@@ -121,13 +121,11 @@
     padding-left: 60%;
     font-size: 18px;
     outline: none;
-    height: 60px;;
-    
+    height: 60px;
 }
 /*input startTime endTime*/
 .startTime {
     display: flex;
-   
 }
 .startTime label {
     position: fixed;
@@ -144,7 +142,6 @@
 }
 .endTime {
     display: flex;
-  
 }
 .endTime label {
     position: fixed;
@@ -157,7 +154,7 @@
     padding-left: 60%;
     font-size: 18px;
     outline: none;
-      height: 60px;
+    height: 60px;
 }
 /*캘린더 spna*/
 .date span {
@@ -177,7 +174,6 @@
     width: 100%;
     border: none;
     color: black;
-
 }
 
 .text-title {
@@ -193,7 +189,6 @@
     font-size: 18px;
     outline: none;
     height: 50px;
-    
 }
 
 /*달력 text색상*/
