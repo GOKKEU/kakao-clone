@@ -1,7 +1,7 @@
 .cal-shell {
-  display: block;
-  width: 100%;
-  margin-top: 40px;
+    display: block;
+    width: 100%;
+    margin-top: 40px;
 }
 
 /* THE SELECT ROW */
@@ -9,189 +9,194 @@
 /* MONTH VIEW */
 
 .month-list {
-  font-weight: 800;
-  font-size: 20px;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 .month-list li {
-  text-align: center;
-  height: 40px;
-  opacity: 50%;
+    text-align: center;
+    height: 40px;
+    opacity: 50%;
 }
 .month-list li:nth-child(2) {
-  opacity: 1;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+    opacity: 1;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 /* MONTH VIEW */
 
 .day-list {
-  font-weight: 800;
-  font-size: 20px;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 .day-list li {
-  text-align: center;
-  height: 40px;
-  opacity: 50%;
+    text-align: center;
+    height: 40px;
+    opacity: 50%;
 }
 .day-list li:nth-child(2) {
-  opacity: 1;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+    opacity: 1;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 /* MONTH VIEW */
 
 .year-list {
-  font-weight: 800;
-  font-size: 20px;
+    font-weight: 800;
+    font-size: 20px;
 }
 
 .year-list li {
-  text-align: center;
-  height: 40px;
-  opacity: 50%;
+    text-align: center;
+    height: 40px;
+    opacity: 50%;
 }
 .year-list li:nth-child(2) {
-  opacity: 1;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+    opacity: 1;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .boxCalendar {
-  display: flex;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  background-color: white;
-  height: 20%;
+    display: flex;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: white;
+    height: 20%;
 
-  box-shadow: 1px 1px 5px 0px #999;
+    box-shadow: 1px 1px 5px 0px #999;
 }
 /*라인*/
 .cal-shell li {
-  margin: 0px 20px;
-  padding: 10px;
+    margin: 0px 20px;
+    padding: 10px;
 }
 .cal-shell li:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 /*스크롤바 숨기기*/
 .month-list,
 .year-list,
 .day-list {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 .month-list::-webkit-scrollbar,
 .year-list::-webkit-scrollbar,
 .day-list::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
+    display: none; /* Chrome, Safari, Opera*/
 }
 /*버튼*/
 .submitDatebtn {
-  background-color: #fce006;
-  height: 5%;
-  width: 100%;
-  /* outline: none; */
-  border: none;
+    background-color: #fce006;
+    height: 5%;
+    width: 100%;
+    /* outline: none; */
+    border: none;
 }
 .datepicker {
-  width: 100%;
+    width: 100%;
 
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  display: none;
-  height: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+    height: 100%;
 }
 .wrappercontainer {
-  width: 100%;
-  height: 75%;
+    width: 100%;
+    height: 75%;
 }
 /*title*/
 .date__title {
-  display: flex;
-  margin: 10px 0px 20px;
+    display: flex;
 }
 .date__title label {
-  position: fixed;
-  margin-left: 20px;
+    position: fixed;
+    margin: 20px;
 }
 
 .date__title input {
-  padding-left: 60%;
-  font-size: 18px;
-  outline: none;
+    padding-left: 60%;
+    font-size: 18px;
+    outline: none;
+    height: 60px;;
+    
 }
 /*input startTime endTime*/
 .startTime {
-  display: flex;
-  margin: 10px 0px 20px;
+    display: flex;
+   
 }
 .startTime label {
-  position: fixed;
-  margin-left: 20px;
+    position: fixed;
+    margin: 20px;
 }
 .startTime input:hover {
-  background-color: lightblue;
+    background-color: lightblue;
 }
 .startTime input {
-  padding-left: 60%;
-  font-size: 18px;
-  outline: none;
+    padding-left: 60%;
+    font-size: 18px;
+    outline: none;
+    height: 60px;
 }
 .endTime {
-  display: flex;
-  margin: 10px 0px 20px;
+    display: flex;
+  
 }
 .endTime label {
-  position: fixed;
-  margin-left: 20px;
+    position: fixed;
+    margin: 20px;
 }
 .endTime input:hover {
-  background-color: lightcoral;
+    background-color: lightcoral;
 }
 .endTime input {
-  padding-left: 60%;
-  font-size: 18px;
-  outline: none;
+    padding-left: 60%;
+    font-size: 18px;
+    outline: none;
+      height: 60px;
 }
 /*캘린더 spna*/
 .date span {
-  background-color: cornflowerblue;
-  width: 100%;
-  display: flex;
-  height: 15px;
-  font-size: 15px;
-  overflow: hidden;
-  color: black;
-  font-weight: 600;
+    background-color: cornflowerblue;
+    width: 100%;
+    display: flex;
+    height: 15px;
+    font-size: 15px;
+    overflow: hidden;
+    color: black;
+    font-weight: 600;
 }
 
 /*내용 입력칸*/
 
 .list_section input {
-  width: 100%;
-  border: none;
-  color: black;
+    width: 100%;
+    border: none;
+    color: black;
+
 }
 
 .text-title {
-  display: flex;
-  margin: 10px 0px 20px;
+    display: flex;
 }
 .text-title label {
-  position: fixed;
-  margin-left: 20px;
+    position: fixed;
+    margin: 20px;
 }
 
 .text-title input {
-  padding-left: 60%;
-  font-size: 18px;
-  outline: none;
+    padding-left: 60%;
+    font-size: 18px;
+    outline: none;
+    height: 50px;
+    
 }
 
 /*달력 text색상*/
-.box ul li:first-child{
-  color: red;
+.box ul li:first-child {
+    color: red;
 }

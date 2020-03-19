@@ -1,141 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--emmet사용 ,사용언어-->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find | Kakao Clone</title>
-    <!--무료폰트를 사용하기 위한 코드-->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--CSS 사용하기 위한 코드-->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body class="find-body">
-    <div class="header-wrapper">
-      <!--status-bar start-->
-      <div class="status-bar">
-        <div class="status-bar__column">
-          <span class="status-bar__kt">KT</span>
-        </div>
-        <div class="status-bar__column">
-          <!--item 무료사용 Font Awesome 사용-->
-          <i class="fas fa-clock"></i>
-          <i class="fas fa-volume-mute"></i>
-          <i class="fas fa-wifi"></i>
-          <span class="status-bar__battery-level">100%</span>
-          <i class="fas fa-battery-full"></i>
-          <span class="status-bar__clock js-clock"><p>00:00</p></span>
-        </div>
-      </div>
-      <!--status-bar end-->
-      <!--search btn start-->
-      <div class="find__write-lineBox">
-        <input
-          type="search"
-          placeholder="검색어를 입력해주세요"
-          class="find__write js-toDoForm"
-        />
-        <div class="find__icon-left find__icon">
-          <a class="">
-            #
-          </a>
-        </div>
-        <div class="find__icon-right find__icon">
-          <i class="fas fa-search"></i>
-        </div>
-        <div class="find__line"></div>
-        <div class="find__write-container">
-          <ul class="js-toDoList"></ul>
-        </div>
-      </div>
-      <!--search btn end-->
-      <!--header start-->
-      <header class="header">
-        <div class="header__column">
-          <h1 class="header__title">#날씨</h1>
-        </div>
-        <div class="header__column">
-          <span class="header_icon">
-            <i class="fas fa-search"></i>
-          </span>
-          <span class="header_icon">
-            <i class="fas fa-cog"></i>
-          </span>
-        </div>
-      </header>
-      <!--header end-->
-      <!--Navigator start-->
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__list-item">
-            <a href="friends.html" class="nav__list-link">
-              <i class="far fa-user"></i>
-            </a>
-          </li>
-          <li class="nav__list-item">
-            <a href="index.html" class="nav__list-link">
-              <!--badge만들기-->
-              <div class="nav__badge">8</div>
-              <i class="far fa-comment"></i>
-            </a>
-          </li>
-          <li class="nav__list-item">
-            <a href="find.html" class="nav__list-link">
-              #
-            </a>
-          </li>
-          <li class="nav__list-item">
-            <a href="more.html" class="nav__list-link">
-              <i class="fas fa-ellipsis-h"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!--Navigator end-->
-    </div>
-    <!--main start -->
-    <main>
-      <a class="find_weather_title">Today Weather</a>
-      <div class="find__imformation">
-        <!--날씨 start-->
+    <!--emmet사용 ,사용언어-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Find | Kakao Clone</title>
+        <!--무료폰트를 사용하기 위한 코드-->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!--CSS 사용하기 위한 코드-->
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body class="find-body">
+        <div class="header-wrapper">
+            <!--status-bar start-->
+            <div class="status-bar">
+                <div class="status-bar__column">
+                    <span class="status-bar__kt">KT</span>
+                </div>
+                <div class="status-bar__column">
+                    <!--item 무료사용 Font Awesome 사용-->
+                    <i class="fas fa-clock"></i>
+                    <i class="fas fa-volume-mute"></i>
+                    <i class="fas fa-wifi"></i>
+                    <span class="status-bar__battery-level">100%</span>
+                    <i class="fas fa-battery-full"></i>
+                    <span class="status-bar__clock js-clock"><p>00:00</p></span>
+                </div>
+            </div>
+            <!--status-bar end-->
+            <!--search btn start-->
 
-        <div class="find__toDayWeather ">
-          <div class="find__column">
-            <img id="wicon" src="" alt="Weather icon" />
-            <a class=" js-weather"></a>
-          </div>
-          <div class="find__column">
-            <span class="js-place"></span>
-            <span class="js-temp"></span>
-          </div>
-        </div>
-        <!--다음날 날씨-->
-        <div class="find__toDayWeather">
-          <div class="find__column"></div>
-          <div class="find__column"></div>
-        </div>
-      </div>
-      <section class="find__sections">
-        <ul class="settings_list">
-          <li class="settings__setting"></li>
-          <li class="settings__setting"></li>
-          <li class="settings__setting"></li>
-          <li class="settings__setting"></li>
-          <li class="settings__setting"></li>
-        </ul>
-      </section>
-    </main>
-    <!--main end -->
+            <div class="find__write-lineBox">
+                <div class="tooltipInput">
+                    <span class="inputTooltip">클릭시 검색창과+검색기록창으로 이동 </span>
+                </div>
+                <input type="search" placeholder="검색어를 입력해주세요" class="find__write js-toDoForm" />
 
-    <!--MediaQuery-->
-    <div class="bigScreen">
-      <span class="bigScreen__text">
-        Please make your screen small
-      </span>
-    </div>
-    <script src="./js/mousehovwer.js"></script>
-    <script src="./js/clock.js"></script>
-    <script src="./js/todo.js"></script>
-    <script src="./js/weather.js"></script>
-  </body>
+                <div class="find__icon-left find__icon">
+                    <a class="">
+                        #
+                    </a>
+                </div>
+                <div class="find__icon-right find__icon">
+                    <i class="fas fa-search"> </i>
+                </div>
+                <div class="find__line"></div>
+                <div class="find__write-container">
+                    <ul class="js-toDoList"></ul>
+                </div>
+            </div>
+            <!--search btn end-->
+            <!--header start-->
+            <header class="header">
+                <div class="header__column">
+                    <h1 class="header__title">#날씨</h1>
+                </div>
+
+                <div class="header__column">
+                    <span class="header_icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <span class="header_icon">
+                        <i class="fas fa-cog"></i>
+                    </span>
+                </div>
+            </header>
+            <!--header end-->
+            <!--Navigator start-->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list-item ">
+                        <div class="tooltip">
+                            <span class="tooltiptext top">친구</span>
+                            <a href="friends.html" class="nav__list-link ">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav__list-item">
+                        <div class="tooltip">
+                            <span class="tooltiptext top">채팅</span>
+                            <a href="index.html" class="nav__list-link">
+                                <!--badge만들기-->
+                                <div class="nav__badge">8</div>
+                                <i class="far fa-comment"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav__list-item">
+                        <div class="tooltip">
+                            <a href="find.html" class="nav__list-link"> #<span class="tooltiptext top">검색</span> </a>
+                        </div>
+                    </li>
+                    <li class="nav__list-item">
+                        <div class="tooltip">
+                            <a href="more.html" class="nav__list-link">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <span class="tooltiptext top">더보기</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!--Navigator end-->
+        </div>
+        <!--main start -->
+        <main>
+            <a class="find_weather_title">Today Weather</a>
+            <div class="find__imformation">
+                <!--날씨 start-->
+
+                <div class="find__toDayWeather ">
+                    <div class="find__column">
+                        <img id="wicon" src="" alt="Weather icon" />
+                        <a class=" js-weather"></a>
+                    </div>
+                    <div class="find__column">
+                        <span class="js-place"></span>
+                        <span class="js-temp"></span>
+                    </div>
+                    <div class="tooltip weathertoolTip">
+                        <span class="tooltiptext bottom">오늘의 날씨</span>
+                    </div>
+                </div>
+                <!--다음날 날씨-->
+                <div class="find__toDayWeather">
+                    <div class="find__column"></div>
+                    <div class="find__column"></div>
+                </div>
+            </div>
+            <section class="find__sections">
+                <ul class="settings_list">
+                    <li class="settings__setting"></li>
+                    <li class="settings__setting"></li>
+                    <li class="settings__setting"></li>
+                    <li class="settings__setting"></li>
+                    <li class="settings__setting"></li>
+                </ul>
+            </section>
+        </main>
+        <!--main end -->
+
+        <!--MediaQuery-->
+        <div class="bigScreen">
+            <span class="bigScreen__text">
+                Please make your screen small
+            </span>
+        </div>
+        <script src="./js/mousehovwer.js"></script>
+        <script src="./js/clock.js"></script>
+        <script src="./js/todo.js"></script>
+        <script src="./js/weather.js"></script>
+    </body>
 </html>

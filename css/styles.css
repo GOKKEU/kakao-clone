@@ -13,40 +13,41 @@
 @import "chats.css";
 @import "calendar.css";
 @import "chgDate.css";
+@import "tooltip.css";
 * {
-  /*
+    /*
   box-sizing은 박스의 크기를 어떤 것을 기준으로 계산할지를 정하는 속성입니다.
   border-box : 테두리를 기준으로 크기를 정합니다.
   */
-  box-sizing: border-box;
-  letter-spacing: -1px; /*자간 사이를 좁게 변경*/
+    box-sizing: border-box;
+    letter-spacing: -1px; /*자간 사이를 좁게 변경*/
 }
 
 body {
-  background-color: white;
-  padding: 10px 0px;
-  color: #020202;
-  font-family: "Nanum Gothic";
-  margin-top: 100px;
+    background-color: white;
+    padding: 10px 0px;
+    color: #020202;
+    font-family: "Nanum Gothic";
+    margin-top: 100px;
 }
 
 a {
-  /* 부모요소를 받아온다 ex 링크가 걸린  아이콘은 보라색으로 이를 없애기 위해 적용*/
-  color: inherit;
-  /*밑줄 없애준다*/
-  text-decoration: none;
+    /* 부모요소를 받아온다 ex 링크가 걸린  아이콘은 보라색으로 이를 없애기 위해 적용*/
+    color: inherit;
+    /*밑줄 없애준다*/
+    text-decoration: none;
 }
 /*아래->위로 올라가는 애니메이션*/
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    transform: none;
-  }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        transform: none;
+    }
 }
 
 main {
-  animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 0.5s ease-in;
 }

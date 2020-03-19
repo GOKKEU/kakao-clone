@@ -38,9 +38,12 @@
         </a>
         <h1 class="month js-month"></h1>
         <select
-          ><option></option></select
-        >
-        <a id="year"></a>
+          ><option></option>
+          </select>
+          <div class="rightToolTip">
+            <span class="tooltiptext">마우스 휠을 움직이면 화면이 이동합니다.</span>
+          <a id="year"></a>
+      </div>
       </div>
       <div class="calendar__header-right">
         <span class="">
@@ -51,7 +54,11 @@
     <div class="calendar ">
       <div class="boxwrap"></div>
     </div>
-    <button class="addBtn">+</button>
+    <div class="tooltip">
+      <span class="addBtntooltip">일정 추가 버튼</span>    
+    <button class="addBtn">
+       +</button></div>
+  
     <div class="pageChg"></div>
     <div class="addToDoList">
       <div class="list_header">
@@ -82,7 +89,9 @@
     <div class="wrappercontainer"></div>
     <div class="boxCalendar">
       <div class="cal-shell">
+
         <div class="select-year">
+
           <ul class="year-list">
             <li>2019</li>
            <li>2020</li>

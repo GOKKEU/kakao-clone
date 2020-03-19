@@ -1,0 +1,149 @@
+.tooltip,
+.rightToolTip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    opacity: 0.8;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -50px;
+    font-size: 16px;
+}
+
+/*꼬리부분*/
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+}
+
+/*마우스 호버시 사라짐*/
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*top*/
+.top {
+    bottom: 150%;
+    width: 100px;
+    visibility: hidden;
+}
+.top::after {
+    top: 100%;
+    border-color: black transparent transparent transparent;
+}
+
+/*bottom*/
+.bottom {
+    top: 150%;
+    width: 150px;
+    visibility: visible;
+}
+.bottom::after {
+    bottom: 100%;
+    border-color: transparent transparent black transparent;
+}
+/* find page input*/
+.tooltipInput {
+    position: fixed;
+    bottom: 140px;
+    left: 150px;
+    display: inline-block;
+    border-bottom: 1px dotted white;
+}
+.inputTooltip {
+    opacity: 0.8;
+    font-size: 17px;
+    visibility: visible;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    margin-left: -60px;
+    position: fixed;
+    left: 100px;
+    bottom: 140px;
+}
+.inputTooltip::after {
+    content: "";
+    position: fixed;
+    left: 50px;
+    bottom: 130px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.weathertoolTip {
+    position: fixed;
+    left: 100px;
+    top: 280px;
+}
+
+/*캘린더 페이지*/
+.rightToolTip .tooltiptext {
+    opacity: 0.7;
+    font-size: 15px;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.rightToolTip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip .addBtntooltip {
+    opacity: 0.7;
+    font-size: 17px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 28px;
+    right: 80px;
+    width: 150px;
+}
+
+.tooltip .addBtntooltip::after {
+    content: "";
+    position: fixed;
+    bottom: 35px;
+    right: 70px;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}

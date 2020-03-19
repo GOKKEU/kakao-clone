@@ -1,117 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--emmet사용 ,사용언어-->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chats | Kakao Clone</title>
-    <!--무료아이콘를 사용하기 위한 코드-->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--CSS 사용하기 위한 코드-->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="header-wrapper">
-      <!--status-bar start-->
-      <div class="status-bar">
-        <div class="status-bar__column">
-          <span class="status-bar__kt">KT</span>
-        </div>
-        <div class="status-bar__column">
-          <!--item 무료사용 Font Awesome 사용-->
-          <i class="fas fa-clock"></i>
-          <i class="fas fa-volume-mute"></i>
-          <i class="fas fa-wifi"></i>
-          <span class="status-bar__battery-level">100%</span>
-          <i class="fas fa-battery-full "></i>
-          <span class="status-bar__clock js-clock"><p>00:00</p></span>
-        </div>
-      </div>
-      <!--status-bar end-->
-      <!--header start-->
-      <header class="header">
-        <div class="header__column">
-          <h1 class="header__title">Chart</h1>
-        </div>
-        <div class="header__column">
-          <span class="header_icon">
-            <i class="fas fa-search"></i>
-          </span>
-          <span class="header_icon">
-            <i class="far fa-comment"></i>
-          </span>
-          <span class="header_icon">
-            <i class="fas fa-cog"></i>
-          </span>
-        </div>
-      </header>
-      <!--header end-->
-    </div>
-    <!--main chats box start-->
-    <main class="chats">
-      <ul class="chats__list">
-        <li class="chats__chat chat">
-          <!--chart페이지로 링크화-->
-          <a href="chart.html">
-            <!--친구 프로필 start-->
-            <div class="chats__chat friend friend--lg">
-              <div class="friend__column">
-                <img src="images/avatar.jpg" class="m-avatar friend__avatar" />
-                <div class="friend__content">
-                  <span class="friend__name">
-                    Lynn
-                  </span>
-                  <span class="friend__status">
-                    Going home
-                  </span>
+    <!--emmet사용 ,사용언어-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chats | Kakao Clone</title>
+        <!--무료아이콘를 사용하기 위한 코드-->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!--CSS 사용하기 위한 코드-->
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="header-wrapper">
+            <!--status-bar start-->
+            <div class="status-bar">
+                <div class="status-bar__column">
+                    <span class="status-bar__kt">KT</span>
                 </div>
-              </div>
-              <div class="friend__column">
-                <span class="chat__side">
-                  March 8
-                </span>
-              </div>
+                <div class="status-bar__column">
+                    <!--item 무료사용 Font Awesome 사용-->
+                    <i class="fas fa-clock"></i>
+                    <i class="fas fa-volume-mute"></i>
+                    <i class="fas fa-wifi"></i>
+                    <span class="status-bar__battery-level">100%</span>
+                    <i class="fas fa-battery-full "></i>
+                    <span class="status-bar__clock js-clock"><p>00:00</p></span>
+                </div>
             </div>
-            <!--친구 프로필 end-->
-          </a>
-        </li>
-      </ul>
-    </main>
-    <!--main chats box end-->
-    <!--Navigator start-->
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__list-item">
-          <a href="friends.html" class="nav__list-link">
-            <i class="far fa-user"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="index.html" class="nav__list-link">
-            <!--badge만들기-->
-            <div class="nav__badge">8</div>
-            <i class="fas fa-comment"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="find.html" class="nav__list-link">
-            #
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="more.html" class="nav__list-link">
-            <i class="fas fa-ellipsis-h"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!--Navigator end-->
-    <!--MediaQuery-->
-    <div class="bigScreen">
-      <span class="bigScreen__text">
-        Please make your screen smallㅠㅜ
-      </span>
-    </div>
-    <script src="js/clock.js"></script>
-  </body>
+            <!--status-bar end-->
+            <!--header start-->
+            <header class="header">
+                <div class="header__column">
+                    <h1 class="header__title">Chart</h1>
+                </div>
+                <div class="header__column">
+                    <span class="header_icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <span class="header_icon">
+                        <i class="far fa-comment"></i>
+                    </span>
+                    <span class="header_icon">
+                        <i class="fas fa-cog"></i>
+                    </span>
+                </div>
+            </header>
+            <!--header end-->
+        </div>
+        <!--main chats box start-->
+        <main class="chats">
+            <ul class="chats__list">
+                <li class="chats__chat chat">
+                    <!--chart페이지로 링크화-->
+                    <a href="chart.html">
+                        <!--친구 프로필 start-->
+
+                        <div class="chats__chat friend friend--lg">
+                            <div class="friend__column">
+                                <img src="images/avatar.jpg" class="m-avatar friend__avatar" />
+                                <div class="friend__content">
+                                    <div class="tooltip">
+                                        <span class="tooltiptext bottom">채팅창으로 이동</span>
+                                        <span class="friend__name">
+                                            Lynn
+                                        </span>
+                                        <span class="friend__status">
+                                            Going home
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="friend__column">
+                                <span class="chat__side">
+                                    March 8
+                                </span>
+                            </div>
+                        </div>
+                        <!--친구 프로필 end-->
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <!--main chats box end-->
+        <!--Navigator start-->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list-item ">
+                    <div class="tooltip">
+                        <span class="tooltiptext top">친구</span>
+                        <a href="friends.html" class="nav__list-link ">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav__list-item">
+                    <div class="tooltip">
+                        <span class="tooltiptext top">채팅</span>
+                        <a href="index.html" class="nav__list-link">
+                            <!--badge만들기-->
+                            <div class="nav__badge">8</div>
+                            <i class="fas fa-comment"></i>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav__list-item">
+                    <div class="tooltip">
+                        <a href="find.html" class="nav__list-link"> #<span class="tooltiptext top">검색</span> </a>
+                    </div>
+                </li>
+                <li class="nav__list-item">
+                    <div class="tooltip">
+                        <a href="more.html" class="nav__list-link">
+                            <i class="fas fa-ellipsis-h"></i>
+                            <span class="tooltiptext top">더보기</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!--Navigator end-->
+        <!--MediaQuery-->
+        <div class="bigScreen">
+            <span class="bigScreen__text">
+                Please make your screen smallㅠㅜ
+            </span>
+        </div>
+        <script src="js/clock.js"></script>
+    </body>
 </html>
