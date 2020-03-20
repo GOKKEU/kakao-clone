@@ -27,8 +27,6 @@ function mouseEnter() {
     focusIine.classList.add(ADD_CSS_IINE);
     /*input을 나타나게 하는 cs*/
     toDoInput.classList.add(ADD_CSS_IIPUT);
-
-    
 }
 
 function mouseLeave() {
@@ -41,19 +39,16 @@ function mouseLeave() {
 }
 function xBtnAddCss() {
     const localStorageItem = localStorage.getItem(TODOS_LS);
+    const parseItem = JSON.parse(localStorageItem);
+    if (parseItem !== null) {
+        for (var i = 0; i < parseItem.length; i++) {
+            console.dir(parseItem.length + "X의 갯수");
+            /*mouseenter는 요소에 위치했을때 발생*/
+            if (focusedChid.item(i) !== null) {
+                focusedChid
+                    .item(i)
 
-    if (localStorageItem !== toDos) {
-        const parseItem = JSON.parse(localStorageItem);
-        if (parseItem !== null) {
-            for (var i = 0; i < parseItem.length; i++) {
-                console.dir(parseItem.length + "X갯수");
-                /*mouseenter는 요소에 위치했을때 발생*/
-                if (focusedChid.item(i) !== null) {
-                    focusedChid
-                        .item(i)
-                        .querySelector("button")
-                        .addEventListener("mouseenter", mouseEnter);
-                }
+                    .addEventListener("mouseenter", mouseEnter);
             }
         }
     }
@@ -72,10 +67,11 @@ function deleteToDo(event) {
 
     toDos = cleanToDos;
     saveToDo();
-    console.log(focusedChid.length);
 
     if (focusedChid.length === 0) {
         mouseLeave();
+    } else {
+        mouseEnter();
     }
 }
 
@@ -130,13 +126,21 @@ function loadToDos() {
             paintToDo(toDo.text);
         });
     }
+    document.querySelector(".find__icon-right").addEventListener("click", function(e) {
+        /*공백처리*/
+        console.dir(e);
+        if (toDoInput.value !== "") {
+            //13는 스페이스바
+            handleSubmit(e);
+        }
+    });
 }
 
 function init() {
     loadToDos();
     //input 공백 방지
     toDoInput.addEventListener("keypress", function(e) {
-        console.dir(e);
+         console.dir(e);
         if (e.target.value === "") {
             //13는 스페이스바
             e.returnValue = false;
@@ -144,14 +148,9 @@ function init() {
     });
     toDoInput.addEventListener("search", handleSubmit);
     //돋보기 아이콘 눌렀을때 input에 내용을 저장하게 하는 기능
-    // document.querySelector(".find__icon-right").addEventListener("mouseenter", mouseEnter);
-    //  document.querySelector(".find__icon-right").addEventListener("mouseLeave", mouseLeave);
-    document.querySelector(".find__icon-right").addEventListener("click", function(e){
-        toDoInput.style.color="red";
-    });
 
     //컨테이너 밖의 요소 클릭시 dislay none 되도록 추가
-    document.querySelector(".header-wrapper").addEventListener("click", mouseLeave);
+    //  document.querySelector(".header-wrapper").addEventListener("click", mouseLeave);
 }
 
 init();
