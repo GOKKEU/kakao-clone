@@ -90,11 +90,7 @@
   box-shadow: 1px 1px 4px 0px #999;
   cursor: pointer;
 }
-.pageChg {
-  background-color: red;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
+
 .addToDoList {
   /*버튼클릭시 display: flex;*/
 
