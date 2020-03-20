@@ -45,10 +45,13 @@
 
 .friend__add-btn {
   display: flex;
-  padding: 10px 20px;
+  margin-right: 10px;
+  
+width: 65px;
+height: 35px;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+
   border-radius: 20px;
   border: 1px solid lightgray;
   font-size: 18px;
