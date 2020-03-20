@@ -10,74 +10,72 @@ const API_KEY = "fabdb8edb8c8f543ba4fe4378accc29c";
 //아이콘 적용
 
 function getWeather(lat, lon) {
-  fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-  )
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json) {
-      const temperature = json.main.temp;
-      const place = json.name;
-      const weatherArray = json.weather;
-      console.log(json);
-      const icon = weatherArray[0].icon;
-      const iconurl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-      console.log(iconurl);
-      document.getElementById("wicon").src = iconurl;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            const temperature = json.main.temp;
+            const place = json.name;
+            const weatherArray = json.weather;
+            console.log(json);
+            const icon = weatherArray[0].icon;
+            const iconurl = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+            console.log(iconurl);
+            document.getElementById("wicon").src = iconurl;
 
-      const description = weatherArray[0].description;
-      console.log(toDayWeather, place, description);
-      toDayWeather.innerHTML = `${description}`;
-      toDayPlace.innerHTML = `${place}`;
-      toDayTemp.innerHTML = `${temperature}`;
-    });
+            const description = weatherArray[0].description;
+            console.log(toDayWeather, place, description);
+            toDayWeather.innerHTML = `${description}`;
+            toDayPlace.innerHTML = `${place}`;
+            toDayTemp.innerHTML = `${temperature}`;
+        });
 }
 API_KEY;
 
 function saveCoords(coords) {
-  localStorage.setItem(COORDS, JSON.stringify(coords));
+    localStorage.setItem(COORDS, JSON.stringify(coords));
 }
 
 //좌표를 가져왔을때 성공을 나타내는 함수
 function handleGeoSucess(position) {
-  //위도
-  const latitude = position.coords.latitude;
-  //경도
-  const longitude = position.coords.longitude;
-  //위치 ojb
-  const coordsObj = {
-    latitude,
-    longitude
-  };
-  saveCoords(coordsObj);
-  getWeather(latitude, longitude);
+    //위도
+    const latitude = position.coords.latitude;
+    //경도
+    const longitude = position.coords.longitude;
+    //위치 ojb
+    const coordsObj = {
+        latitude,
+        longitude
+    };
+    saveCoords(coordsObj);
+    getWeather(latitude, longitude);
 }
 //좌표를 가져왔을때 실패 했을때 나타내는 함수
 function handleGeoError(position) {
-  console.log("Cant access geo location");
+    console.log("Cant access geo location");
 }
 
 function askForCoords() {
-  //navigator,window,document등등 API
-  navigator.geolocation.getCurrentPosition(handleGeoSucess, handleGeoError);
+    //navigator,window,document등등 API
+    navigator.geolocation.getCurrentPosition(handleGeoSucess, handleGeoError);
 }
 
 //위치를 load
 function loadCoords() {
-  const loadedCords = localStorage.getItem(COORDS);
-  if (loadedCords === null) {
-    //localstorage에 값이 없어 -> 가져옴
-    askForCoords();
-  } else {
-    //위치 데이터를 localstorage에서 받아온 정보를 string 으로
-    const parseedCoords = JSON.parse(loadedCords);
+    const loadedCords = localStorage.getItem(COORDS);
+    if (loadedCords === null) {
+        //localstorage에 값이 없어 -> 가져옴
+        askForCoords();
+    } else {
+        //위치 데이터를 localstorage에서 받아온 정보를 string 으로
+        const parseedCoords = JSON.parse(loadedCords);
 
-    //스토리지의 값을 불러올때 변수.key값
-    getWeather(parseedCoords.latitude, parseedCoords.longitude);
-  }
+        //스토리지의 값을 불러올때 변수.key값
+        getWeather(parseedCoords.latitude, parseedCoords.longitude);
+    }
 }
 function init() {
-  loadCoords();
+    loadCoords();
 }
 init();
