@@ -139,14 +139,20 @@ function loadToDos() {
 function init() {
     loadToDos();
     //input 공백 방지
+
     toDoInput.addEventListener("keypress", function(e) {
-         console.dir(e);
-        if (e.target.value === "") {
+        console.dir(e);
+        if (e.key === " ") {
             //13는 스페이스바
-            e.returnValue = false;
+            alert("해당 항목에는 공백을 사용할 수 없습니다");
+            console.log(toDoInput.value);
+            toDoInput.value = ""
+            
+        }else{
+            toDoInput.addEventListener("search", handleSubmit);
         }
     });
-    toDoInput.addEventListener("search", handleSubmit);
+
     //돋보기 아이콘 눌렀을때 input에 내용을 저장하게 하는 기능
 
     //컨테이너 밖의 요소 클릭시 dislay none 되도록 추가
