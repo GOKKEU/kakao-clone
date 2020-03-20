@@ -277,8 +277,10 @@ document.querySelector(".startTime input").addEventListener("click", function(e)
         const obj = e.srcElement;
         document.querySelector(".chekTag").value = obj.previousSibling.innerHTML;
     } else {
+        console.log("크롬");
         const obj = e.toElement.previousElementSibling;
-        document.querySelector(".chekTag").value = obj;
+        console.log(obj);
+        document.querySelector(".chekTag").value = obj.innerHTML;
     }
 
     /*박스 보이게 하기*/
@@ -293,8 +295,9 @@ document.querySelector(".endTime input").addEventListener("click", function(e) {
         document.querySelector(".chekTag").value = obj.previousSibling.innerHTML;
     } else {
         /*chrome*/
+        console.log("크롬");
         const obj = e.toElement.previousElementSibling;
-        document.querySelector(".chekTag").value = obj;
+        document.querySelector(".chekTag").value = obj.innerHTML;
     }
 
     /*박스 보이게 하기*/

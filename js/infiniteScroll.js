@@ -123,12 +123,15 @@ $(document).ready(function() {
         //버튼 클릭 이벤트 (full 화면)
         $(".addToDoList").css("position", "fixed");
         document.querySelector(".addToDoList").style.width = "100%";
+        //explore에서 툴팁이 보이는 부분을 막기 위해 
+        document.querySelector(".rightToolTip").style.display ="none";
     });
 
     document.querySelector(".list_left").addEventListener("click", function() {
         //버튼 클릭 이벤트 css position기본값으로
         $(".addToDoList").css("position", "static");
         document.querySelector(".addToDoList").style.width = "0";
+        document.querySelector(".rightToolTip").style.display ="block";
     });
 
     document.getElementById("year").innerHTML = currentYear;

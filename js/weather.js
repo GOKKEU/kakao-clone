@@ -10,7 +10,8 @@ const API_KEY = "fabdb8edb8c8f543ba4fe4378accc29c";
 //아이콘 적용
 
 function getWeather(lat, lon) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
+    fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+API_KEY+"&units=metric")
+   // fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
         .then(function(response) {
             return response.json();
         })
@@ -26,9 +27,13 @@ function getWeather(lat, lon) {
 
             const description = weatherArray[0].description;
             console.log(toDayWeather, place, description);
+          /* 
             toDayWeather.innerHTML = `${description}`;
             toDayPlace.innerHTML = `${place}`;
-            toDayTemp.innerHTML = `${temperature}`;
+            toDayTemp.innerHTML = `${temperature}`;*/
+            toDayWeather.innerHTML = description;
+            toDayPlace.innerHTML = place;
+            toDayTemp.innerHTML = temperature;
         });
 }
 API_KEY;
@@ -45,8 +50,8 @@ function handleGeoSucess(position) {
     const longitude = position.coords.longitude;
     //위치 ojb
     const coordsObj = {
-        latitude,
-        longitude
+        latitude:latitude,
+        longitude:longitude
     };
     saveCoords(coordsObj);
     getWeather(latitude, longitude);

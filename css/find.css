@@ -1,189 +1,206 @@
 .find__write-lineBox {
-  /*바닥 고정 */
-  position: fixed;
-  width: 100%;
-  bottom: 66px;
+    /*바닥 고정 */
+    position: fixed;
+    width: 100%;
+    bottom: 66px;
 }
 
 .find__write {
-  width: 100%;
-  border: none;
-  font-size: 18px;
-  font-weight: 600;
-  display: flex;
-  margin: auto 0;
-  padding: 20px 60px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 2px 7px 10px 3px #999;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    margin: auto 0;
+    padding: 20px 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 2px 7px 10px 3px #999;
 }
 .find__write:focus {
-  /*input을 클릭했을때 파란 테두리를 지우기위해 사용 코드  */
-  outline: none;
-  /*줄어들때 상하(수직 방향)의 이동 거리 값을 지정*/
-  position: fixed;
-  top: 65px;
-  background-color: white;
+    /*input을 클릭했을때 파란 테두리를 지우기위해 사용 코드  */
+    outline: none;
+    /*줄어들때 상하(수직 방향)의 이동 거리 값을 지정*/
+    position: fixed;
+    top: 65px;
+    background-color: white;
 }
 .find__write:focus ~ .find__icon {
-  position: fixed;
-  top: 85px;
+    position: fixed;
+    top: 85px;
 }
 .find__write:focus ~ .find__line {
-  position: fixed;
-  top: 75px;
+    position: fixed;
+    top: 75px;
 }
 
 .find__write:focus ~ .find__write-container {
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 120px;
-  background-color: white;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 120px;
+    background-color: white;
 }
 
 .find__write-container {
-  display: none;
-  padding: 15px;
-  background-color: white;
+    display: none;
+    padding: 15px;
+    background-color: white;
 }
 
 .find__write-container button {
-  position: fixed;
-  right: 15px;
-  cursor: pointer;
-  border-radius: 20px;
-  background-color: white;
-  color: lightgray;
-  width: 25px;
-  height: 25px;
-  font-size: 16px;
-  font-weight: 600;
+    position: fixed;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    color: lightgray;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .find__write-container li {
-  margin: 15px;
-  font-size: 17px;
-  font-weight: 600;
+    margin: 15px;
+    font-size: 17px;
+    font-weight: 600;
 }
 .find__icon-right {
-  position: absolute;
-  right: 50px;
-  opacity: 0.7;
-  cursor: pointer;
-  bottom: 20px;
+    position: absolute;
+    right: 50px;
+    opacity: 0.7;
+    cursor: pointer;
+    bottom: 20px;
+    width: 50px;
+
+    background-color: red;
 }
 
 .find__icon-left {
-  position: absolute;
-  left: 35px;
-  bottom: 20px;
-  font-weight: 600;
-  color: #fce006;
-  cursor: pointer;
+    position: absolute;
+    left: 35px;
+    bottom: 20px;
+    font-weight: 600;
+    color: #fce006;
+    cursor: pointer;
 }
 .find__line {
-  position: absolute;
-  bottom: 8px;
-  border-radius: 10px;
-  border: 3px solid #fce006;
-  height: 45px;
-  width: 90%;
-  left: 25px;
+    position: absolute;
+    bottom: 8px;
+    border-radius: 10px;
+    border: 3px solid #fce006;
+    height: 45px;
+    width: 90%;
+    left: 25px;
 
-  /*클릭 이벤트 허용 여부 :none을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 한다*/
-  pointer-events: none;
+    /*클릭 이벤트 허용 여부 :none을 설정하여 마우스 이벤트의 타겟이 될 수 없도록 한다*/
+    pointer-events: none;
 }
 /*날씨 부분*/
 .find__imformation {
-  display: flex;
-  font-size: 16px;
-  font-weight: 600;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
 }
 .find_weather_title {
-  font-size: 18px;
-  font-weight: 600;
-  position: fixed;
-  left: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    position: fixed;
+    left: 25px;
 }
 .find__toDayWeather {
-  margin-top: 30px;
-  width: 100%;
-  display: flex;
-  border-top: 5px solid rgb(238, 234, 234);
-  border-bottom: 5px solid rgb(238, 234, 234);
-  flex-direction: row;
-  border-right: 5px solid rgb(238, 234, 234);
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    border-top: 5px solid rgb(238, 234, 234);
+    border-bottom: 5px solid rgb(238, 234, 234);
+    flex-direction: row;
+    border-right: 5px solid rgb(238, 234, 234);
 }
 .find__toDayWeather:first-child {
-  border-left: 5px solid rgb(238, 234, 234);
+    border-left: 5px solid rgb(238, 234, 234);
 }
 .find__column {
-  width: 100%;
-  margin: auto 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
+    width: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
 }
 
 .find__column span {
-  width: 100%;
+    width: 100%;
 }
 .js-place {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 .js-temp {
-  font-size: 30px;
-  margin-top: 20px;
+    font-size: 30px;
+    margin-top: 20px;
 }
 .js-weather {
-  font-size: 14px;
+    font-size: 14px;
 }
 #wicon {
-  width: 85px;
+    width: 85px;
 }
 
 /*이벤트시 추가되는 CSS*/
 .addingcss {
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 120px;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 120px;
 }
 .iconaddingcss {
-  position: fixed;
-  top: 85px;
+    position: fixed;
+    top: 85px;
 }
 .lineaddingcss {
-  position: fixed;
-  top: 75px;
+    position: fixed;
+    top: 75px;
 }
 .lnputaddingcss {
-  outline: none;
-  position: fixed;
-  top: 65px;
+    outline: none;
+    position: fixed;
+    top: 65px;
 }
 
 .settings__setting {
-  padding: 15px 20px;
-  border-top: 1px solid rgb(238, 234, 234);
+    padding: 15px 20px;
+    border-top: 1px solid rgb(238, 234, 234);
 }
 
 /*아래->위로 올라가는 애니메이션*/
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    transform: none;
-  }
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        transform: none;
+    }
 }
 
 .find__write-lineBox {
-  animation: fadeIn 0.5s ease-in;
+    animation: fadeIn 0.5s ease-in;
+}
+/*input X 지우기*/
+.find__write::-ms-clear,
+.find__write::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.find__write::-webkit-search-decoration,
+.find__write::-webkit-search-cancel-button,
+.find__write::-webkit-search-results-button,
+.find__write::-webkit-search-results-decoration {
+    display: none;
 }

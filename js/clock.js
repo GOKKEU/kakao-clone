@@ -8,8 +8,11 @@ function getTime() {
     const minutes = date.getMinutes();
     //00:00처럼 한자리숫자의 경우 앞에 0이 보이도록 해준다.
     //hours가 10보다 작으면 '0hours'이고 아니면 'hours'를 나타낸다.
-    const time = `${hours < 10 ? `0${hours}` : hours}  : ${minutes < 10 ? `0${minutes}` : minutes}`;
-    //console.log(time);
+
+    const time = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes);
+
+    //  const time = `${hours < 10 ? `0${hours}` : hours}  : ${minutes < 10 ? `0${minutes}` : minutes}`;
+
     clockTitle.innerHTML = time;
 }
 
