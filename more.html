@@ -1,250 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--emmet사용 ,사용언어-->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>More | Kakao Clone</title>
-    <!--무료폰트를 사용하기 위한 코드-->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--CSS 사용하기 위한 코드-->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="header-wrapper">
-      <!--status-bar start-->
-      <div class="status-bar">
-        <div class="status-bar__column">
-          <span class="status-bar__kt">KT</span>
+    <!--emmet사용 ,사용언어-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>More | Kakao Clone</title>
+        <!--무료폰트를 사용하기 위한 코드-->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!--CSS 사용하기 위한 코드-->
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="header-wrapper">
+            <!--status-bar start-->
+            <div class="status-bar">
+                <div class="status-bar__column">
+                    <span class="status-bar__kt">KT</span>
+                </div>
+                <div class="status-bar__column">
+                    <!--item 무료사용 Font Awesome 사용-->
+                    <i class="fas fa-clock"></i>
+                    <i class="fas fa-volume-mute"></i>
+                    <i class="fas fa-wifi"></i>
+                    <span class="status-bar__battery-level">100%</span>
+                    <i class="fas fa-battery-full"></i>
+                    <span class="status-bar__clock js-clock"><p>00:00</p></span>
+                </div>
+            </div>
+            <!--status-bar end-->
+            <!--header start-->
+            <header class="header">
+                <div class="header__header-column">
+                    <h1 class="header__title">더보기</h1>
+                </div>
+                <div class="header__header-column">
+                    <span class="header_icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <span class="header_icon">
+                        <i class="fas fa-qrcode"></i>
+                    </span>
+                    <span class="header_icon">
+                        <!--버튼클릭시 setting화면으로 이동-->
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </span>
+                </div>
+            </header>
+            <!--header end-->
         </div>
-        <div class="status-bar__column">
-          <!--item 무료사용 Font Awesome 사용-->
-          <i class="fas fa-clock"></i>
-          <i class="fas fa-volume-mute"></i>
-          <i class="fas fa-wifi"></i>
-          <span class="status-bar__battery-level">100%</span>
-          <i class="fas fa-battery-full"></i>
-          <span class="status-bar__clock js-clock"><p>00:00</p></span>
-        </div>
-      </div>
-      <!--status-bar end-->
-      <!--header start-->
-      <header class="header">
-        <div class="header__header-column">
-          <h1 class="header__title">더보기</h1>
-        </div>
-        <div class="header__header-column">
-          <span class="header_icon">
-            <i class="fas fa-search"></i>
-          </span>
-          <span class="header_icon">
-            <i class="fas fa-qrcode"></i>
-          </span>
-          <span class="header_icon">
-            <!--버튼클릭시 setting화면으로 이동-->
-            <a href="settings.html">
-              <i class="fas fa-cog"></i>
-            </a>
-          </span>
-        </div>
-      </header>
-      <!--header end-->
-    </div>
-    <!--main start-->
-    <main class="more">
-      <!--친구 프로필 start-->
-      <div class="friends__friend friend friend--lg">
-        <div class="friend__column">
-          <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
-          <div class="friend__content">
-            <span class="friend__name">
-              GOKKEU
-            </span>
-            <span class="friend__status">
-              gokkeu.github.io/kakao-clone
-            </span>
-          </div>
-        </div>
-        <div class="friend__column">
-          <div class="friend__add-btn">MY</div>
-          <div class="friend__add-btn">
-            <i class="fas fa-user-plus"></i>
-            <span>10</span>
-          </div>
-        </div>
-      </div>
-      <!--친구 프로필 end-->
-      <!--pay box start-->
-      <div class="more__pay">
-        <div class="more__column">
-          <div class="more__pay-cash">
-            <i class="fas fa-comment"></i>
-            <span>Pay </span>
-            <span>4,446원</span>
-          </div>
-        </div>
-        <div class="more__column">
-          <span class="more__send-btn">송금</span>
-          <span class="more__pay-btn">결제</span>
-        </div>
-      </div>
-      <!--pay box end-->
-      <!--btton12개-->
-      <ul class="more__header-list ">
-        <li class="more__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-qrcode fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            QR Code
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-user-plus fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            Add by Contacts
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="far fa-envelope fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            Invite
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-qrcode fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            QR Code
-          </span>
-        </li>
-      </ul>
-      <ul class="more__header-list ">
-        <li class="more__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-qrcode fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            QR Code
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-user-plus fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            Add by Contacts
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="far fa-envelope fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            Invite
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-qrcode fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            QR Code
-          </span>
-        </li>
-      </ul>
-      <ul class="more__header-list ">
-        <li class="more__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-qrcode fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            QR Code
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-user-plus fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            Add by Contacts
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="far fa-envelope fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            Invite
-          </span>
-        </li>
-        <li class="find__header-btn header-btn">
-          <span class="header-btn__icon">
-            <i class="fas fa-qrcode fa-2x"></i>
-          </span>
-          <span class="header-btn__title">
-            QR Code
-          </span>
-        </li>
-      </ul>
-      <!--btton12개 end-->
+        <!--main start-->
+        <main class="more">
+            <!--친구 프로필 start-->
+            <div class="friends__friend friend friend--lg">
+                <div class="friend__column">
+                    <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+                    <div class="friend__content">
+                        <span class="friend__name">
+                            GOKKEU
+                        </span>
+                        <span class="friend__status">
+                            gokkeu.github.io/kakao-clone
+                        </span>
+                    </div>
+                </div>
+                <div class="friend__column">
+                    <div class="friend__add-btn">MY</div>
+                    <div class="friend__add-btn">
+                        <i class="fas fa-user-plus"></i>
+                        <span>10</span>
+                    </div>
+                </div>
+            </div>
+            <!--친구 프로필 end-->
+            <!--pay box start-->
+            <div class="more__pay">
+                <div class="more__column">
+                    <div class="more__pay-cash">
+                        <i class="fas fa-comment"></i>
+                        <span>Pay </span>
+                        <span>4,446원</span>
+                    </div>
+                </div>
+                <div class="more__column">
+                    <span class="more__send-btn">송금</span>
+                    <span class="more__pay-btn">결제</span>
+                </div>
+            </div>
+            <!--pay box end-->
+            <!--btton12개-->
+            <ul class="more__header-list ">
+                <li class="more__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-qrcode fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        QR Code
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-user-plus fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        Add by Contacts
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="far fa-envelope fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        Invite
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-qrcode fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        QR Code
+                    </span>
+                </li>
+            </ul>
+            <ul class="more__header-list ">
+                <li class="more__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-qrcode fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        QR Code
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-user-plus fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        Add by Contacts
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="far fa-envelope fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        Invite
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-qrcode fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        QR Code
+                    </span>
+                </li>
+            </ul>
+            <ul class="more__header-list ">
+                <li class="more__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-qrcode fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        QR Code
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-user-plus fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        Add by Contacts
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="far fa-envelope fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        Invite
+                    </span>
+                </li>
+                <li class="find__header-btn header-btn">
+                    <span class="header-btn__icon">
+                        <i class="fas fa-qrcode fa-2x"></i>
+                    </span>
+                    <span class="header-btn__title">
+                        QR Code
+                    </span>
+                </li>
+            </ul>
+            <!--btton12개 end-->
 
-      <!--버튼 start-->
-      <div class="more__section">
-        <div class="more__section_envelope">
-          <i class="far fa-envelope"></i>
-          <span> 메일<a> 만들기</a></span>
+            <!--버튼 start-->
+            <div class="more__section">
+                <div class="more__section_envelope">
+                    <i class="far fa-envelope"></i>
+                    <span> 메일<a> 만들기</a></span>
+                </div>
+                <div class="more__section_calendar" onclick="location.href='calendar.html'">
+                    <i class="far fa-calendar"></i>
+
+                    <div class="tooltip">
+                        <span class="tooltiptext bottom">캘린더로 이동</span>
+
+                        <span> 캘린더 <a> 일정 만들기</a></span>
+                    </div>
+                </div>
+            </div>
+            <!-- 버튼 end-->
+        </main>
+        <!--main end-->
+        <!--Navigator start-->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list-item">
+                    <a href="friends.html" class="nav__list-link">
+                        <i class="far fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="index.html" class="nav__list-link">
+                        <!--badge만들기-->
+                        <div class="nav__badge">8</div>
+                        <i class="far fa-comment"></i>
+                    </a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="find.html" class="nav__list-link">
+                        #
+                    </a>
+                </li>
+                <li class="nav__list-item">
+                    <a href="more.html" class="nav__list-link">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--Navigator end-->
+        <!--MediaQuery-->
+        <div class="bigScreen">
+            <span class="bigScreen__text">
+                Please make your screen small
+            </span>
         </div>
-        <div
-          class="more__section_calendar"
-          onclick="location.href='calendar.html'"
-        >
-          <i class="far fa-calendar"></i>
-          <span> 캘린더 <a> 일정 만들기</a></span>
-        </div>
-      </div>
-      <!-- 버튼 end-->
-    </main>
-    <!--main end-->
-    <!--Navigator start-->
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__list-item">
-          <a href="friends.html" class="nav__list-link">
-            <i class="far fa-user"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="index.html" class="nav__list-link">
-            <!--badge만들기-->
-            <div class="nav__badge">8</div>
-            <i class="far fa-comment"></i>
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="find.html" class="nav__list-link">
-            #
-          </a>
-        </li>
-        <li class="nav__list-item">
-          <a href="more.html" class="nav__list-link">
-            <i class="fas fa-ellipsis-h"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!--Navigator end-->
-    <!--MediaQuery-->
-    <div class="bigScreen">
-      <span class="bigScreen__text">
-        Please make your screen small
-      </span>
-    </div>
-    <script src="js/clock.js"></script>
-  </body>
+        <script src="js/clock.js"></script>
+    </body>
 </html>
