@@ -126,14 +126,6 @@ function loadToDos() {
             paintToDo(toDo.text);
         });
     }
-    document.querySelector(".find__icon-right").addEventListener("click", function(e) {
-        /*공백처리*/
-        console.dir(e);
-        if (toDoInput.value !== "") {
-            //13는 스페이스바
-            handleSubmit(e);
-        }
-    });
 }
 
 function init() {
@@ -141,19 +133,18 @@ function init() {
     //input 공백 방지
 
     toDoInput.addEventListener("keypress", function(e) {
-        console.dir(e);
         if (e.key === " ") {
             //13는 스페이스바
             alert("해당 항목에는 공백을 사용할 수 없습니다");
             console.log(toDoInput.value);
-            toDoInput.value = ""
-            
-        }else{
-            toDoInput.addEventListener("search", handleSubmit);
+            toDoInput.value = "";
+            e.returnValue = false;
         }
     });
-
+    document.querySelector(".find__icon-right").addEventListener("click", handleSubmit);
     //돋보기 아이콘 눌렀을때 input에 내용을 저장하게 하는 기능
+    document.querySelector(".find__icon-right").addEventListener("mouseenter", mouseEnter);
+    document.querySelector(".find__icon-right").addEventListener("mouseLeave", mouseLeave);
 
     //컨테이너 밖의 요소 클릭시 dislay none 되도록 추가
     //  document.querySelector(".header-wrapper").addEventListener("click", mouseLeave);
