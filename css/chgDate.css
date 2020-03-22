@@ -195,3 +195,6 @@
 .box ul li:first-child {
     color: red;
 }
+.box ul:first-child {
+    height: calc(100% / 18);
+}

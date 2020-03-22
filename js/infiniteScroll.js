@@ -118,6 +118,7 @@ $(function() {
 });
 //add 버튼 클릭시!
 $(document).ready(function() {
+    document.querySelector(".rightToolTip").style.display = "block";
     document.querySelector(".addBtn").addEventListener("click", function() {
         //버튼 클릭 이벤트 (full 화면)
         $(".addToDoList").css("position", "fixed");
