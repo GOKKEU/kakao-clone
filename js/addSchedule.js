@@ -16,21 +16,19 @@ function loadSchedule() {
         printLocalData(startArr, endArr, title);
     });
 }
+
 function addSchedule(start, end, title) {
     //출력된 요소에 아이디가 일치하는지 확인   //p202003
 
     const LiNode = document.querySelector(".boxwrap").querySelectorAll("li");
-    //console.dir(LiNode);
+
     var check = false;
-    var precheck = false;
-    //현재달...active
 
     for (let i = 0; i < LiNode.length; i++) {
         // console.log( LiNode.item(i).id);
         // console.log(typeof start);
-        nodeId = LiNode.item(i).id;
+        const nodeId = LiNode.item(i).id;
         if (nodeId.indexOf("c") !== -1) {
-            const nodeId = LiNode.item(i).id;
             if (nodeId.indexOf(start) !== -1) {
                 //id에 start값이 포함한다면
                 check = true;
@@ -41,13 +39,12 @@ function addSchedule(start, end, title) {
             }
             const span = document.createElement("span");
             if (check) {
+                span.classList.add(start + "-" + end);
                 span.innerHTML = title;
                 span.style.backgroundColor = "red";
             }
             LiNode.item(i).appendChild(span);
         }
-
-        
     }
 }
 function printLocalData(startArr, endArr, title) {
@@ -59,7 +56,7 @@ function printLocalData(startArr, endArr, title) {
 
     //console.log("사잇날:" + (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24);
 
-    //console.log("두날짜사이" + beteeenDay + "첫날:" + startArr[2] + "마지막날" + endArr[2]);
+    console.log("두날짜사이" + beteeenDay + "첫날:" + startArr[2] + "마지막날" + endArr[2]);
     if (beteeenDay < 0) {
         return false;
     } else {
