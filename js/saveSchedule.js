@@ -24,26 +24,42 @@ function loadSchedule() {
         printLocalData(startArr, endArr, title);
     });
 }
-function addSchedule(nodes, start, beteeenDay, content) {
+function addSchedule(nodes, start, end, content,beteeenDay) {
     //span 태그의 시작점에 디자인 추가 멧서드
     let count = 0;
     let curCount = 0;
     let nexCount = 0;
-    console.dir(nodes); //총 49개
+    
+    var drawing = false;
+    //  console.dir(nodes); //총 49개
     for (let i = 0; i < nodes.length; i++) {
         const number = parseInt(nodes.item(i).innerHTML);
+        const span = document.createElement("span");
+        
         if (number === 1) {
             count++;
         }
 
-        if (count === 1 && start === number) {
-            console.log("몇번째노드" + i); //0~6 까지 빼고 7부터
-            console.log(start + "," + number + "," + Number(49 - i));
+        if (count === 1) {
+  
+            if (start === number) {
+                drawing = true;
+            }
+            if (end +1 === number) {
+                drawing = false;
+            }
+            if (drawing) {
+                console.log("몇번째노드" + i); //0~6 까지 빼고 7부터
+                console.log(start + "," + number + "," + Number(beteeenDay));
 
-            const span = document.createElement("span");
-            span.innerText = content;
-            nodes.item(i).appendChild(span);
+                span.innerText = content;
+                span.style.background ="red";//color js 나중에 추가
+                nodes.item(i).appendChild(span);
+            }else{
+                nodes.item(i).appendChild(span);
+            }
         }
+
         if (count === 1) {
             curCount++;
         }
@@ -61,7 +77,9 @@ function printLocalData(startArr, endArr, title) {
     const endDate = new Date(endArr[0], Number(endArr[1]) - 1, endArr[2]);
     // 종료시간 - 시작시간이 <0 인경우 제외
     const beteeenDay = (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24;
-    console.log(beteeenDay);
+
+    console.log("사잇날:"+(endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24);
+    console.log("두날짜사이"+beteeenDay+"첫날:"+startArr[2]+"마지막날"+endArr[2]);
     if (beteeenDay < 0) {
         return false;
     } else {
@@ -71,12 +89,15 @@ function printLocalData(startArr, endArr, title) {
         if (startArr[0] !== document.getElementById("year").innerHTML) {
             //내용은 저장
         } else {
-            for (let i = 0; i < boxList.length; i++) {
-                if (Number(startArr[1]) === Number(boxList.item(i).id)) {
-                    //ul 태그 밑에 날짜 정보가 있는 li의 값을 가져와서
-                    const nodes = boxList.item(i).querySelectorAll("li");
-                    //nodes를 돌면서 일치하는데이터 화면에 디자인 추가
-                    addSchedule(nodes, Number(startArr[2]), beteeenDay, title);
+            if (Number(startArr[0]) === Number(endArr[0])) {
+                for (let i = 0; i < boxList.length; i++) {
+                    //일정의 달이 현재 달일때
+                    if (Number(startArr[1]) === Number(boxList.item(i).id)) {
+                        const nodes = boxList.item(i).querySelectorAll("li");
+                        //nodes를 돌면서 일치하는데이터 화면에 디자인 추가
+                        addSchedule(nodes, Number(startArr[2]), Number(endArr[2]), title,beteeenDay);
+                    } else {
+                    }
                 }
             }
         }
