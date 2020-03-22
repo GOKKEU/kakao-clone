@@ -1,138 +1,136 @@
 .calendar-body {
-  /* position: fixed;*/
-  margin-top: 60px;
-  height: 700px;
+    /* position: fixed;*/
+    margin-top: 60px;
+    height: 700px;
 }
 /*헤더부분 start*/
 .calendar-body .header-wrapper {
-  padding-bottom: 0px;
+    padding-bottom: 0px;
 }
 .calendar-body .status-bar {
-  padding: 0px 10px;
-  margin: 10px;
+    padding: 0px 10px;
+    margin: 10px;
 }
 
 .calendar__header-left {
-  display: flex;
+    display: flex;
 
-  position: fixed;
-  top: 40px;
-  left: 20px;
+    position: fixed;
+    top: 40px;
+    left: 20px;
 }
 .calendar__header-right {
-  display: flex;
+    display: flex;
 
-  position: fixed;
-  top: 40px;
-  right: 20px;
+    position: fixed;
+    top: 40px;
+    right: 20px;
 }
 .calendar__header i,
 .calendar__header select,
 .calendar__header h1 {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 /*헤더부분*/
 .boxwrap div ul {
-  display: flex;
-  flex-direction: row;
-  padding-top: 7px;
-  border-bottom: solid 1px lightgray;
+    display: flex;
+    flex-direction: row;
+    padding-top: 7px;
+    border-bottom: solid 1px lightgray;
 }
 .weeks {
-  height: calc(100% / 28);
+    height: calc(100% / 28);
 }
 .date {
-  height: calc(100% / 7);
+    height: calc(100% / 7);
 }
 .box ul:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 .boxwrap div li {
-  width: calc(100% / 7);
-  text-align: center;
+    width: calc(100% / 7);
+    text-align: center;
 }
 
 /*좌-우로 위치하도록 하는 코드*/
 
 .boxwrap {
-  /*모바일 세로 맞추기
+    /*모바일 세로 맞추기
   height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-  /*height: calc(var(--vh, 1vh) * 100);
+    /*height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;*/
-  overflow: auto;
-  white-space: nowrap;
+    overflow: auto;
+    white-space: nowrap;
 
-  height: 850px;
+    height: 850px;
 }
 .box {
-  /*화면넓이 3등분 코드
+    /*화면넓이 3등분 코드
   float: left;
   width: calc(100% / 3);
   background-color: yellow;
   border: 1px solid black;*/
-  display: inline-block;
-  align-items: center;
-  width: 100%;
-  height: calc(100%);
-  font-size: 18px;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    height: calc(100%);
+    font-size: 18px;
 }
 
 .addBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 30px;
-  border: 1px solid lightgray;
-  background-color: white;
-  font-size: 40px;
-  box-shadow: 1px 1px 4px 0px #999;
-  cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    background-color: white;
+    font-size: 40px;
+    box-shadow: 1px 1px 4px 0px #999;
+    cursor: pointer;
 }
 
 .addToDoList {
-  /*버튼클릭시 display: flex;*/
+    /*버튼클릭시 display: flex;*/
 
-  /*해당 div를 화면전체를 채우도록 한다*/
-  width: 0;
-  height: 100%;
-  top: 0;
-  right: 0;
-  /*slide*/
-  overflow-x: hidden;
-  transition: 0.2s;
-  background-color: white;
+    /*해당 div를 화면전체를 채우도록 한다*/
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    /*slide*/
+    overflow-x: hidden;
+    transition: 0.2s;
+    background-color: white;
 }
 .list_header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 20px;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 600;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
 }
 .list_left {
-  border: none;
-  background-color: white;
-  font-size: 21px;
+    border: none;
+    background-color: white;
+    font-size: 21px;
 }
 
-
 .saveToDoList {
-  cursor: pointer;
+    cursor: pointer;
 }
 /*스크롤 안보이게 하기*/
 /* IE and Edge */
 /* Firefox */
 /* Chrome, Safari, Opera*/
 .boxwrap {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .boxwrap::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
-

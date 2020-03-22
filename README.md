@@ -4,7 +4,7 @@
 
 ### 베이스 코드
 
-- https://github.com/nomadcoders/kakao-clone-v2
+-   https://github.com/nomadcoders/kakao-clone-v2
 
 ---
 
@@ -35,23 +35,23 @@
 
 ### 개발 내용
 
-- 개발 도구: visualCode
-  사용언어:javascript,css,html
+-   개발 도구: visualCode
+    사용언어:javascript,css,html
 
 1. 노마드코딩의 클론코딩수업으로 기본 틀 만들기
 
-- html (3/4)
-- css (3/5)
-- animations (3/6)
-- 4.개발기간: 3/3 - 3.20
+-   html (3/4)
+-   css (3/5)
+-   animations (3/6)
+-   4.개발기간: 3/3 - 3.20
 
 2. 카카오톡 v8.7.8 기능 추가하기
 
-- 친구 페이지: 한글로 변경 [O],실기간 시간[O]
-- 채팅 페이지: 로컬스토리지 이용--> 응용해서 채팅 페이지도 적용[]:포폴 만들면서 총정리하면서 추가
-- 검색 페이지: 디자인 [O] , 날씨 API [O] ,검색창 애니메이션 [O],채팅 입력 시 입력된 글 box 생성 기능[O],날씨 디자인 변경[O]
-- more페이지 : 디자인 변경(한글/버튼/캘린더 일정버튼) [O]
-- 캘린더: 달력기능[O], 피벗슬라이드 [O] , 캘린더 일정 추가 기능 [0] , 왼쪽에서 나타나는 메뉴바 [O] ,시작날짜 입력 룰렛[0]
+-   친구 페이지: 한글로 변경 [O],실기간 시간[O]
+-   채팅 페이지: 로컬스토리지 이용--> 응용해서 채팅 페이지도 적용[]:포폴 만들면서 총정리하면서 추가
+-   검색 페이지: 디자인 [O] , 날씨 API [O] ,검색창 애니메이션 [O],채팅 입력 시 입력된 글 box 생성 기능[O],날씨 디자인 변경[O]
+-   more페이지 : 디자인 변경(한글/버튼/캘린더 일정버튼) [O]
+-   캘린더: 달력기능[O], 피벗슬라이드 [O] , 캘린더 일정 추가 기능 [0] , 왼쪽에서 나타나는 메뉴바 [O] ,시작날짜 입력 룰렛[0]
 
 ---
 
@@ -59,8 +59,8 @@
 
 animation-timing-function
 
-- https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2
-- https://www.codingfactory.net/10942
+-   https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_animation-timing-function2
+-   https://www.codingfactory.net/10942
 
 #### 로컬스토리지
 
@@ -99,3 +99,4 @@ console.log()
 | css관해서 잘 정리됨                 | https://css-tricks.com/a-couple-of-use-cases-for-calc/                                                                                                                                                                                          |  |  | https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ |
 | input 조정 CSS                      | https://stackoverflow.com/questions/14946091/are-there-any-style-options-for-the-html5-date-picker ,http://jsfiddle.net/plan/V2Q58/ ,https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls/                       |
 | 선택자                              | https://verdana1012.tistory.com/entry/CSS3-nthchildn-%EC%84%A0%ED%83%9D%EC%9E%90-%EA%B0%99%EC%9D%80%EC%A2%85%EB%A5%98%EC%9D%98-%ED%83%9C%EA%B7%B8%EB%A1%9C-%EA%B5%AC%EC%84%B1%EB%90%98%EC%96%B4-%EC%9E%88%EC%9D%84-%EB%95%8C-%EC%82%AC%EC%9A%A9 |
+| stop().animation()                  | https://webclub.tistory.com/461                                                                                                                                                                                                                 |
