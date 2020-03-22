@@ -25,7 +25,6 @@ function chunk(arr, size) {
 function printArr(arr, currentY, currentM) {
     const WEEKS = "weeks";
     const DATE = "date";
-    console.log(arr);
 
     for (let i = 0; i < arr.length; i++) {
         const ul = document.createElement("ul");
@@ -36,7 +35,6 @@ function printArr(arr, currentY, currentM) {
             ul.classList.add(DATE);
         }
         for (var j in arr[i]) {
-            console.log(arr[i][j]);
             //     const val =eval( arr[i][j] );
             ul.appendChild(arr[i][j]);
         }
@@ -54,25 +52,23 @@ function arrAddDate(obj) {
     }
     const dateObj = obj;
     const currM = dateObj["currMonth"]; //number
-    const stringMonth = currM < 10 ? "0" + currM : currM; //string
+
     const currY = dateObj["currYear"];
     const firstDay = dateObj["currFirstDay"];
     let prelastDate = dateObj["preLastDate"];
     let crrlastDate = dateObj["curLastDate"];
 
-    console.log(typeof currY);
-
     /*이전달 내용*/
     for (let i = 0; i < firstDay; i++) {
         const li = document.createElement("li");
         const day = Number(prelastDate - firstDay + 1);
-
+        const stringMonth = currM - 1 < 10 ? "0" + (currM - 1) : currM - 1; //string
         if (currM === 1) {
-            li.id = "p" + (currY - 1).toString() + 12 + day;
+            li.id = "p" + currY.toString() + stringMonth + 12 + day.toString();
 
             console.log(li.id);
         } else {
-            li.id = "p" + currY.toString() + (currM - 1).toString() + day;
+            li.id = "p" + currY.toString() + stringMonth + day.toString();
         }
         li.innerHTML = Number(day);
         arr[i + 7] = li;
@@ -82,7 +78,8 @@ function arrAddDate(obj) {
     /*현재달 내용*/
     for (let j = 1; j <= crrlastDate; j++) {
         const li = document.createElement("li");
-        const day = j < 10 ? "0" + j : j;
+        const day = j < 10 ? "0" + j.toString() : j.toString();
+        const stringMonth = currM < 10 ? "0" + currM : currM; //string
         li.id = "c" + currY.toString() + stringMonth + day;
         li.innerHTML = Number(day);
         // 1~마지막날
@@ -94,13 +91,13 @@ function arrAddDate(obj) {
     for (let k = 1; k <= emptylen; k++) {
         //1~ (남은갯수)
         const li = document.createElement("li");
-
-        const day = k < 10 ? "0" + k : k;
+        const stringMonth = currM + 1 < 10 ? "0" + (currM + 1) : currM + 1; //string
+        const day = k < 10 ? "0" + k.toString() : k.toString();
         if (currM == 12) {
-            li.id = "n" + (currY + 1).toString() + 1 + day;
+            li.id = "n" + currY.toString() + stringMonth + day.toString();
             console.log(li.id + "12월");
         } else {
-            li.id = "n" + currY.toString() + (currM + 1) + day;
+            li.id = "n" + currY.toString() + stringMonth + day.toString();
         }
         li.innerHTML = Number(day);
         arr.push(li);
