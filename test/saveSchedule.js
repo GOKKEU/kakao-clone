@@ -15,37 +15,36 @@ if (localdata !== null) {
 }
 
 function loadSchedule() {
-    /*dataLs는 localStroge에서 데이터를 받아온 배열*/
+    /*dataLs는 localStroge에서 데이터를 받아온 배열
     dateLs.forEach(function(dateitem) {
         console.log("화면 로드시 태그 생성");
         const startArr = dateitem.start.split("-");
         const endArr = dateitem.end.split("-");
         const title = dateitem.title;
         printLocalData(startArr, endArr, title);
-    });
+    });*/
 }
-function addSchedule(nodes, start, end, content,beteeenDay) {
+function addSchedule(nodes, start, end, content, beteeenDay) {
     //span 태그의 시작점에 디자인 추가 멧서드
     let count = 0;
     let curCount = 0;
     let nexCount = 0;
-    
+
     var drawing = false;
     //  console.dir(nodes); //총 49개
     for (let i = 0; i < nodes.length; i++) {
         const number = parseInt(nodes.item(i).innerHTML);
         const span = document.createElement("span");
-        
+
         if (number === 1) {
             count++;
         }
 
         if (count === 1) {
-  
             if (start === number) {
                 drawing = true;
             }
-            if (end +1 === number) {
+            if (end + 1 === number) {
                 drawing = false;
             }
             if (drawing) {
@@ -53,9 +52,9 @@ function addSchedule(nodes, start, end, content,beteeenDay) {
                 console.log(start + "," + number + "," + Number(beteeenDay));
 
                 span.innerText = content;
-                span.style.background ="red";//color js 나중에 추가
+                span.style.background = "red"; //color js 나중에 추가
                 nodes.item(i).appendChild(span);
-            }else{
+            } else {
                 nodes.item(i).appendChild(span);
             }
         }
@@ -78,8 +77,8 @@ function printLocalData(startArr, endArr, title) {
     // 종료시간 - 시작시간이 <0 인경우 제외
     const beteeenDay = (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24;
 
-    console.log("사잇날:"+(endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24);
-    console.log("두날짜사이"+beteeenDay+"첫날:"+startArr[2]+"마지막날"+endArr[2]);
+    console.log("사잇날:" + (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24);
+    console.log("두날짜사이" + beteeenDay + "첫날:" + startArr[2] + "마지막날" + endArr[2]);
     if (beteeenDay < 0) {
         return false;
     } else {
@@ -95,7 +94,7 @@ function printLocalData(startArr, endArr, title) {
                     if (Number(startArr[1]) === Number(boxList.item(i).id)) {
                         const nodes = boxList.item(i).querySelectorAll("li");
                         //nodes를 돌면서 일치하는데이터 화면에 디자인 추가
-                        addSchedule(nodes, Number(startArr[2]), Number(endArr[2]), title,beteeenDay);
+                        //addSchedule(nodes, Number(startArr[2]), Number(endArr[2]), title, beteeenDay);
                     } else {
                     }
                 }
@@ -113,8 +112,10 @@ function getLocalData() {
             const startArr = dateitem.start.split("-");
             const endArr = dateitem.end.split("-");
             const title = dateitem.title;
-
-            const boolcheek = printLocalData(startArr, endArr, title);
+            const color = dateitem.color;
+            
+            console.log(color);
+            //const boolcheek = printLocalData(startArr, endArr, title, color);
             console.log(boolcheek);
             if (boolcheek) {
                 /*저장시 이전화면으로 돌아가기 위해 넓이를 0으로*/
@@ -135,6 +136,18 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
     const startT = document.querySelector(".startTime").querySelector("input");
     const endT = document.querySelector(".endTime").querySelector("input");
     const test = document.querySelector(".text-content");
+    //선택된 tag색상
+    const color = "";
+
+    if (document.getElementById("red").checked) {
+        color = "lightpink";
+    } else if (document.getElementById("blue").checked) {
+        color = "lightskyblue";
+    } else if (document.getElementById("green").checked) {
+        color = "lightgreen";
+    } else {
+        color = "gold";
+    }
 
     if (title.value === "") {
         alert("제목을 입력해 주세요");
@@ -145,7 +158,8 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
         start: startT.value,
         end: endT.value,
         text: test.innerHTML,
-        title: title.value
+        title: title.value,
+        color: color
     };
     //해당obj를  ARRAY에 추가한 후 ARRAY를 로컬스트로지 데이터에 추가한다.
     dateLs.push(timeObj);

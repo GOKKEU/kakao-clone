@@ -13,7 +13,8 @@ function loadSchedule() {
         const startArr = dateitem.start.split("-");
         const endArr = dateitem.end.split("-");
         const title = dateitem.title;
-        printLocalData(startArr, endArr, title);
+        const color = dateitem.color;
+        printLocalData(startArr, endArr, title, color);
     });
 }
 function addPreSchedule(start, end, title) {
@@ -25,7 +26,7 @@ function addPreSchedule(start, end, title) {
     console.dir(nArr);
 }
 
-function addSchedule(start, end, title) {
+function addSchedule(start, end, title, color) {
     //출력된 요소에 아이디가 일치하는지 확인
     const LiNode = document.querySelector(".boxwrap").querySelectorAll("li");
     const arr = [];
@@ -41,7 +42,7 @@ function addSchedule(start, end, title) {
             if (arr.indexOf(id) !== -1) {
                 span.classList.add(start + "-" + end);
                 span.innerHTML = title;
-                span.style.backgroundColor = "coral";
+                span.style.backgroundColor = color;
             }
             LiNode.item(i).appendChild(span);
         }
@@ -52,7 +53,7 @@ function addSchedule(start, end, title) {
             if (arr.indexOf(id) !== -1) {
                 span.classList.add(start + "-" + end);
                 span.innerHTML = title;
-                span.style.backgroundColor = "lightblue";
+                span.style.backgroundColor = color;
             }
             LiNode.item(i).appendChild(span);
         }
@@ -63,13 +64,13 @@ function addSchedule(start, end, title) {
             if (arr.indexOf(id) !== -1) {
                 span.classList.add(start + "-" + end);
                 span.innerHTML = title;
-                span.style.backgroundColor = "pink";
+                span.style.backgroundColor = color;
             }
             LiNode.item(i).appendChild(span);
         }
     }
 }
-function printLocalData(startArr, endArr, title) {
+function printLocalData(startArr, endArr, title, color) {
     /*시작 > 종료 인 경우 다시입력을 유도하기*/
     const startDate = new Date(startArr[0], Number(startArr[1]) - 1, startArr[2]);
     const endDate = new Date(endArr[0], Number(endArr[1]) - 1, endArr[2]);
@@ -82,7 +83,7 @@ function printLocalData(startArr, endArr, title) {
         const start = startArr[0] + startArr[1] + startArr[2];
         const end = endArr[0] + endArr[1] + endArr[2];
         console.log(start + "," + end);
-        addSchedule(start, end, title);
+        addSchedule(start, end, title, color);
         // addPreSchedule(start, end, title);
     }
     return true;
@@ -96,8 +97,8 @@ function getLocalData() {
             const startArr = dateitem.start.split("-");
             const endArr = dateitem.end.split("-");
             const title = dateitem.title;
-
-            const boolcheek = printLocalData(startArr, endArr, title);
+            const color = dateitem.color;
+            const boolcheek = printLocalData(startArr, endArr, title, color);
             console.log(boolcheek);
             if (boolcheek) {
                 //  저장시 이전화면으로 돌아가기 위해 넓이를 0으로
@@ -118,6 +119,22 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
     const startT = document.querySelector(".startTime").querySelector("input");
     const endT = document.querySelector(".endTime").querySelector("input");
     const test = document.querySelector(".text-content");
+    //선택된 tag색상
+    let color = " ";
+    if (document.getElementById("red").checked) {
+        color = "lightpink";
+    } else if (document.getElementById("blue").checked) {
+        color = "lightskyblue";
+    } else if (document.getElementById("green").checked) {
+        color = "lightgreen";
+    } else {
+        color = "gold";
+    }
+    console.log(color);
+    if (title.value === "") {
+        alert("제목을 입력해 주세요");
+        return;
+    }
 
     if (title.value === "") {
         alert("제목을 입력해 주세요");
@@ -128,7 +145,8 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
         start: startT.value,
         end: endT.value,
         text: test.innerHTML,
-        title: title.value
+        title: title.value,
+        color: color
     };
     //해당obj를  ARRAY에 추가한 후 ARRAY를 로컬스트로지 데이터에 추가한다.
     dateLs.push(timeObj);
