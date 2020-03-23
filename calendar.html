@@ -126,7 +126,7 @@
         </div>
         <!--popup//-->
         <div id="id01" class="modal">
-            <form class="modal-content animate" action="/action_page.php" method="post">
+            <form class="modal-content animate">
                 <div class="closecontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                 </div>
@@ -134,22 +134,25 @@
                 <div class="container">
                     <div class="texContainer">
                         <label for="title"><a>제목</a></label>
-                        <input type="text" placeholder="Title" name="title" id="texTitle"readonly />
+                        <input type="text" placeholder="Title" name="title" />
                     </div>
-                    <div class="tiemContainer">
-                        <label for="start"><a>시작</a></label>
-                        <input type="text" placeholder="Start Time" name="start" readonly />
-
-                        <label for="end"><a>종료 </a></label>
-                        <input type="text" placeholder="End Time" name="end" readonly />
+                    <div class="texContainer">
+                        <div class="timeContainer">
+                            <label for="start"><a>시작</a></label>
+                            <input type="text" placeholder="Start Time" name="start" />
+                        </div>
+                        <div class="timeContainer">
+                            <label for="end"><a>종료 </a></label>
+                            <input type="text" placeholder="End Time" name="end" />
+                        </div>
                     </div>
                     <div class="texContainer">
                         <label for="text"><a>내용</a></label>
-                        <input type="text" placeholder="Text" name="text" id="textVal" readonly />
+                        <input type="text" placeholder="Text" name="text" id="textVal" />
                     </div>
                     <biv class="buttonBox">
-                        <button type="submit">수정</button>
-                        <button type="submit">삭제</button>
+                        <input type="button" value="수정" />
+                        <input type="button" value="삭제" />
                     </biv>
                 </div>
             </form>
@@ -162,10 +165,10 @@
             </span>
         </div>
     </body>
-
     <script src="./js/calendar.js"></script>
     <script src="./js/infiniteScroll.js"></script>
     <script src="./js/clock.js"></script>
+    <script src="./js/popup.js"></script>
     <script src="./js/addSchedule.js"></script>
     <script src="./js/chgDate.js"></script>
 </html>

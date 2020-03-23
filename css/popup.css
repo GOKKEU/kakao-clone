@@ -1,71 +1,67 @@
 /* Full-width input fields */
-.modal input[type="text"]{
-width: 87%;
-margin: 20px 5px;
-border: none;
-outline: none;
-border-bottom: 1px solid lightgray;
+.modal input[type="text"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+    margin: 0;
+    padding: 0;
+    width: 50%;
 }
-.modal .tiemContainer  label,
-.modal .texContainer label {
-    width: 20%;
- 
- }
-.modal a{
+.modal a {
     font-size: 15px;
     font-weight: 600;
+    margin: 10px;
 }
-.tiemContainer,texContainer {
-justify-content: space-between;
-align-items: center;
+.modal .textContainer label {
+    float: left;
+    width: 50%;
 }
+.texContainer{
+    display: flex;
+    padding-bottom: 20px;
+}
+
 /* Set a style for all buttons */
 .modal button {
-    background-color: red;
-    color: white;
     padding: 14px 20px;
     margin: 10px 0;
     border: none;
     cursor: pointer;
 }
-.modal .buttonBox{
- display: flex;
+.modal .buttonBox {
+    display: flex;
 }
 
 .modal .buttonBox :nth-child(1) {
     background-color: lightskyblue;
     width: 50%;
+    border: none;
 }
 .modal .buttonBox :nth-child(2) {
     background-color: lightpink;
     width: 50%;
+    border: none;
 }
 
-
-/* Extra styles for the cancel button */
+/*cancel button */
 .modal .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
 }
 
-/* Center the image and position the close button */
+/* position the close button */
 .modal .closecontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
 
-
 .modal .container {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
-.modal .tiemContainer{
-    display: flex;
-}
+
 
 /* The Modal (background) */
 .modal {

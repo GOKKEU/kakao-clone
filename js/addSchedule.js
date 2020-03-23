@@ -5,42 +5,7 @@ const localdata = localStorage.getItem(SETDATE);
 if (localdata !== null) {
     dateLs = eval(localdata); //string->obj!!!
 }
-function showPopup(e) {
-    const className = e.srcElement.className;
-    //none -> block
-    document.getElementById("id01").style.display = "block";
-    //start end값 입력
-    let startTime = "";
-    let endTime = "";
-    const inputNodes = document.querySelector(".tiemContainer").querySelectorAll("input");
-    for (let i = 0; i < inputNodes.length; i++) {
-        if (inputNodes.item(i).name === "start") {
-            startTime = className.split("-")[i];
-            inputNodes.item(i).value = startTime;
-        } else {
-            endtTime = className.split("-")[i];
-            inputNodes.item(i).value = endtTime;
-        }
-    }
-    //title
-    document.getElementById("texTitle").value = e.srcElement.innerText;
 
-    //text
-    const localData = localStorage.getItem(SETDATE); //string
-
-    eval(localData).forEach(function(item, number) {
-        let startLocalTime = "";
-
-        item.start.split("-").forEach(function(i) {
-            startLocalTime += i;
-        });
-
-        const localEnd = item.end.split("-");
-        if (startLocalTime === startTime) {
-            document.getElementById("textVal").value = item.text;
-        }
-    });
-}
 function loadSchedule() {
     /*dataLs는 localStroge에서 데이터를 받아온 배열*/
     dateLs.forEach(function(dateitem) {
