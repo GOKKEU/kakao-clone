@@ -43,11 +43,11 @@ function addSchedule(start, end, title) {
         if (nodeId.indexOf("c") !== -1) {
             //스타트 값이
             const id = Number(nodeId.slice(1, 9));
-     
+
             if (arr.indexOf(id) !== -1) {
                 span.classList.add(start + "-" + end);
                 span.innerHTML = title;
-                span.style.backgroundColor = "red";
+                span.style.backgroundColor = "coral";
             }
             LiNode.item(i).appendChild(span);
         }
@@ -55,11 +55,11 @@ function addSchedule(start, end, title) {
         if (nodeId.indexOf("n") !== -1) {
             //스타트 값이
             const id = Number(nodeId.slice(1, 9));
-     
+
             if (arr.indexOf(id) !== -1) {
                 span.classList.add(start + "-" + end);
                 span.innerHTML = title;
-                span.style.backgroundColor = "blue";
+                span.style.backgroundColor = "lightblue";
             }
             LiNode.item(i).appendChild(span);
         }
