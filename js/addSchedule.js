@@ -24,26 +24,20 @@ function addPreSchedule(start, end, title) {
     }
     console.dir(nArr);
 }
+
 function addSchedule(start, end, title) {
-    //출력된 요소에 아이디가 일치하는지 확인   //p202003
-
+    //출력된 요소에 아이디가 일치하는지 확인
     const LiNode = document.querySelector(".boxwrap").querySelectorAll("li");
-
-    var check = false;
-
     const arr = [];
-
     for (let j = Number(start); j <= Number(end); j++) {
         arr.push(j);
     }
-    console.log(arr);
+
     for (let i = 0; i < LiNode.length; i++) {
         const span = document.createElement("span");
         const nodeId = LiNode.item(i).id;
         if (nodeId.indexOf("c") !== -1) {
-            //스타트 값이
             const id = Number(nodeId.slice(1, 9));
-
             if (arr.indexOf(id) !== -1) {
                 span.classList.add(start + "-" + end);
                 span.innerHTML = title;
@@ -53,7 +47,6 @@ function addSchedule(start, end, title) {
         }
 
         if (nodeId.indexOf("n") !== -1) {
-            //스타트 값이
             const id = Number(nodeId.slice(1, 9));
 
             if (arr.indexOf(id) !== -1) {
@@ -65,7 +58,6 @@ function addSchedule(start, end, title) {
         }
 
         if (nodeId.indexOf("p") !== -1) {
-            //스타트 값이
             const id = Number(nodeId.slice(1, 9));
 
             if (arr.indexOf(id) !== -1) {
@@ -83,10 +75,6 @@ function printLocalData(startArr, endArr, title) {
     const endDate = new Date(endArr[0], Number(endArr[1]) - 1, endArr[2]);
     // 종료시간 - 시작시간이 <0 인경우 제외
     const beteeenDay = (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24;
-
-    //console.log("사잇날:" + (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24);
-
-    // console.log("두날짜사이" + beteeenDay + "첫날:" + startArr[2] + "마지막날" + endArr[2]);
     if (beteeenDay < 0) {
         return false;
     } else {
@@ -105,7 +93,6 @@ function getLocalData() {
     dateLs.forEach(function(dateitem, idx, arr) {
         if (idx === arr.length - 1) {
             //가장 마지막으로 ARRAY에 저장된 데이터
-
             const startArr = dateitem.start.split("-");
             const endArr = dateitem.end.split("-");
             const title = dateitem.title;

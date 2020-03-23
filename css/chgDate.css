@@ -158,7 +158,6 @@
 }
 /*캘린더 spna*/
 .date span {
-
     width: 100%;
     display: flex;
     height: 15px;
@@ -171,7 +170,6 @@
 /*내용 입력칸*/
 
 .list_section input {
-    width: 100%;
     border: none;
     color: black;
 }
@@ -197,4 +195,76 @@
 }
 .box ul:first-child {
     height: calc(100% / 18);
+}
+
+/* Radio */
+
+.colorBtn{
+    height: 40px;
+}
+.colorBtn input {
+    padding-left: 0;
+    outline: none;
+    height: 20px;
+    width: 20px;
+    padding-bottom: 20px;
+}
+
+.colorBox {
+   position: fixed;
+   left: 60%;
+   top:150px;
+}
+
+
+
+.colorBox input {
+    cursor: pointer;
+    display: inline-block;
+
+    -webkit-appearance: none;
+}
+.colorBtn label{
+    top:135px;
+
+}
+.colorBox input:nth-child(1):after {
+    background-color: lightpink;
+    border-radius: 25px;
+
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.colorBox input:nth-child(2):after {
+    background-color: lightskyblue;
+    border-radius: 25px;
+
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.colorBox input:nth-child(3):after {
+    background-color: lightgreen;
+    border-radius: 25px;
+
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.colorBox input:nth-child(4):after {
+    background-color: gold;
+    border-radius: 25px;
+
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.colorBox input[type="radio"]:checked:after {
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.4), inset 0 2px 2px hsla(0, 0%, 100%, 0.4), 0 1px 1px hsla(0, 0%, 100%, 0.8),
+        0 0 2px 2px hsla(0, 70%, 70%, 0.4);
 }
