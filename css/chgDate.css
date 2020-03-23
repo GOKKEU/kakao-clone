@@ -199,8 +199,10 @@
 
 /* Radio */
 
-.colorBtn{
+.colorBtn {
     height: 40px;
+    display: flex;
+    flex-direction: row;
 }
 .colorBtn input {
     padding-left: 0;
@@ -211,22 +213,17 @@
 }
 
 .colorBox {
-   position: fixed;
-   left: 60%;
-   top:150px;
+    margin-left: 60%;
 }
-
-
-
 .colorBox input {
     cursor: pointer;
     display: inline-block;
 
     -webkit-appearance: none;
 }
-.colorBtn label{
-    top:135px;
-
+.colorBtn label {
+    position: fixed;
+    margin: 5px 0px;
 }
 .colorBox input:nth-child(1):after {
     background-color: lightpink;
