@@ -16,7 +16,14 @@ function loadSchedule() {
         printLocalData(startArr, endArr, title);
     });
 }
-
+function addPreSchedule(start, end, title) {
+    const nNodes = document.querySelector(".boxwrap").childNodes;
+    const nArr = [];
+    for (j = 0; j < nNodes.length; j++) {
+        nArr.push(nNodes.item(j));
+    }
+    console.dir(nArr);
+}
 function addSchedule(start, end, title) {
     //출력된 요소에 아이디가 일치하는지 확인   //p202003
 
@@ -24,24 +31,47 @@ function addSchedule(start, end, title) {
 
     var check = false;
 
+    const arr = [];
+
+    for (let j = Number(start); j <= Number(end); j++) {
+        arr.push(j);
+    }
+    console.log(arr);
     for (let i = 0; i < LiNode.length; i++) {
-        // console.log( LiNode.item(i).id);
-        // console.log(typeof start);
+        const span = document.createElement("span");
         const nodeId = LiNode.item(i).id;
         if (nodeId.indexOf("c") !== -1) {
-            if (nodeId.indexOf(start) !== -1) {
-                //id에 start값이 포함한다면
-                check = true;
-            }
-
-            if (nodeId.indexOf(Number(end) + 1) !== -1) {
-                check = false;
-            }
-            const span = document.createElement("span");
-            if (check) {
+            //스타트 값이
+            const id = Number(nodeId.slice(1, 9));
+     
+            if (arr.indexOf(id) !== -1) {
                 span.classList.add(start + "-" + end);
                 span.innerHTML = title;
                 span.style.backgroundColor = "red";
+            }
+            LiNode.item(i).appendChild(span);
+        }
+
+        if (nodeId.indexOf("n") !== -1) {
+            //스타트 값이
+            const id = Number(nodeId.slice(1, 9));
+     
+            if (arr.indexOf(id) !== -1) {
+                span.classList.add(start + "-" + end);
+                span.innerHTML = title;
+                span.style.backgroundColor = "blue";
+            }
+            LiNode.item(i).appendChild(span);
+        }
+
+        if (nodeId.indexOf("p") !== -1) {
+            //스타트 값이
+            const id = Number(nodeId.slice(1, 9));
+
+            if (arr.indexOf(id) !== -1) {
+                span.classList.add(start + "-" + end);
+                span.innerHTML = title;
+                span.style.backgroundColor = "pink";
             }
             LiNode.item(i).appendChild(span);
         }
@@ -56,7 +86,7 @@ function printLocalData(startArr, endArr, title) {
 
     //console.log("사잇날:" + (endDate.getTime() - startDate.getTime()) / 1000 / 60 / 60 / 24);
 
-    console.log("두날짜사이" + beteeenDay + "첫날:" + startArr[2] + "마지막날" + endArr[2]);
+    // console.log("두날짜사이" + beteeenDay + "첫날:" + startArr[2] + "마지막날" + endArr[2]);
     if (beteeenDay < 0) {
         return false;
     } else {
@@ -65,6 +95,7 @@ function printLocalData(startArr, endArr, title) {
         const end = endArr[0] + endArr[1] + endArr[2];
         console.log(start + "," + end);
         addSchedule(start, end, title);
+        // addPreSchedule(start, end, title);
     }
     return true;
 }

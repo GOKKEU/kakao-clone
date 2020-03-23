@@ -95,7 +95,7 @@ function arrAddDate(obj) {
         const day = k < 10 ? "0" + k.toString() : k.toString();
         if (currM == 12) {
             li.id = "n" + currY.toString() + stringMonth + day.toString();
-            console.log(li.id + "12월");
+           
         } else {
             li.id = "n" + currY.toString() + stringMonth + day.toString();
         }
