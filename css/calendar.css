@@ -42,7 +42,7 @@
     height: calc(100% / 28);
 }
 .date {
-    height: calc(100% / 7);
+    height: calc(100% / 6);
 }
 .box ul:last-child {
     border-bottom: none;
@@ -50,26 +50,19 @@
 .boxwrap div li {
     width: calc(100% / 7);
     text-align: center;
+    /*태그 일정양 이상되면 숨기기*/
+    overflow-y: hidden;
 }
 
 /*좌-우로 위치하도록 하는 코드*/
 
 .boxwrap {
-    /*모바일 세로 맞추기
-  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
-    /*height: calc(var(--vh, 1vh) * 100);
-  margin: 0 auto;*/
     overflow: auto;
     white-space: nowrap;
 
     height: 850px;
 }
 .box {
-    /*화면넓이 3등분 코드
-  float: left;
-  width: calc(100% / 3);
-  background-color: yellow;
-  border: 1px solid black;*/
     display: inline-block;
     align-items: center;
     width: 100%;

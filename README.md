@@ -62,7 +62,7 @@
 -   채팅 페이지: 채팅 페이지도 입력 box 추가[]
 -   검색 페이지: 웹 스크랩하여 로드 하는 방식 []
 -   more페이지 :
--   캘린더: 캘린더 일정 추가 기능(이전달/이후달) [O] , 일정별 색상 선택 적용[]
+-   캘린더: 캘린더 일정 추가 기능(이전달/이후달) [O] , 일정별 색상 선택 적용[O],tag 선택시 내용 popup(추가/삭제/수정)[]
 
 ---
 
@@ -111,3 +111,4 @@ console.log()
 | input 조정 CSS                      | https://stackoverflow.com/questions/14946091/are-there-any-style-options-for-the-html5-date-picker ,http://jsfiddle.net/plan/V2Q58/ ,https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls/ ,https://stackoverflow.com/questions/18272497/styling-input-radio-with-css |
 | 선택자                              | https://verdana1012.tistory.com/entry/CSS3-nthchildn-%EC%84%A0%ED%83%9D%EC%9E%90-%EA%B0%99%EC%9D%80%EC%A2%85%EB%A5%98%EC%9D%98-%ED%83%9C%EA%B7%B8%EB%A1%9C-%EA%B5%AC%EC%84%B1%EB%90%98%EC%96%B4-%EC%9E%88%EC%9D%84-%EB%95%8C-%EC%82%AC%EC%9A%A9                                                      |
 | stop().animation()                  | https://webclub.tistory.com/461                                                                                                                                                                                                                                                                      |
+| locatstorage 삭제                   | https://doc.arcgis.com/ko/maps-for-powerbi/get-started/clear-browser-storage.htm                                                                                                                                                                                                                     |

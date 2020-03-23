@@ -124,6 +124,37 @@
                 <input type="button" value="확인" class="submitDatebtn" />
             </div>
         </div>
+        <!--popup//-->
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="closecontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+                <div class="container">
+                    <div class="texContainer">
+                        <label for="title"><a>제목</a></label>
+                        <input type="text" placeholder="Title" name="title" id="texTitle"readonly />
+                    </div>
+                    <div class="tiemContainer">
+                        <label for="start"><a>시작</a></label>
+                        <input type="text" placeholder="Start Time" name="start" readonly />
+
+                        <label for="end"><a>종료 </a></label>
+                        <input type="text" placeholder="End Time" name="end" readonly />
+                    </div>
+                    <div class="texContainer">
+                        <label for="text"><a>내용</a></label>
+                        <input type="text" placeholder="Text" name="text" id="textVal" readonly />
+                    </div>
+                    <biv class="buttonBox">
+                        <button type="submit">수정</button>
+                        <button type="submit">삭제</button>
+                    </biv>
+                </div>
+            </form>
+        </div>
+        <!--popup-->
         <!--MediaQuery-->
         <div class="bigScreen">
             <span class="bigScreen__text">
@@ -136,6 +167,5 @@
     <script src="./js/infiniteScroll.js"></script>
     <script src="./js/clock.js"></script>
     <script src="./js/addSchedule.js"></script>
-
     <script src="./js/chgDate.js"></script>
 </html>

@@ -5,7 +5,42 @@ const localdata = localStorage.getItem(SETDATE);
 if (localdata !== null) {
     dateLs = eval(localdata); //string->obj!!!
 }
+function showPopup(e) {
+    const className = e.srcElement.className;
+    //none -> block
+    document.getElementById("id01").style.display = "block";
+    //start end값 입력
+    let startTime = "";
+    let endTime = "";
+    const inputNodes = document.querySelector(".tiemContainer").querySelectorAll("input");
+    for (let i = 0; i < inputNodes.length; i++) {
+        if (inputNodes.item(i).name === "start") {
+            startTime = className.split("-")[i];
+            inputNodes.item(i).value = startTime;
+        } else {
+            endtTime = className.split("-")[i];
+            inputNodes.item(i).value = endtTime;
+        }
+    }
+    //title
+    document.getElementById("texTitle").value = e.srcElement.innerText;
 
+    //text
+    const localData = localStorage.getItem(SETDATE); //string
+
+    eval(localData).forEach(function(item, number) {
+        let startLocalTime = "";
+
+        item.start.split("-").forEach(function(i) {
+            startLocalTime += i;
+        });
+
+        const localEnd = item.end.split("-");
+        if (startLocalTime === startTime) {
+            document.getElementById("textVal").value = item.text;
+        }
+    });
+}
 function loadSchedule() {
     /*dataLs는 localStroge에서 데이터를 받아온 배열*/
     dateLs.forEach(function(dateitem) {
@@ -37,37 +72,17 @@ function addSchedule(start, end, title, color) {
     for (let i = 0; i < LiNode.length; i++) {
         const span = document.createElement("span");
         const nodeId = LiNode.item(i).id;
-        if (nodeId.indexOf("c") !== -1) {
-            const id = Number(nodeId.slice(1, 9));
-            if (arr.indexOf(id) !== -1) {
-                span.classList.add(start + "-" + end);
-                span.innerHTML = title;
-                span.style.backgroundColor = color;
-            }
-            LiNode.item(i).appendChild(span);
+
+        const id = Number(nodeId.slice(1, 9));
+
+        if (arr.indexOf(id) !== -1) {
+            span.classList.add(start + "-" + end);
+            span.innerHTML = title;
+            span.style.backgroundColor = color;
+            span.addEventListener("click", showPopup);
         }
 
-        if (nodeId.indexOf("n") !== -1) {
-            const id = Number(nodeId.slice(1, 9));
-
-            if (arr.indexOf(id) !== -1) {
-                span.classList.add(start + "-" + end);
-                span.innerHTML = title;
-                span.style.backgroundColor = color;
-            }
-            LiNode.item(i).appendChild(span);
-        }
-
-        if (nodeId.indexOf("p") !== -1) {
-            const id = Number(nodeId.slice(1, 9));
-
-            if (arr.indexOf(id) !== -1) {
-                span.classList.add(start + "-" + end);
-                span.innerHTML = title;
-                span.style.backgroundColor = color;
-            }
-            LiNode.item(i).appendChild(span);
-        }
+        LiNode.item(i).appendChild(span);
     }
 }
 function printLocalData(startArr, endArr, title, color) {
@@ -82,9 +97,8 @@ function printLocalData(startArr, endArr, title, color) {
         //시작날자 문제 text
         const start = startArr[0] + startArr[1] + startArr[2];
         const end = endArr[0] + endArr[1] + endArr[2];
-        console.log(start + "," + end);
+
         addSchedule(start, end, title, color);
-        // addPreSchedule(start, end, title);
     }
     return true;
 }
@@ -99,7 +113,7 @@ function getLocalData() {
             const title = dateitem.title;
             const color = dateitem.color;
             const boolcheek = printLocalData(startArr, endArr, title, color);
-            console.log(boolcheek);
+
             if (boolcheek) {
                 //  저장시 이전화면으로 돌아가기 위해 넓이를 0으로
                 document.querySelector(".addToDoList").position = "static";
@@ -118,7 +132,7 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
     const title = document.querySelector(".date__title").querySelector("input");
     const startT = document.querySelector(".startTime").querySelector("input");
     const endT = document.querySelector(".endTime").querySelector("input");
-    const test = document.querySelector(".text-content");
+    const text = document.querySelector(".text-content");
     //선택된 tag색상
     let color = " ";
     if (document.getElementById("red").checked) {
@@ -130,21 +144,16 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
     } else {
         color = "gold";
     }
-    console.log(color);
-    if (title.value === "") {
-        alert("제목을 입력해 주세요");
-        return;
-    }
 
     if (title.value === "") {
         alert("제목을 입력해 주세요");
         return;
     }
-
+    console.dir(text);
     const timeObj = {
         start: startT.value,
         end: endT.value,
-        text: test.innerHTML,
+        text: text.value,
         title: title.value,
         color: color
     };

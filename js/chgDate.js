@@ -307,4 +307,5 @@ document.querySelector(".endTime input").addEventListener("click", function(e) {
 //4.확인을 누르지X 나갈때 이벤트 처리
 document.querySelector(".wrappercontainer").addEventListener("click", function(e) {
     document.querySelector(".datepicker").style.display = "none";
+    
 });

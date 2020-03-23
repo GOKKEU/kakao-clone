@@ -223,7 +223,7 @@
 }
 .colorBtn label {
     position: fixed;
-    margin: 5px 0px;
+    margin: 5px 20px;
 }
 .colorBox input:nth-child(1):after {
     background-color: lightpink;

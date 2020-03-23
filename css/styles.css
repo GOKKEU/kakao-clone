@@ -14,6 +14,8 @@
 @import "calendar.css";
 @import "chgDate.css";
 @import "tooltip.css";
+@import "popup.css";
+
 * {
     /*
   box-sizing은 박스의 크기를 어떤 것을 기준으로 계산할지를 정하는 속성입니다.
