@@ -88,7 +88,7 @@ function showPopup(e) {
     //span의 클레스 이름을 받는다.
     const className = e.srcElement.className;
     //none -> block
-    document.getElementById("popup").style.display = "block";
+    document.querySelector(".modal").style.display = "block";
 
     //start end값 입력
     let startTime = "";
