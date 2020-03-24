@@ -40,7 +40,12 @@
                     ><option></option>
                 </select>
                 <div class="rightToolTip">
-                    <span class="tooltiptext">마우스 휠을 움직이면 화면이 이동합니다.</span>
+                    <span class="tooltiptext"
+                        >1. 마우스 휠을 움직이면 화면이 이동합니다.<br /><br />
+                        2. 일정추가 후 생성된 태그를 클릭 하세요<br /><br />
+                        (팝업창으로 이동 > 태그 내용 수정,삭제 가능)
+                    </span>
+
                     <a id="year"></a>
                 </div>
             </div>
@@ -125,10 +130,10 @@
             </div>
         </div>
         <!--popup//-->
-        <div id="id01" class="modal">
+        <div id="popup" class="modal">
             <form class="modal-content animate">
                 <div class="closecontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <span class="close" title="Close Modal">&times;</span>
                 </div>
 
                 <div class="container">

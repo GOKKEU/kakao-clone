@@ -16,7 +16,7 @@
     float: left;
     width: 50%;
 }
-.texContainer{
+.texContainer {
     display: flex;
     padding-bottom: 20px;
 }
@@ -38,6 +38,11 @@
     border: none;
 }
 .modal .buttonBox :nth-child(2) {
+    background-color: lightgreen;
+    width: 50%;
+    border: none;
+}
+.modal .buttonBox :nth-child(3) {
     background-color: lightpink;
     width: 50%;
     border: none;
@@ -60,8 +65,6 @@
 .modal .container {
     padding: 20px;
 }
-
-
 
 /* The Modal (background) */
 .modal {

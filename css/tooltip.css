@@ -110,6 +110,8 @@
     top: 150%;
     left: 50%;
     margin-left: -60px;
+    text-align: left;
+    padding: 13px;
 }
 
 .rightToolTip .tooltiptext::after {
