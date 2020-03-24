@@ -1,7 +1,27 @@
+function valSizeCheck(iNodes) {
+    let startD = "";
+    let endD = "";
+    iNodes.forEach(function(i) {
+        if (i.name === "start") {
+            startD = i.value;
+        }
+        if (i.name === "end") {
+            endD = i.value;
+        }
+    });
+    if (Number(startD) < Number(endD)) {
+        console.log(startD + "<" + endD);
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function isDate(item) {
     const result = /(\d{4})(\d{2})(\d{2})/;
     return result.test(item);
 }
+/*태그 수정*/
 function saveVal(start, end) {
     const inputs = document.querySelector(".container").querySelectorAll("input");
 
@@ -37,7 +57,7 @@ function saveVal(start, end) {
     document.getElementById("modal_popup").style.display = "none";
     window.location.reload();
 }
-
+/*태그 삭제*/
 function deleteVal(start, end) {
     var sString = start;
     var eString = end;
@@ -81,8 +101,14 @@ function getLocalItem(startTime, endTime) {
     return result;
 }
 
+/*close 버튼 이벤트*/
+document.querySelector(".close").onclick = function(e) {
+    document.getElementById("modal_popup").style.display = "none";
+    window.location.reload();
+};
+
+/*팝업창 이벤트*/
 function showPopup(e) {
-    //span의 클레스 이름을 받는다.
     const className = e.srcElement.className;
     //none -> block
     document.getElementById("modal_popup").style.display = "block";
@@ -114,6 +140,7 @@ function showPopup(e) {
         if (inputNodes.item(i).value === "수정") {
             inputNodes.item(i).addEventListener("click", function() {
                 inputNodes.item(i).type = "hidden";
+
                 inputNodes.forEach(function(item) {
                     item.readOnly = false;
                     if (item.name === "start") {
@@ -122,6 +149,8 @@ function showPopup(e) {
                             if (!isDate(item.value.replace(/-/gi, ""))) {
                                 alert("날짜를 다시 입력하세요");
                                 item.value = startTime;
+                            } else {
+                                startDate = item.value;
                             }
                         };
                     }
@@ -130,6 +159,11 @@ function showPopup(e) {
                             //start의 값이 변할때
                             if (!isDate(item.value.replace(/-/gi, ""))) {
                                 alert("날짜를 다시 입력하세요");
+                                item.value = endTime;
+                            }
+                            //end의 입력값은 항상 start값보다 커야 한다.
+                            if (!valSizeCheck(inputNodes)) {
+                                alert("시작날 이후에 날짜를 입력하세요");
                                 item.value = endTime;
                             }
                         };
@@ -157,8 +191,3 @@ function showPopup(e) {
         }
     }
 }
-/*close 버튼 이벤트*/
-document.querySelector(".close").onclick = function(e) {
-    document.getElementById("modal_popup").style.display = "none";
-    window.location.reload();
-};

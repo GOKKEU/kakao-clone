@@ -1,4 +1,4 @@
-/*룰렛 start*/
+/*룰렛 start---------------------------------------------------------------------------------------------------------------------------*/
 
 function chgYearList(e) {
     const wheelyear = e.wheelDelta;
@@ -116,7 +116,7 @@ function chgMonthList(e) {
     const node = document.querySelector(".month-list");
 
     if (wheel > 0) {
-        console.log("up");
+        // console.log("up");
         if (node.children.item(0).innerHTML === "1") {
             firstLi.innerHTML = 12;
             centerLi.innerHTML = parseInt(node.children.item(0).innerHTML);
@@ -175,64 +175,14 @@ function getLastDay() {
     const lastDay = new Date(cheekedYear, cheekedMonth, 0).getDate();
     return lastDay;
 }
-/*달의 마지막날이 달라질때 경우마다 dayList에 출력 메서드*/
-function chgDayListLastDay() {
-    const day = getLastDay(); //마지막 받아서
-    const dayList = document.querySelector(".day-list");
 
-    const firstLi = document.createElement("li");
-    const centerLi = document.createElement("li");
-    const lastLi = document.createElement("li");
-    //itme < day && 28<=day<=31 :28<29 28<30 28<31 29<30 29<31 30<31
-    //item > day
-
-    for (let i = 0; i < dayList.children.length; i++) {
-        const item = dayList.children.item(i).innerText;
-
-        if (i === 1) {
-            if (parseInt(item) === 1) {
-                firstLi.innerText = day;
-                centerLi.innerText = 1;
-                lastLi.innerText = 2;
-
-                changeLi(dayList, firstLi, centerLi, lastLi);
-
-                break;
-            }
-        }
-        if (i === 2) {
-            if (parseInt(item) === 1) {
-                firstLi.innerText = day - 1;
-                centerLi.innerText = day;
-                lastLi.innerText = 1;
-
-                changeLi(dayList, firstLi, centerLi, lastLi);
-
-                break;
-            }
-        }
-
-        if (day < item) {
-            //28<;30  28<31
-            console.log(day + "<" + item);
-            if (i === 2) {
-                firstLi.innerText = day - 2;
-                centerLi.innerText = day - 1;
-                lastLi.innerText = day;
-
-                changeLi(dayList, firstLi, centerLi, lastLi);
-                break;
-            }
-        }
-    }
-}
-/*룰렛 end */
+/*룰렛 end ---------------------------------------------------------------------------------------------------------------------------*/
 
 /*event 추가 메서드*/
+
 //0.룰렛의 List에 마우스 휠 효과가 적용됬을때 이벤트
 document.querySelector(".month-list").addEventListener("mousewheel", function(e) {
     chgMonthList(e);
-    chgDayListLastDay();
 });
 document.querySelector(".year-list").addEventListener("mousewheel", function(e) {
     chgYearList(e);
@@ -255,11 +205,11 @@ document.querySelector(".submitDatebtn").addEventListener("click", function(e) {
     // 숨겨진 input에서 값을 바다 선택된 input을 구분
     const chekTag = document.querySelector(".chekTag").value;
     if (chekTag === "시작") {
-        console.log(chekedDay);
+        //console.log(chekedDay);
         document.querySelector(".startTime").querySelector("input").value = cheekedYear + "-" + chekedMonth + "-" + chekedDay;
     }
     if (chekTag === "종료") {
-        console.log(chekedDay);
+        //console.log(chekedDay);
         document.querySelector(".endTime").querySelector("input").value = cheekedYear + "-" + chekedMonth + "-" + chekedDay;
     }
     //2.확인 버튼 클릭시 박스 사라지는 이벤트
@@ -277,7 +227,7 @@ document.querySelector(".startTime input").addEventListener("click", function(e)
         const obj = e.srcElement;
         document.querySelector(".chekTag").value = obj.previousSibling.innerHTML;
     } else {
-        console.log("크롬");
+        /*chrome*/
         const obj = e.toElement.previousElementSibling;
         console.log(obj);
         document.querySelector(".chekTag").value = obj.innerHTML;
@@ -295,7 +245,7 @@ document.querySelector(".endTime input").addEventListener("click", function(e) {
         document.querySelector(".chekTag").value = obj.previousSibling.innerHTML;
     } else {
         /*chrome*/
-        console.log("크롬");
+
         const obj = e.toElement.previousElementSibling;
         document.querySelector(".chekTag").value = obj.innerHTML;
     }
@@ -307,5 +257,4 @@ document.querySelector(".endTime input").addEventListener("click", function(e) {
 //4.확인을 누르지X 나갈때 이벤트 처리
 document.querySelector(".wrappercontainer").addEventListener("click", function(e) {
     document.querySelector(".datepicker").style.display = "none";
-    
 });
