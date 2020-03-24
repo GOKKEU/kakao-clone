@@ -1,5 +1,3 @@
-
-
 function isDate(item) {
     const result = /(\d{4})(\d{2})(\d{2})/;
     return result.test(item);
@@ -16,31 +14,30 @@ function saveVal(start, end) {
         console.dir(sT);
         inputs.forEach(function(i) {
             if (sT === start && eT === end) {
-            //정규식을 사용해서 문자열에 "yyyy-mm-dd" 정규식으로 값 치환
-            if (i.name === "start") {
-                obj.start = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
-            }
-            if (i.name === "end") {
-                console.dir(i);
-                obj.end = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
-                console.dir(obj.end);
-            }
-            if (i.name === "title") {
-                obj.title = i.value;
-            }
-            if (i.name === "text") {
-                obj.text = i.value;
-            }
-           
+                //정규식을 사용해서 문자열에 "yyyy-mm-dd" 정규식으로 값 치환
+                if (i.name === "start") {
+                    obj.start = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
+                }
+                if (i.name === "end") {
+                    console.dir(i);
+                    obj.end = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
+                    console.dir(obj.end);
+                }
+                if (i.name === "title") {
+                    obj.title = i.value;
+                }
+                if (i.name === "text") {
+                    obj.text = i.value;
+                }
             }
         });
-   
+
         array.push(obj);
     });
     console.dir(array);
     localStorage.setItem(SETDATE, JSON.stringify(array));
     document.getElementById("id01").style.display = "none";
-     window.location.reload();
+    window.location.reload();
 }
 
 function deleteVal(start, end) {
@@ -118,10 +115,37 @@ function showPopup(e) {
         }
         if (inputNodes.item(i).value === "수정") {
             console.log("수정");
-            inputNodes.item(i).addEventListener("click", function(e) {
+            inputNodes.item(i).addEventListener("click", function() {
                 inputNodes.item(i).type = "hidden";
                 inputNodes.forEach(function(item) {
                     item.readOnly = false;
+                    if (item.name === "start") {
+                        item.onchange = function() {
+                            //start의 값이 변할때
+                            if (!isDate(item.value.replace(/-/gi, ""))) {
+                                alert("날짜를 다시 입력하세요");
+                                item.value = startTime;
+                            }
+                        };
+                    }
+                    if (item.name === "end") {
+                        item.onchange = function() {
+                            //start의 값이 변할때
+                            if (!isDate(item.value.replace(/-/gi, ""))) {
+                                alert("날짜를 다시 입력하세요");
+                                item.value = endTime;
+                            }
+                        };
+                    }
+                    if (item.name === "title") {
+                        item.onchange = function() {
+                            if (item.value === "") {
+                                console.log(item.value);
+                                alert("제목을 입력해 주세요");
+                                item.value = e.srcElement.innerText;
+                            }
+                        };
+                    }
                 });
                 document.getElementById("saveBtn").type = "button";
                 document.getElementById("saveBtn").onclick = function(e) {
