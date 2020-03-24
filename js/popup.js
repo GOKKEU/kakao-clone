@@ -1,20 +1,29 @@
-function savaVal() {
+
+
+function isDate(item) {
+    const result = /(\d{4})(\d{2})(\d{2})/;
+    return result.test(item);
+}
+function saveVal(start, end) {
     const inputs = document.querySelector(".container").querySelectorAll("input");
 
     const localStorageData = localStorage.getItem(SETDATE); //string
     const array = [];
 
     eval(localStorageData).forEach(function(obj) {
+        const sT = obj.start.replace(/-/gi, "");
+        const eT = obj.end.replace(/-/gi, "");
+        console.dir(sT);
         inputs.forEach(function(i) {
-            console.log(i.name);
+            if (sT === start && eT === end) {
+            //정규식을 사용해서 문자열에 "yyyy-mm-dd" 정규식으로 값 치환
             if (i.name === "start") {
-                //정규식을 사용해서 문자열에 "yyyy-mm-dd" 정규식으로 값 치환
-
                 obj.start = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
-                console.log(obj.start);
             }
             if (i.name === "end") {
+                console.dir(i);
                 obj.end = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
+                console.dir(obj.end);
             }
             if (i.name === "title") {
                 obj.title = i.value;
@@ -22,42 +31,38 @@ function savaVal() {
             if (i.name === "text") {
                 obj.text = i.value;
             }
+           
+            }
         });
+   
         array.push(obj);
-        console.dir(array);
+    });
+    console.dir(array);
+    localStorage.setItem(SETDATE, JSON.stringify(array));
+    document.getElementById("id01").style.display = "none";
+     window.location.reload();
+}
+
+function deleteVal(start, end) {
+    var sString = start;
+    var eString = end;
+    const getlocalData = localStorage.getItem(SETDATE); //string
+    const startT = sString.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
+    const endT = eString.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
+    const arr = [];
+
+    eval(getlocalData).forEach(function(obj) {
+        if (obj.start === startT && obj.end === endT) {
+            console.log("삭제 할거");
+        } else {
+            arr.push(obj);
+        }
     });
 
-    localStorage.setItem(SETDATE, JSON.stringify(array));
-    alert("저장했습니다.");
+    localStorage.setItem(SETDATE, JSON.stringify(arr));
+    alert("삭제했습니다.");
     window.location.reload();
     document.getElementById("id01").style.display = "none";
-}
-
-function deleteVal(e) {
-    console.dir(e);
-}
-
-function modifyVal() {
-    //input 내용 변경 가능
-    const inputNodes = document.querySelector(".container").querySelectorAll("input");
-    let startVal = "";
-    let endVal = "";
-
-    inputNodes.forEach(function(inputitem) {
-        inputitem.readOnly = false;
-        if (inputitem.name === "start") {
-            startVal = inputitem.value.split("-")[0];
-        }
-        if (inputitem.name === "end") {
-            endVal = inputitem.value.split("-")[0];
-        }
-
-        //수정박스 text를 저장으로 바꿈
-        if (inputitem.value === "수정") {
-            inputitem.value = "저장";
-            inputitem.addEventListener("click", savaVal);
-        }
-    });
 }
 
 function getLocalItem(startTime, endTime) {
@@ -94,7 +99,7 @@ function showPopup(e) {
 
     for (let i = 0; i < inputNodes.length; i++) {
         //모든 input 값을 readOnly로 변경
-
+        inputNodes.item(i).readOnly = true;
         if (inputNodes.item(i).name === "start") {
             startTime = className.split("-")[0];
             inputNodes.item(i).value = startTime;
@@ -108,24 +113,27 @@ function showPopup(e) {
         if (inputNodes.item(i).name === "title") {
             inputNodes.item(i).value = e.srcElement.innerText;
         }
-
-        if (inputNodes.item(i).value === "수정") {
-            inputNodes.item(i).addEventListener("click", modifyVal);
-        }
-        if (inputNodes.item(i).value === "삭제") {
-            inputNodes.item(i).addEventListener("click", deleteVal);
-        }
-
         if (inputNodes.item(i).name === "text") {
-            console.log(startTime + "," + endTime);
-
             inputNodes.item(i).value = getLocalItem(startTime, endTime);
         }
+        if (inputNodes.item(i).value === "수정") {
+            console.log("수정");
+            inputNodes.item(i).addEventListener("click", function(e) {
+                inputNodes.item(i).type = "hidden";
+                inputNodes.forEach(function(item) {
+                    item.readOnly = false;
+                });
+                document.getElementById("saveBtn").type = "button";
+                document.getElementById("saveBtn").onclick = function(e) {
+                    saveVal(startTime, endTime);
+                };
+            });
+        }
 
-        inputNodes.item(i).readOnly = "true";
+        if (inputNodes.item(i).value === "삭제") {
+            inputNodes.item(i).addEventListener("click", function(e) {
+                deleteVal(startTime, endTime);
+            });
+        }
     }
-
-    //text값을 저장된 값에서 찾아준다
-
-    //수정버튼과 종료버튼에 이벤트 추가
 }
