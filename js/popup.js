@@ -36,7 +36,7 @@ function saveVal(start, end) {
     });
     console.dir(array);
     localStorage.setItem(SETDATE, JSON.stringify(array));
-    document.getElementById("id01").style.display = "none";
+    document.getElementById("modal_popup").style.display = "none";
     window.location.reload();
 }
 
@@ -59,7 +59,7 @@ function deleteVal(start, end) {
     localStorage.setItem(SETDATE, JSON.stringify(arr));
     alert("삭제했습니다.");
     window.location.reload();
-    document.getElementById("popup").style.display = "none";
+    document.getElementById("modal_popup").style.display = "none";
 }
 
 function getLocalItem(startTime, endTime) {
@@ -88,7 +88,7 @@ function showPopup(e) {
     //span의 클레스 이름을 받는다.
     const className = e.srcElement.className;
     //none -> block
-    document.querySelector(".modal").style.display = "block";
+    document.getElementById("modal_popup").style.display = "block";
 
     //start end값 입력
     let startTime = "";
@@ -164,6 +164,6 @@ function showPopup(e) {
 }
 /*close 버튼 이벤트*/
 document.querySelector(".close").onclick = function(e) {
-    document.getElementById("popup").style.display = "none";
+    document.getElementById("modal_popup").style.display = "none";
     window.location.reload();
 };
