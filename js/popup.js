@@ -89,6 +89,7 @@ function showPopup(e) {
     const className = e.srcElement.className;
     //none -> block
     document.getElementById("popup").style.display = "block";
+
     //start end값 입력
     let startTime = "";
     let endTime = "";
