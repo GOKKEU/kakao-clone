@@ -3,11 +3,11 @@ const date = new Date();
 const currentMonth = date.getMonth() + 1;
 const currentYear = date.getFullYear();
 
-console.log("현재 날짜 정보" + currentMonth + "," + currentYear + ",");
+//console.log("현재 날짜 정보" + currentMonth + "," + currentYear + ",");
 
 function leftPrint(month) {
     let year = parseInt(document.getElementById("year").innerHTML);
-    console.log("월" + month + "년" + year);
+    //console.log("월" + month + "년" + year);
 
     /*left*/
     if (month === 12) {
@@ -29,7 +29,7 @@ function leftPrint(month) {
 }
 function rifhtPrint(month) {
     let year = parseInt(document.getElementById("year").innerHTML);
-    console.log("월" + month + "년" + year + "오른쪽");
+    //console.log("월" + month + "년" + year + "오른쪽");
 
     /*right*/
     if (month === 1) {
@@ -69,7 +69,7 @@ function mouseWheelEvent(e) {
     const wheelDelta = e.originalEvent.wheelDelta;
     const boxCon = document.querySelector(".boxwrap");
     if (wheelDelta > 0) {
-        console.log("up");
+        //  console.log("up");
 
         $(".boxwrap")
             .stop(false, true)

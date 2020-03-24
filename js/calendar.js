@@ -66,7 +66,7 @@ function arrAddDate(obj) {
         if (currM === 1) {
             li.id = "p" + currY.toString() + stringMonth + 12 + day.toString();
 
-            console.log(li.id);
+            // console.log(li.id);
         } else {
             li.id = "p" + currY.toString() + stringMonth + day.toString();
         }
@@ -95,7 +95,6 @@ function arrAddDate(obj) {
         const day = k < 10 ? "0" + k.toString() : k.toString();
         if (currM == 12) {
             li.id = "n" + currY.toString() + stringMonth + day.toString();
-           
         } else {
             li.id = "n" + currY.toString() + stringMonth + day.toString();
         }
@@ -111,7 +110,7 @@ function arrAddDate(obj) {
 
 function printContainer(printmonth, printyear) {
     //(1)년도와 월을 받아서 Div생성
-    console.log(printmonth, printyear);
+    // console.log(printmonth, printyear);
 
     const div = document.createElement("div");
     div.id = printmonth;

@@ -9,7 +9,7 @@ if (localdata !== null) {
 function loadSchedule() {
     /*dataLs는 localStroge에서 데이터를 받아온 배열*/
     dateLs.forEach(function(dateitem) {
-        console.log("화면 로드시 태그 생성");
+        // console.log("화면 로드시 태그 생성");
         const startArr = dateitem.start.split("-");
         const endArr = dateitem.end.split("-");
         const title = dateitem.title;
@@ -23,7 +23,7 @@ function addPreSchedule(start, end, title) {
     for (j = 0; j < nNodes.length; j++) {
         nArr.push(nNodes.item(j));
     }
-    console.dir(nArr);
+    //console.dir(nArr);
 }
 
 function addSchedule(start, end, title, color) {
@@ -114,7 +114,7 @@ document.querySelector(".saveToDoList").addEventListener("click", function() {
         alert("제목을 입력해 주세요");
         return;
     }
-    console.dir(text);
+    //console.dir(text);
     const timeObj = {
         start: startT.value,
         end: endT.value,

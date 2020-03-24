@@ -11,7 +11,7 @@ function saveVal(start, end) {
     eval(localStorageData).forEach(function(obj) {
         const sT = obj.start.replace(/-/gi, "");
         const eT = obj.end.replace(/-/gi, "");
-        console.dir(sT);
+
         inputs.forEach(function(i) {
             if (sT === start && eT === end) {
                 //정규식을 사용해서 문자열에 "yyyy-mm-dd" 정규식으로 값 치환
@@ -19,9 +19,7 @@ function saveVal(start, end) {
                     obj.start = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
                 }
                 if (i.name === "end") {
-                    console.dir(i);
                     obj.end = i.value.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
-                    console.dir(obj.end);
                 }
                 if (i.name === "title") {
                     obj.title = i.value;
@@ -34,7 +32,7 @@ function saveVal(start, end) {
 
         array.push(obj);
     });
-    console.dir(array);
+    //  console.dir(array);
     localStorage.setItem(SETDATE, JSON.stringify(array));
     document.getElementById("modal_popup").style.display = "none";
     window.location.reload();
@@ -50,7 +48,6 @@ function deleteVal(start, end) {
 
     eval(getlocalData).forEach(function(obj) {
         if (obj.start === startT && obj.end === endT) {
-            console.log("삭제 할거");
         } else {
             arr.push(obj);
         }
@@ -115,7 +112,6 @@ function showPopup(e) {
             inputNodes.item(i).value = getLocalItem(startTime, endTime);
         }
         if (inputNodes.item(i).value === "수정") {
-            console.log("수정");
             inputNodes.item(i).addEventListener("click", function() {
                 inputNodes.item(i).type = "hidden";
                 inputNodes.forEach(function(item) {
@@ -141,7 +137,6 @@ function showPopup(e) {
                     if (item.name === "title") {
                         item.onchange = function() {
                             if (item.value === "") {
-                                console.log(item.value);
                                 alert("제목을 입력해 주세요");
                                 item.value = e.srcElement.innerText;
                             }

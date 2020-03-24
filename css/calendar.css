@@ -27,11 +27,17 @@
     right: 20px;
 }
 .calendar__header i,
-.calendar__header select,
 .calendar__header h1 {
-    margin-right: 10px;
+    margin-right: 5px;
 }
+.calendar__header .select {
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px;
+}
+
 /*헤더부분*/
+
 .boxwrap div ul {
     display: flex;
     flex-direction: row;
