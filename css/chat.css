@@ -1,193 +1,190 @@
 .header-wrapper {
-  background-color: white;
-  box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.08);
-  /*상단 고정 코드*/
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  padding-bottom: 25px;
-  /*아래 레이어와 겹치는 문제
+    background-color: white;
+    box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.08);
+    /*상단 고정 코드*/
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    padding-bottom: 25px;
+    /*아래 레이어와 겹치는 문제
   레이어의 순서를 z-index로 해결
   Layer 0 기본 렌더링 레이어--> 2 (숫자커지면 사용자로 가깝)
   */
-  z-index: 2;
-  /*스클롤 내려갈때 애니메이션 추가*/
+    z-index: 2;
+    /*스클롤 내려갈때 애니메이션 추가*/
 }
 
 /*배경 부분*/
 .chat-screen {
-  background-image: url("../images/pattern.png");
-  min-height: 100vh;
+    background-image: url("../images/pattern.png");
+    min-height: 100vh;
 }
 
 .chat-screen .chat__messages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 1px solid #f7f7f7;
-  padding-top: 30px;
-  padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #f7f7f7;
+    padding-top: 30px;
+    padding-left: 20px;
 }
 .chat__messages .chat__timestamp {
-  background-color: white;
-  border-radius: 10px;
-  font-size: 12px;
-  padding: 5px 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5),
-    inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2);
-  /*대문자로 바꿈*/
-  text-transform: uppercase;
-  font-weight: 700;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2);
+    /*대문자로 바꿈*/
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .message {
-  display: flex;
-  align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
 
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .message .message__content {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 /*div를 정렬*/
 .incoming-message {
-  align-self: flex-start;
+    align-self: flex-start;
 }
 .sent-message {
-  align-self: flex-end;
+    align-self: flex-end;
 }
 .message .message__bubble {
-  background-color: white;
-  border-radius: 320px;
-  padding: 10px 20px;
-  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5),
-    inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2);
-  font-weight: 500;
+    background-color: white;
+    border-radius: 320px;
+    padding: 10px 20px;
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
 }
 
 .message__content .message__author {
-  margin-top: 15px;
-  font-size: 12px;
-  font-weight: 600;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
 }
 .incoming-message .message__bubble {
-  border-bottom-left-radius: 0px;
-  /*그라디언트 적용된 코드*/
-  background-image: linear-gradient(to right, #f46b45, #eea849);
+    border-bottom-left-radius: 0px;
+    /*그라디언트 적용된 코드*/
+    background-image: linear-gradient(to right, #f46b45, #eea849);
 }
 .sent-message .message__bubble {
-  border-bottom-right-radius: 0px;
-  background-image: linear-gradient(to left, #f46b45, #eea849);
+    border-bottom-right-radius: 0px;
+    background-image: linear-gradient(to left, #f46b45, #eea849);
 }
 
 .message .message__timestamp {
-  padding: 10px 5px 0px;
+    padding: 10px 5px 0px;
 }
 
 /*chat write 수정
 1.html 코드 수정 input ->div 순서로
 2.입력시 크기 작아지고 위로 올라가는 애니메이션 추가
 */
-.chat__write-container .chat__write {
-  padding: 15px 60px;
-  font-size: 14px;
-  border: none;
-  width: 100%;
-  /*입력창을 가운데 위치하게 하는 코드*/
 
-  margin: 0 auto;
-  /*크기 줄어들때 부드럽게 보이는 효과*/
-  /*transition: all 0.4s ease-in;대신 세부 요소 변경하기 위해 코드 변경*/
-  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out,
-    transform 0.5s ease-in-out;
+.chat__write-container .chat__write {
+    padding: 15px 60px;
+    font-size: 14px;
+    border: none;
+
+    /*입력창을 가운데 위치하게 하는 코드*/
+    width: 100%;
+    margin: 0 auto;
+    /*크기 줄어들때 부드럽게 보이는 효과*/
+    /*transition: all 0.4s ease-in;대신 세부 요소 변경하기 위해 코드 변경*/
+    transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .chat__write:focus {
-  border-radius: 40px;
-  box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5),
-    inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2);
-  /*input을 클릭했을때 파란 테두리를 지우기위해 사용 코드  */
-  outline: none;
-  /*크기 100%->80%*/
-  width: 80%;
+    border-radius: 40px;
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2);
+    /*input을 클릭했을때 파란 테두리를 지우기위해 사용 코드  */
+    outline: none;
 
-  /*줄어들때 상하(수직 방향)의 이동 거리 값을 지정*/
-  transform: translateY(-60px);
+    width: 100%;
+
+    /*줄어들때 상하(수직 방향)의 이동 거리 값을 지정*/
+    transform: translateY(-60px);
 }
 .chat__write-container {
-  /*바닥 고정 */
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
+    /*바닥 고정 */
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
 }
 .chat__icon {
-  font-size: 18px;
-  /*아이콘 사라질때 효과*/
-  transition: opacity 0.3s ease-in-out;
+    font-size: 18px;
+    /*아이콘 사라질때 효과*/
+    transition: opacity 0.3s ease-in-out;
 }
 /*icon 위치 고정*/
 .chat__icon-left {
-  position: absolute;
-  bottom: 12px;
-  left: 15px;
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
 }
 .chat__icon-right {
-  position: absolute;
-  right: 15px;
-  bottom: 12px;
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
 }
 /*icon 숨기기
 chat__write 클릭 > chart__icon은 숨김
 ^중요한거는 ~(sibling selector) 을 사용하기 위해 input 뒤에 div가 와야한다
 */
 .chat__write:focus ~ .chat__icon {
-  opacity: 0;
+    opacity: 0;
 }
 /*메세지 박스 애니메이션*/
 @keyframes incomingAnim {
-  from {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 .incoming-message {
-  animation: incomingAnim 0.5s ease-out forwards;
+    animation: incomingAnim 0.5s ease-out forwards;
 }
 
 @keyframes sentAnimation {
-  from {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .sent-message {
-  animation: sentAnimation 0.5s ease-out forwards;
+    animation: sentAnimation 0.5s ease-out forwards;
 }
 
 /*이미지 회전*/
 .incoming-message img {
-  width: 35px;
-  border-radius: 15px;
-  margin-right: 20px;
-  animation: spin 5s linear infinite;
+    width: 35px;
+    border-radius: 15px;
+    margin-right: 20px;
+    animation: spin 5s linear infinite;
 }
 @keyframes spin {
-  from {
-    transform: none;
-  }
-  to {
-    transform: rotateY(1turn);
-  }
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotateY(1turn);
+    }
 }
