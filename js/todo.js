@@ -57,7 +57,7 @@ function deleteToDo(event) {
 
     toDoList.removeChild(li);
     /*어려움! array를 만드는 filter 기능 사용해 완전히 지움*/
-    const cleanToDos = toDos.filter(function(toDo) {
+    const cleanToDos = toDos.filter(function (toDo) {
         return toDo.id !== parseInt(li.id);
     });
 
@@ -117,7 +117,7 @@ function loadToDos() {
     if (loadedToDos !== null) {
         const parseToDos = JSON.parse(loadedToDos);
 
-        parseToDos.forEach(function(toDo) {
+        parseToDos.forEach(function (toDo) {
             paintToDo(toDo.text);
         });
     }
@@ -135,17 +135,8 @@ function init() {
     toDoInput.addEventListener("mouseleave", mouseLeave);
     //화면 크기 유지 END
 
-    //검색어 입력시 공백 제거
-    toDoInput.addEventListener("keypress", function(e) {
-        if (e.key === " ") {
-            alert("해당 항목에는 공백을 사용할 수 없습니다");
 
-            toDoInput.value = "";
-            e.returnValue = false;
-        }
-    });
-
-    document.querySelector(".find__icon-right").addEventListener("click", function(e) {
+    document.querySelector(".find__icon-right").addEventListener("click", function (e) {
         if (toDoInput.value === "") {
             alert("검색어를 입력하세요");
             event.target.value = "";

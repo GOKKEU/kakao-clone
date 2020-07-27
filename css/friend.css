@@ -80,3 +80,19 @@ height: 35px;
   font-size: 15px;
 }
 
+.settings__setting:hover{
+ background:#fafafa ;
+ cursor: pointer;
+}
+
+.settings__setting img{
+
+  width: 300px;
+  margin-top: 20px;
+ }
+ .settings__setting div{
+  display: flex;
+ }
+ .settings__setting a{
+  font-size: 15px;
+ }
